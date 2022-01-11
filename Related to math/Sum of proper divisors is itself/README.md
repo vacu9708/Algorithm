@@ -1,10 +1,10 @@
-# Find how many numbers in a certain range have the sum of their divisors as itself
+# Find how many numbers in a certain range have the sum of their proper divisors as itself
 
 ~~~C++
 #include <iostream>
 using namespace std;
 
-void sum_of_divisors_of_a_number_is_itself(int range) {
+void sum_of_proper_divisors_is_itself(int range) {
 	int count = 0, sum_of_divisors = 0;
 	for (int i = 4; i <= range; i++) {
 		sum_of_divisors = 0;
@@ -25,5 +25,5 @@ void sum_of_divisors_of_a_number_is_itself(int range) {
 int main() {
 	int range = 1000;
 	printf("Answer up to (%d) : ", range);
-	sum_of_divisors_of_a_number_is_itself(range);
+	sum_of_proper_divisors_is_itself(range);
 ~~~

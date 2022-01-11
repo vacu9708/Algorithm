@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+vector<char> set = { 'a','b','c','d'};
+vector<char> result(set.size());
+int r = 3; // number of elements to arrange
+int n_of_cases = 0;
+
+void dfs(int level, int index) {
+	if (level == r) {
+		n_of_cases++;
+		for (int i = 0; i < result.size(); i++)
+			cout << result[i] << " ";
+		printf("/ Number of cases : %d\n", n_of_cases);
+		return;
+	}
+
+	for (int i = index; i < set.size(); i++) {
+		result[level] = set[i];
+		dfs(level + 1, i);
+	}
+}
+
+int main() {
+	dfs(0, 0);
+}

@@ -1,0 +1,127 @@
+-----Using a string
+#include <iostream>
+#include <string>
+using namespace std;
+
+string decimal_to_binary1(int decimal) { //the simplest
+    string binary = "";
+    while (decimal > 0) {
+        binary = to_string(decimal % 2) + binary;
+        decimal /= 2;
+    }
+    return binary;
+}
+
+string decimal_to_binary2(int decimal)
+    string binary = "";
+    while (decimal > 0) {
+        if (decimal % 2 == 1)
+            binary = "1" + binary;
+        else
+            binary = "0" + binary;
+        decimal /= 2;
+    }
+    return binary;
+}
+
+int main() {
+    cout << "Binary : " << decimal_to_binary(12);
+}
+
+-----Using an int variable to store the binary
+#include <iostream>
+using namespace std;
+
+void decimal_to_binary(int decimal) { //Also print the number of 1
+    char one_digit;
+    long long int i = 1;
+    long long int binary = 0; //binary를 표시하려면 공간이 부족해서 long long
+    int count = 0;
+    while(decimal > 0) {
+        one_digit = decimal % 2;
+        binary += one_digit * i;
+        decimal /= 2;
+        i *= 10;
+        if (one_digit == 1) //To count the number of 1
+            count++;
+    }
+    cout << "Count: " << count << "\n";
+    cout << "Binary: " << binary << "\n";
+}
+
+int main() {
+    decimal_to_binary(12);
+}
+
+-----Using a char array for the storage of the binary (the way in C language)
+#include <iostream>
+using namespace std;
+
+void decimal_to_binary(int decimal) {
+    char one_digit;
+    long long int i = 0;
+    char binary[111]="";
+    int count = 0;
+    while (decimal > 0) {
+        one_digit = decimal % 2;
+        binary[i] = one_digit + '0'; //int to ASCII
+        decimal >>= 1; //one bit shift is equal to dividing with 2
+        i++;
+        if (one_digit == 1) //To count the number of 1
+            count += 1;
+    }
+    cout << "Count: " << count << "\n";
+    cout << "Binary: ";
+    for (int a = sizeof(binary)-1; a >-1; a--) //Print from the last index of the array
+        printf("%c", binary[a]);
+}
+
+int main() {
+    decimal_to_binary(12);
+}
+
+-----Decimal fraction to binary
+#include <iostream>
+using namespace std;
+
+string decimal_fraction_to_binary(double decimal_fraction) {
+	string binary = "0.";
+	while (decimal_fraction > 0) {
+		decimal_fraction *= 2;
+		if (decimal_fraction >= 1) {
+			binary += "1";
+			decimal_fraction--;
+		}
+		else
+			binary += "0";
+	}
+	return binary;
+}
+
+
+int main() {
+	cout << "Binary : " << decimal_fraction_to_binary(0.8752);
+}
+
+-----This doesn't work because the calculation of decimal fraction of computers is inaccurate
+#include <iostream>
+using namespace std;
+
+double decimal_fraction_to_binary(double decimal_fraction) {
+	double i = 0.1;
+	double binary = 0;
+	while (decimal_fraction > 0) {
+		decimal_fraction *= 2;
+		if (decimal_fraction >= 1) {
+			binary += i;
+			decimal_fraction--;
+		}
+		i *= 0.1;
+	}
+	return binary;
+}
+
+int main() {
+	cout.precision(33);
+	cout << "Binary : " << decimal_fraction_to_binary(0.8752);
+}

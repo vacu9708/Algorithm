@@ -1,0 +1,35 @@
+This way seems slower than using integral and inaccurate
+Principle : The area of a circle whose radius is 1 is equal to pi.
+
+#include <iostream>
+#include <random>
+#include <time.h>
+
+using namespace std;
+
+double random_real_number(double min, double max) {
+	random_device seed; // Generate a random seed
+	mt19937_64 mersenne(seed());
+	uniform_real_distribution<> range(min, max);
+	return range(mersenne);
+}
+
+void pi_using_monte_carlo() {
+	double n_of_points_in_circle = 0, x = 0, y = 0;
+	for (int i = 0; i < 654321; i++) {
+		x = random_real_number(-1, 1);
+		y = random_real_number(-1, 1);
+
+		if (pow(x, 2) + pow(y, 2) <= 1)
+			n_of_points_in_circle++;
+	}
+
+	printf("%.20lf\n", (n_of_points_in_circle / 654321) * 4);
+}
+
+int main() {
+	double start = clock();
+	pi_using_monte_carlo();
+	double end = clock();
+	printf("Elapsed time : %lf\n", end - start);
+}

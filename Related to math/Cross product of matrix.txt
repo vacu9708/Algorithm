@@ -1,0 +1,26 @@
+matrix1 = [[1,2,3], [4,5,6]]
+matrix2 = [[1,2], [3,4], [5,6]]
+
+def cross_product(matrix1, matrix2):
+    row1 = len(matrix1)
+    column1 = len(matrix1[0])
+    row2 = len(matrix2)
+    column2 = len(matrix2[0])
+    if column1 != row2:
+        print("The number of columns in the first matrix should be equal to the number of rows in the second.")
+        return
+
+    result = []
+    for i in range(row1):
+        second_dimensional = []
+        for j in range(column2):
+            second_dimensional.append(0)
+        result.append(second_dimensional)
+        
+    for i in range(row1):
+        for j in range(column2):
+            for k in range(column1): #column2 is possible too
+                result[i][j] += matrix1[i][k] * matrix2[k][j]
+    print(result)
+
+cross_product(matrix1, matrix2)

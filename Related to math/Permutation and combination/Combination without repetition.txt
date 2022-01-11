@@ -1,0 +1,28 @@
+#include <iostream>
+#include <vector>
+#include <list>
+using namespace std;
+
+vector<char> set = { 'a','b','c','d' }; // A set for combination without repetition
+list<char> case; // Container to store finished cases
+int r = 3; // number of elements to arrange
+int n_of_cases = 0; // number of cases
+
+void dfs(int level, int index) { // level : the level of tree
+	if (level == r) {
+		n_of_cases++;
+		for (char i : case)
+			cout << i << " ";
+		printf("/ Number of cases : %d\n", n_of_cases);
+		return;
+	}
+
+	for (int i = index; i < set.size(); i++) {
+		case.push_back(set[i]);
+		dfs(level + 1, i + 1);
+		case.pop_back();
+	}
+}
+int main() {
+	dfs(0, 0);
+}

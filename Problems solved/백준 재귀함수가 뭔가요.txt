@@ -1,0 +1,168 @@
+-----recursive 이용
+#include <iostream>
+#include <string>
+using namespace std;
+
+string underbar="";
+
+void recursive(int n) {
+	string temp; //함수가 호출될때마다 늘어난 underbar를 저장하기 위한 새로운 변수를 생성
+	temp=underbar; //밑에서 underbar를 늘리기위해 쓴 strcat은 call by reference이기 때문에 recursive후 마무리를 위해 temp가 필요하다.
+	if (n > 0) {
+			cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+			cout << underbar << "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\"\n";
+			cout << underbar << "\"마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\"\n";
+			cout << underbar << "\"그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n";
+		underbar.append("____"); // underbar 늘리기
+		recursive(n - 1);
+		cout << temp << "\"라고 답변하였지.\"\n";
+	}
+	else { //반복 횟수가 끝나면 함수 종료
+		cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+		cout << underbar << "\"재귀함수는 자기 자신을 호출하는 함수라네\"\n";
+		cout << underbar << "\"라고 답변하였지.\"\n";
+		return;
+	}
+}
+
+int main(void)
+{
+	printf("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n");
+	recursive(2);
+}
+
+-----loop 이용
+#include <iostream>
+#include <string>
+using namespace std;
+
+string underbar="";
+string temp[111]; //마무리
+
+void loop(int n) {
+	for (int i = 0; i < n; i++) {
+		cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+		cout << underbar << "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\"\n";
+		cout << underbar << "\"마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\"\n";
+		cout << underbar << "\"그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n";
+		temp[i] = underbar;
+		underbar.append("____"); // underbar 늘리기
+	}
+	cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+	cout << underbar << "\"재귀함수는 자기 자신을 호출하는 함수라네\"\n";
+	cout << underbar << "\"라고 답변하였지.\"\n";
+
+	for (int i = n - 1; i >= 0; i--)
+		cout << temp[i] << "\"라고 답변하였지.\"\n";
+}
+
+int main(void)
+{
+	cout << "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n";
+	loop(2);
+}
+
+-----loop2
+#include <iostream>
+#include <string>
+using namespace std;
+
+string underbar = "";
+
+void loop(int n) {
+	for (int i = 0; i < n; i++) {
+		cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+		cout << underbar << "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\"\n";
+		cout << underbar << "\"마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\"\n";
+		cout << underbar << "\"그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n";
+		underbar.append("____"); // underbar 늘리기
+	}
+	cout << underbar << "\"재귀함수가 뭔가요?\"\n";
+	cout << underbar << "\"재귀함수는 자기 자신을 호출하는 함수라네\"\n";
+
+	for (int i = 0; i < n + 1; i++) {
+		for (int j = 0; j < n - i; j++)
+			printf("____");
+		cout << "\"라고 답변하였지.\"\n";
+	}
+
+	/*for (int i = n; i >= 0; i--) { //Also possible
+		underbar = underbar.substr(0, 4 * i);
+		cout << underbar << "\"라고 답변하였지.\"\n";
+	}*/
+}
+
+int main(void)
+{
+	cout << "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n";
+	loop(2);
+}
+
+int main(void)
+{
+	cout << "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n";
+	loop(2);
+}
+-----loop 노가다
+#include <iostream>
+
+char s[6][111];
+char underbar[111];
+char temp[111][111]; //마무리
+
+using namespace std;
+
+void loop(int n) {
+	for (int i = 0; i < n; i++) {
+		for (int k = 0; k < i; k++)
+			cout << "____";
+		cout << "\"재귀함수가 뭔가요?\"" << endl;
+		for (int k = 0; k < i; k++)
+			cout << "____";
+		cout << "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\"" << endl;
+		for (int k = 0; k < i; k++)
+			cout << "____";
+		cout << "\"마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\"" << endl;
+		for (int k = 0; k < i; k++)
+			cout << "____";
+		cout << "\"그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"" << endl;
+	}
+	for (int i = 0; i < n; i++)
+		printf("____");
+	cout << "\"재귀함수가 뭔가요?\"" << endl;
+	for (int i = 0; i < n; i++)
+		printf("____");
+	cout << "\"재귀함수는 자기 자신을 호출하는 함수라네\"" << endl;
+
+	for (int i = 0; i < n+1; i++) {
+		for (int j = 0; j < n-i; j++)
+			printf("____");
+		cout << "\"라고 답변하였지.\"" << endl;
+	}
+}
+
+int main(void)
+{
+	cout << "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.\n" << endl;
+	loop(2);
+}
+
+-----Python
+def recursive(m):
+    print("_" * (4 * (n - m)) + '"재귀함수가 뭔가요?"')
+
+    if not m: #n==0과 같다
+        print("_" * (4 * (n - m)) + '"재귀함수는 자기 자신을 호출하는 함수라네"')
+        print("_" * (4 * (n - m)) + "라고 답변하였지.")
+        return
+
+    print("_" * (4 * (n - m)) + '"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.')
+    print("_" * (4 * (n - m)) + "마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.")
+    print("_" * (4 * (n - m)) + '그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어."')
+    recursive(m - 1)
+    print("_" * (4 * (n - m)) + "라고 답변하였지.")
+
+
+n = int(input())
+print("어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.")
+recursive(n)

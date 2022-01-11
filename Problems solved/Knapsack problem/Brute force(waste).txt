@@ -1,0 +1,48 @@
+#include <iostream>
+
+using namespace std;
+
+const int how_many_items = 5;
+bool truth_table[how_many_items], answer[how_many_items];
+int max_weight = 15, biggest_profit = 0;
+int item_weights[] = { 12, 1, 4, 1, 2 }; // kg
+int item_values[] = { 4, 2, 10, 1, 2 }; // $
+
+void knapsack_bruteforce(int level) { // Level of tree (DFS of tree)
+	if (level == how_many_items) {
+		int sum_of_weights = 0, sum_of_values = 0;
+		for (int i = 0; i < how_many_items; i++)
+			if (truth_table[i] == 1) {
+				sum_of_weights += item_weights[i];
+				sum_of_values += item_values[i];
+			}
+
+		if (sum_of_weights > max_weight) // Max weight exceeded
+			return;
+
+		if (sum_of_values > biggest_profit) {
+			biggest_profit = sum_of_values; // Update biggest profit and answer
+			for (int i = 0; i < how_many_items; i++)
+				answer[i] = truth_table[i];
+		}
+
+		return;
+	}
+
+	for (int i = 0; i <= 1; i++) {
+		truth_table[level] = i;
+		knapsack_bruteforce(level + 1);
+	}
+}
+
+void print_answer() {
+	cout << "A B C D E" << "\n";
+	for (int i = 0; i < how_many_items; i++)
+		cout << answer[i] << " ";
+}
+
+int main() {
+	knapsack_bruteforce(0);
+
+	print_answer();
+}

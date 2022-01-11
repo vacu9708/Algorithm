@@ -1,0 +1,34 @@
+#include <iostream>
+#include <vector>
+#include <list>
+using namespace std;
+
+vector<char> set = { 'a','b','c','d' };
+list<char> result;
+int r = 3; // number of elements to arrange
+bool visited[4];
+int n_of_cases = 0;
+
+void dfs(int level) {
+	if (level == r) {
+		n_of_cases++;
+		for (char i : result)
+			cout << i << " ";
+		printf("/ Number of cases : %d\n", n_of_cases);
+		return;
+	}
+
+	for (int i = 0; i < set.size(); i++) {
+		if (!visited[i]) {
+			visited[i] = true;
+			result.push_back(set[i]);
+			dfs(level + 1);
+			result.pop_back();
+			visited[i] = false;
+		}
+	}
+}
+
+int main() {
+	dfs(0);
+}

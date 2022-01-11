@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+void print_array(int* arr, int length) {
+	for (int i = 0; i < length; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+}
+
+void bubble_sort(int* arr, int length) {
+	int tmp;
+	for (int i = 1; i < length; i++) {
+		for (int j = 0; j < length - i; j++) //Numbers are stacked from the far right in ascending order
+			if (arr[j] > arr[j + 1]) {
+				tmp = arr[j];
+				arr[j] = arr[j + 1];
+				arr[j + 1] = tmp;
+			}
+		print_array(arr, length); // Show the process
+	}
+}
+
+void main() {
+	int arr[] = { 5,4,3,2,1 };
+	int length = sizeof(arr) / sizeof(int);
+	bubble_sort(arr, length);
+}

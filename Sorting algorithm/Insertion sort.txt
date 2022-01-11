@@ -1,0 +1,39 @@
+최선의 경우 O(n)으로 엄청 빠르기 때문에 다른 정렬 알고리즘의 일부로 사용될 만큼 좋은 정렬 알고리즘이다
+
+-----Code
+#include <iostream>
+using namespace std;
+
+void print_array(int* arr, int length) {
+	for (int i = 0; i < length; i++)
+		cout << arr[i] << " ";
+	cout << "\n";
+}
+
+void insertion_sort2(int arr[], int length) { //Using while-loop
+	int j, key;
+	for (int i = 1; i < length; i++) { //Sort the sublists in ascending order
+		key = arr[i];
+		j = i - 1;
+		while (j >= 0 && arr[j] > key)
+			arr[j + 1] = arr[j--];
+		arr[j + 1] = key;
+		print_array(arr, length); // Show the process
+	}
+}
+void insertion_sort1(int* arr, int length) {
+	int j, key;
+	for (int i = 1; i < length; i++) { // Sort the sublists in ascending order
+		key = arr[i];
+		for (j = i - 1; j >= 0 && arr[j] > key; j--)
+			arr[j + 1] = arr[j];
+		arr[j + 1] = key;
+		print_array(arr, length); // Show the process
+	}
+}
+
+int main() {
+	int arr[] = { 5,4,3,2,1 };
+	int length = sizeof(arr) / sizeof(arr[0]);
+	insertion_sort1(arr, length);
+}

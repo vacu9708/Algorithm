@@ -1,0 +1,12 @@
+def move(N, start, to):
+    print("{}번 원반을 {}에서 {}로 이동".format(N, start, to))
+
+def hanoi(N, start, to, via):
+    if N == 1: # 종료 조건
+        move(1, start, to)
+    else:
+        hanoi(N-1, start, via, to) # 먼저 N-1을 보조기둥으로 옮기고
+        move(N, start, to) # N을 목표기둥으로 옮긴다.
+        hanoi(N-1, via, to, start) # 보조기둥으로 옮겨진 N-1을 목표기둥으로 옮긴다
+
+hanoi(3, 'A', 'C', 'B') # 원반을 모두 A에서 C로 옮기겠다. B는 보조기둥.

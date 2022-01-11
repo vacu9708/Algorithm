@@ -1,0 +1,67 @@
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+class Knapsack_problem {
+public:
+	int howmany;
+	int max_weight = 15, biggest_profit = 0;
+	vector<bool> truth_table, answer;
+	vector<int> item_weights, item_values;
+
+	Knapsack_problem() {
+		cout << "How many items are there? : ";
+		cin >> howmany;
+
+		truth_table.resize(howmany);
+		answer.resize(howmany);
+
+		int temp_item_weight, temp_item_value;
+		cout << "----Put the weight and value of items\n";
+		for (int i = 0; i < howmany; i++) {
+			cin >> temp_item_weight >> temp_item_value;
+			item_weights.push_back(temp_item_weight);
+			item_values.push_back(temp_item_value);
+		}
+	}
+
+	void knapsack_bruteforce(int n) {
+		if (n == 0) {
+			int sum_of_weights = 0, sum_of_values = 0;
+			for (int i = 0; i < howmany; i++)
+				if (truth_table[i] == 1) {
+					sum_of_weights += item_weights[i];
+					sum_of_values += item_values[i];
+				}
+
+			if (sum_of_weights > max_weight) // Max weight exceeded
+				return;
+
+			if (sum_of_values > biggest_profit) {
+				biggest_profit = sum_of_values; // Update biggest profit and answer
+				for (int i = 0; i < howmany; i++)
+					answer[i] = truth_table[i];
+			}
+
+			return;
+		}
+
+		for (int i = 0; i <= 1; i++) {
+			truth_table[howmany - n] = i;
+			knapsack_bruteforce(n - 1);
+		}
+	}
+
+	void print_answer() {
+		cout << "A B C D E" << "\n";
+		for (int i = 0; i < howmany; i++)
+			cout << answer[i] << " ";
+	}
+};
+
+int main() {
+	Knapsack_problem a;
+	a.knapsack_bruteforce(a.howmany);
+	a.print_answer();
+}

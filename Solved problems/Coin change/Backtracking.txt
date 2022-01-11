@@ -1,0 +1,52 @@
+// Finding all the cases to make target_money
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+int target_money = 15, n_of_coin_type = 3, n_of_cases = 0;
+vector<int> values_of_coins = { 1,5,12 }, numbers_of_remaining_coins = { 33,33,33 }, a_case(n_of_coin_type);
+
+void backtracking(int level, int index, int sum_of_coins, vector<int> numbers_of_remaining_coins, vector<int> a_case) {
+	if (sum_of_coins == target_money) {
+		n_of_cases++;
+
+		printf("Coins used : ");
+		for (auto i : a_case)
+			cout << i << " ";
+		printf("/ Sum of coins : %d / Number of cases : %d\n", sum_of_coins, n_of_cases);
+
+		return;
+	}
+
+	for (int i = index; i < n_of_coin_type; i++) { // Combination with repetition
+		// Cut a branch for backtracking
+		if (sum_of_coins + values_of_coins[i] > target_money) // If sum of the coins exceeds target money
+			return;
+		if (numbers_of_remaining_coins[i] == 0) // When one of the coins has run out
+			continue;
+		//-----
+
+		numbers_of_remaining_coins[i]--;
+		a_case[i]++;
+		// Save the number of coins used and sum of coins upto the previous cases in the parameters
+		backtracking(level + 1, i, sum_of_coins + values_of_coins[i], numbers_of_remaining_coins, a_case);
+		numbers_of_remaining_coins[i]++; // Recover the changed vectors for the next i
+		a_case[i]--;
+	}
+}
+
+int main() {
+	/* Putting values in the variables manually
+	cin >> target_money;
+	cin >> n_of_coin_type;
+	values_of_coins.resize(n_of_coin_type);
+	numbers_of_remaining_coins.resize(n_of_coin_type);
+	a_case.resize(n_of_coin_type);
+
+	for (int i = 0; i < n_of_coin_type; i++)
+		cin >> values_of_coins[i] >> numbers_of_remaining_coins[i];*/
+
+	backtracking(0, 0, 0, numbers_of_remaining_coins, a_case);
+}

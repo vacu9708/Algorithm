@@ -50,7 +50,10 @@ print(f"Elapsed time : {time.time() - start}"
 
 ---
 ## Using monte-carlo method
-Principle : Find pi making use of the ratio of points that got into a circle inscribed in a square whose area is 4.
+Principle : Find pi making use of the ratio of points that got into a circle inscribed in a square.
+![image](https://user-images.githubusercontent.com/67142421/149093113-ddad47b1-4f85-460e-99d1-ad27870553c2.png)
+
+
 ~~~c++
 #include <iostream>
 #include <random>
@@ -75,7 +78,7 @@ void pi_using_monte_carlo() {
 			n_of_points_in_circle++;
 	}
 
-	printf("%.20lf\n", (n_of_points_in_circle / 654321) * 4);
+	printf("%.20lf\n", (n_of_points_in_circle / 654321) * 4); // Because the area of the square is 4
 }
 
 int main() {

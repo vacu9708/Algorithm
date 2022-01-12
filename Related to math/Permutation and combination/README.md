@@ -9,7 +9,7 @@ int r = 3; // the number of elements to arrange
  
 class Permutation_without_repetition {
 	char* a_case = new char[r];
-	int n_of_cases = 0;
+	int n_of_cases = 0; // number of cases
 	bool visited[4];
 public:
 	Permutation_without_repetition() {
@@ -38,7 +38,7 @@ public:
 };
 
 class Permutation_with_repetition {
-	int n_of_cases = 0; // number of cases
+	int n_of_cases = 0;
 	char* a_case = new char[r];
 public:
 	Permutation_with_repetition() {
@@ -64,7 +64,7 @@ public:
 };
 
 class Combination_without_repetition {
-	int n_of_cases = 0; // number of cases
+	int n_of_cases = 0;
 	char* a_case = new char[r];
 public:
 	Combination_without_repetition() {
@@ -118,7 +118,7 @@ public:
 
 /* A list can be used to print cases like this instead of an array.
 class Combination_without_repetition {
-	int n_of_cases = 0; // the number of cases
+	int n_of_cases = 0;
 	list<char> a_case;
 public:
 	Combination_without_repetition() {

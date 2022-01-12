@@ -11,4 +11,4 @@
 ## Mathematical operations
 * [Cross product of 2 matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Cross%20product%20of%202%20matrices)
 * [Calculating a remainder]()
-* [Decimal to binary]()
+* [Decimal to binary](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Decimal%20to%20binary)

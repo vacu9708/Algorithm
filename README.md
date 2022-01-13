@@ -1,4 +1,5 @@
 # Algorithm
+I tried to write comments on the code as in much detail as possible.
 * [Making string functions on my own](https://github.com/vacu9708/Algorithm/tree/main/Making%20string%20functions%20on%20my%20own)
 * [Related to math](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math)
 * [Searching algorithm](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm)

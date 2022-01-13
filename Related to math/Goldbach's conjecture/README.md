@@ -30,7 +30,7 @@ void goldbachs_conjecture(int target_number) {
         for (int j = 2; j <= (target_number - i); j++) {
             if (not_prime[j] == true)
                 continue;
-            if (i + j == target_number) // Print cases that satisfy goldbach's conjecture
+            if (i + j == target_number) // Print a case that satisfy goldbach's conjecture, that is, print a goldbach number
                 printf("%d + %d = %d\n", i, j, target_number);
         }
     }

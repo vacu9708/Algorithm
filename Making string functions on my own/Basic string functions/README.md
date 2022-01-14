@@ -69,4 +69,6 @@ int main() {
 	printf("Copied string : %s\n", to);
 }
 ~~~
+
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/148942870-01a381e0-235d-4402-a2c1-e876ec54c69b.png)

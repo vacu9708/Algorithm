@@ -27,7 +27,7 @@ void DFS(int vertex) {
 	visited[vertex] = true; // Visit
 	cout << vertex << " -> ";
 
-	for (auto i : graph[vertex]) // Search for the vertices not visited
+	for (auto i : graph[vertex]) // Search for vertices not visited
 		if (!visited[i])
 			DFS(i);
 }
@@ -77,7 +77,7 @@ void DFS(int vertex) {
 	cout << vertex << " -> ";
 
 	for (int i = 0; i < GRAPH_SIZE; i++)
-		if (adj_matrix[vertex][i] && !visited[i]) // Search for the vertices not visited
+		if (adj_matrix[vertex][i] && !visited[i]) // Search for vertices not visited
 			DFS(i);
 }
 

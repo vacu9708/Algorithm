@@ -1,4 +1,4 @@
-# Decimal  to binary
+# Decimal number to binary
 
 ~~~c++
 #include <iostream>

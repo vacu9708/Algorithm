@@ -1,4 +1,6 @@
 # Bubble sort
+Bubble sort is simple to implement but is the slowest of other sorting algorithms
+
 ## Time complexity
 > N = the number of elements to sort.
 > In the first iteration of the first loop, N-1 of comparison is conducted >> In the 2nd iteration, N-2 >> N-3 ... 2 ... 1

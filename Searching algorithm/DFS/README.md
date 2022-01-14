@@ -54,8 +54,8 @@ int main() {
 #include <iostream>
 using namespace std;
 
-const char GRAPH_SIZE GRAPH_LENGTH 10 // The number of the vertices
-bool adj_matrix[GRAPH_LENGTH][GRAPH_LENGTH] = { 0, };
+const char GRAPH_SIZE = 10;
+bool adj_matrix[GRAPH_SIZE][GRAPH_SIZE] = { 0, };
 
 void add_edge(int start, int end) {
 	adj_matrix[start][end] = 1;
@@ -70,15 +70,15 @@ void print_adj_matrix() {
 	}
 }
 
-bool visited[GRAPH_LENGTH] = { false, };
+bool visited[GRAPH_SIZE] = { false, };
 
 void DFS(int vertex) {
 	visited[vertex] = true; // Visit
-	cout << vertex << " ";
+	cout << vertex << " -> ";
 
 	for (int i = 0; i < GRAPH_SIZE; i++)
 		if (adj_matrix[vertex][i] && !visited[i]) // Search for the vertices not visited
-			DFS(adj_matrix, i);
+			DFS(i);
 }
 
 int main() {
@@ -94,7 +94,7 @@ int main() {
 	add_edge(7, 8);
 	add_edge(7, 9);
 	print_adj_matrix();
-	DFS( 3);
+	DFS(3);
 }
 ~~~
 

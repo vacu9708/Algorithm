@@ -4,7 +4,7 @@ Bubble sort is simple to implement but is the slowest of sorting algorithms
 ## Time complexity
 > N = the number of elements to sort.
 > In the first iteration of the first loop, N-1 of comparison is conducted >> In the 2nd iteration, N-2 >> N-3 ... 2 ... 1
-> (N-1)+(N-2)+(N-3)+...+2+1 >> By the sum of arithmetical series : ![image](https://user-images.githubusercontent.com/67142421/149508649-d1d4efed-9e65-4b85-bff7-7a851a2dadff.png)
+> (N-1)+(N-2)+(N-3)+...+2+1 -> By the sum of arithmetical series : ![image](https://user-images.githubusercontent.com/67142421/149508649-d1d4efed-9e65-4b85-bff7-7a851a2dadff.png)
 > 
 > Time complexity : **O(n^2)**
 

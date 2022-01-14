@@ -1,8 +1,8 @@
 # Insertion sort
+* In the best case, insertion sort is very fast with the time complexity O(n). It's a good algorithm to the extent that it's used as part of other sorting algorithms.
 
-
-## Process
-1. Find the maximum
+## Time complexity
+* **Best case** : Only comparisons are conducted without moving elements, that is, only the 1st loop is carried out (n-1) times. **-> O(n)**
 
 ~~~c++
 #include <iostream>

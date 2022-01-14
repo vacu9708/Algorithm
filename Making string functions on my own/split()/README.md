@@ -26,5 +26,5 @@ int main() {
 }
 ~~~
 
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/148947913-09404c57-432f-4dec-8dcf-d7a2faa47e4b.png)

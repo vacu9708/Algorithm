@@ -5,6 +5,9 @@
 ## The searching order of DFS and BFS
 ![image](https://user-images.githubusercontent.com/67142421/149474919-bd949f3b-17ae-4d10-a222-729a023e1e64.png)
 
+## The graph for searching in this code
+![Graph for searching](https://user-images.githubusercontent.com/67142421/149482856-ba8dcc40-4928-4a6a-bef6-782ad4778e2a.png)
+
 ## Using adjacent list
 ~~~c++
 #include <iostream>

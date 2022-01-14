@@ -1,0 +1,58 @@
+# Heap sort
+
+~~~c++
+#include <iostream>
+#include <vector>
+using namespace std;
+
+void print_elements(vector<int>& heap_tree) {
+	int tree_size = heap_tree.size();
+	for (int i = 0; i < tree_size; i++)
+		cout << heap_tree[i] << " ";
+	cout << "\n";
+}
+
+void heapify(vector<int>& heap_tree, int parent_index, int heapify_upto) { // Function to max-heapify the tree
+	int tree_size = heap_tree.size(), left_child = 2 * parent_index + 1, right_child = 2 * parent_index + 2;
+
+	if (left_child  <= heapify_upto && heap_tree[left_child] > heap_tree[parent_index]) {
+		swap(heap_tree[parent_index], heap_tree[left_child]);
+		heapify(heap_tree, left_child, heapify_upto);
+	}
+	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[parent_index]) {
+		swap(heap_tree[parent_index], heap_tree[right_child]);
+		heapify(heap_tree, right_child, heapify_upto);
+	}
+}
+
+void heap_sort(vector<int>& heap_tree) {
+	int tree_size = heap_tree.size();
+	printf("---Max heapify\n");
+	for (int i = tree_size / 2 - 1; i >= 0; i--) {; // Max-heapify from the last parent ( (child+1) / 2 -1 is its parent)
+		heapify(heap_tree, i, tree_size - 1);
+		print_elements(heap_tree); // Show the process
+	}
+	cout << "---Max-heap made\n\n";
+
+	for (int i = tree_size - 1; i > 0; i--) {
+		cout << "---Swap the root with index (" << i << ")\n"; // Show the process
+		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements in ascending order
+		print_elements(heap_tree);
+
+		printf("---Max heapify up to index (%d)\n", i - 1); // Show the process
+		heapify(heap_tree, 0, i - 1);
+		print_elements(heap_tree);
+	}
+}
+
+int main() {
+	vector<int> heap_tree = { 3,1,5,4,2 };
+	printf("Elements to sort: "); print_elements(heap_tree);
+
+	heap_sort(heap_tree);
+}
+
+~~~
+
+## Output
+![Untitled](https://user-images.githubusercontent.com/67142421/149524068-2f7a71f0-cdd4-49ff-8df2-255f4359818a.png)

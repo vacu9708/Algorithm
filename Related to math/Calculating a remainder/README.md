@@ -34,5 +34,5 @@ int main() {
 	printf("Remainder : %d\n", mod2(numerator, denominator));
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149187384-65bb2fe7-7c5a-43e7-922d-0f9cd0736383.png)

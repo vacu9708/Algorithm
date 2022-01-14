@@ -1,5 +1,9 @@
 # Decimal number to binary
 
+## How it works
+![image](https://user-images.githubusercontent.com/67142421/149515479-f171e1a1-fa84-42bf-b752-562597df22e6.png)
+
+
 ~~~c++
 #include <iostream>
 #include <string>

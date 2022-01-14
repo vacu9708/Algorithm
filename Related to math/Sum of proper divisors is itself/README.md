@@ -27,5 +27,5 @@ int main() {
 	printf("Answer up to (%d) : ", range);
 	sum_of_proper_divisors_is_itself(range);
 ~~~
-# Result
+# Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/148955468-7b492554-257a-457a-b61d-66da983480c4.png)

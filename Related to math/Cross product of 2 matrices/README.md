@@ -31,5 +31,5 @@ def cross_product(matrix1, matrix2):
 print(matrix1, " X ", matrix2, " = ", end = "");
 cross_product(matrix1, matrix2)
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149186390-e335f0b8-e312-425d-a137-444dd8178690.png)

@@ -28,5 +28,5 @@ int main() {
     e_to_the_x(x);
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149199541-b2e53c9a-830e-45cc-8a3c-556fe41ec763.png)

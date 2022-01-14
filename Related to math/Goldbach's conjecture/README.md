@@ -46,5 +46,5 @@ int main() {
     return 0;
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149280363-3c1be358-e784-41c8-92a4-5c1b739f87ab.png)

@@ -60,5 +60,5 @@ int main() {
 	print_vector(vector);
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149461539-54a393b2-eb89-4fd0-9bd2-2e84cbb2e145.png)

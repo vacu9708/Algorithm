@@ -98,5 +98,5 @@ int main() {
 }
 ~~~
 
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149482085-dc2c4135-8928-499e-9ba3-7ed7aa621311.png)

@@ -145,6 +145,6 @@ int main() {
 	BFS(adj_matrix, 3);
 }
 ~~~
-					     
-## Result
+
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149474554-3e1df771-97f9-4e95-ae90-68bd2bc2ca16.png)

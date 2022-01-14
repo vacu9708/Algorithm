@@ -65,5 +65,5 @@ int main() {
 }
 ~~~
 
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149326923-5046ef89-6d71-453c-be48-e8990949d902.png)

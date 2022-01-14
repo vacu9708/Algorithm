@@ -98,5 +98,5 @@ int main() {
     decimal_fraction_to_binary1(decimal_fraction);
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149196508-d6d725fe-ee60-488e-afac-5b66357785f3.png)

@@ -88,7 +88,7 @@ int main() {
 	printf("Elapsed time : %lf\n", end - start);
 }
 ~~~
-## Result
+## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149089208-e8d964c8-2e57-4e0e-9cab-a6155b45d721.png)
 
 Here we can see that Monte-carlo method is more ineffective than the way using integral when finding Pi

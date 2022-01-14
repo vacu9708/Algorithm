@@ -1,5 +1,6 @@
 # Cross product of 2 matrices
 
+# Python code
 ~~~python
 matrix1 = [[1,2,3], [4,5,6]]
 matrix2 = [[1,2], [3,4], [5,6]]

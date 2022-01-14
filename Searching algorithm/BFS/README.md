@@ -14,7 +14,7 @@
 #include <vector>
 using namespace std;
 
-#define GRAPH_LENGTH 10 // The number of vertices
+#define GRAPH_SIZE 10 // The number of vertices
 
 void insert_edge(vector<vector<int>>& graph, int start, int end) {
 	graph[start].push_back(end);
@@ -22,27 +22,27 @@ void insert_edge(vector<vector<int>>& graph, int start, int end) {
 }
 
 void print_graph(vector<vector<int>>& graph) {
-	for (int i = 0; i < GRAPH_LENGTH; i++) {
+	for (int i = 0; i < GRAPH_SIZE; i++) {
 		cout << i << " : { ";
-		for (int j = 0; j < GRAPH_LENGTH; j++)
+		for (int j = 0; j < graph[i].size(); j++)
 			cout << graph[i][j] << " ";
 		cout << "}\n";
 	}
 }
 
-int queue[GRAPH_LENGTH];
+int queue[GRAPH_SIZE] = { 0, };
 int front = 0, rear = 0;
 void enQ(int data) {
-	rear = (rear + 1) % GRAPH_LENGTH; // If it's the last index go to index 0, else index++
+	rear = (rear + 1) % GRAPH_SIZE; // If it's the last index go to index 0, else index++
 	queue[rear] = data;
 }
 
 int deQ() {
-	front = (front + 1) % GRAPH_LENGTH;
+	front = (front + 1) % GRAPH_SIZE;
 	return queue[front];
 }
 
-bool visited[GRAPH_LENGTH] = { false, };
+bool visited[GRAPH_SIZE] = { false, };
 void BFS(vector<vector<int>>& graph, int vertex) {
 	visited[vertex] = true;
 	cout << vertex << " -> ";
@@ -61,7 +61,7 @@ void BFS(vector<vector<int>>& graph, int vertex) {
 
 int main() {
 	// A : 0 | B : 1 | C : 2 | D : 3 | S : 4
-	vector<vector<int>> graph(GRAPH_LENGTH);
+	vector<vector<int>> graph(GRAPH_SIZE);
 	insert_edge(graph, 0, 1);
 	insert_edge(graph, 1, 2);
 	insert_edge(graph, 1, 3);
@@ -83,49 +83,66 @@ int main() {
 #include <iostream>
 using namespace std;
 
-#define GRAPH_LENGTH 10
+#define GRAPH_SIZE 10
 
-void insert_edge(int adj_matrix[][GRAPH_LENGTH], int start, int end) {
+void insert_edge(int adj_matrix[][GRAPH_SIZE], int start, int end) {
 	adj_matrix[start][end] = 1;
 	adj_matrix[end][start] = 1;
 }
 
-void print_adj_matrix(int adj_matrix[][GRAPH_LENGTH]) {
-	for (int i = 0; i < GRAPH_LENGTH; i++) {
-		for (int j = 0; j < GRAPH_LENGTH; j++)
+void print_adj_matrix(int adj_matrix[][GRAPH_SIZE]) {
+	for (int i = 0; i < GRAPH_SIZE; i++) {
+		for (int j = 0; j < GRAPH_SIZE; j++)
 			cout << adj_matrix[i][j] << "  ";
 		cout << "\n";
 	}
 }
 
-int queue[GRAPH_LENGTH];
+int queue[GRAPH_SIZE];
 int front = 0, rear = 0;
 void enQ(int data) {
-	rear = (rear + 1) % GRAPH_LENGTH;
+	rear = (rear + 1) % GRAPH_SIZE;
 	queue[rear] = data;
 }
 
 int deQ() {
-	front = (front + 1) % GRAPH_LENGTH;
+	front = (front + 1) % GRAPH_SIZE;
 	return queue[front];
 
 }
 
-bool visited[GRAPH_LENGTH] = { false, };
-void BFS(int adj_matrix[][GRAPH_LENGTH], int vertex) {
+bool visited[GRAPH_SIZE] = { false, };
+void BFS(int adj_matrix[][GRAPH_SIZE], int vertex) {
 	visited[vertex] = true;
-	cout << vertex << " ";
-	enQ(vertex);
+	cout << vertex << " -> ";
+	enQ(vertex); // Record the vertices to search from later while searching
 
-	while (front != rear) {
-		vertex = deQ();
-		for (int i = 0; i < GRAPH_LENGTH; i++)
+	while (front != rear) { // While the queue isn't empty
+		vertex = deQ(); // Search from the vertex that was visited the earliest
+		for (int i = 0; i < GRAPH_SIZE; i++) // Search for the vertices not visited
 			if (adj_matrix[vertex][i] && !visited[i]) {
 				visited[i] = true;
-				cout << i << " ";
+				cout << i << " -> ";
 				enQ(i);
 			}
 	}
+}
+
+int main() {
+	int adj_matrix[GRAPH_SIZE][GRAPH_SIZE] = { 0, };
+	insert_edge(adj_matrix, 0, 1);
+	insert_edge(adj_matrix, 1, 2);
+	insert_edge(adj_matrix, 1, 3);
+	insert_edge(adj_matrix, 2, 4);
+	insert_edge(adj_matrix, 3, 4);
+	insert_edge(adj_matrix, 3, 5);
+	insert_edge(adj_matrix, 5, 6);
+	insert_edge(adj_matrix, 5, 7);
+	insert_edge(adj_matrix, 6, 7);
+	insert_edge(adj_matrix, 7, 8);
+	insert_edge(adj_matrix, 7, 9);
+	print_adj_matrix(adj_matrix);
+	BFS(adj_matrix, 3);
 }
 ~~~
 					     

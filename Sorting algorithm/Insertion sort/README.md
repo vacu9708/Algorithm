@@ -3,6 +3,8 @@
 
 ## Time complexity
 * **Best case** : Only comparisons are conducted without moving elements, that is, only the 1st loop is carried out (n-1) times. **-> O(n)**
+* **Worst cass** (For example, elements arranged like this : 5 4 3 2 1) : 2 + 3 + 4 + ... + N-1 + N = ![image](https://user-images.githubusercontent.com/67142421/149545993-042d9d32-351e-4220-99a2-2ea2d31a8d04.png) <br> **-> O(n^2)**
+
 
 ~~~c++
 #include <iostream>

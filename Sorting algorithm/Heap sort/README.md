@@ -1,4 +1,15 @@
 # Heap sort
+Heapsort is a comparison-based sorting algorithm. Heapsort can be thought of as an improved selection sort because maxima or minima are looked for and then they are moved.
+
+## Process (ascending order)
+> 1. Max heapify
+> 2. Move the root which is the biggest value except sorted elements to the right in ascending order
+> 3. Repeat this process
+
+## Time complexity (Let the number of elements be N)
+> Heapifying : log(N)
+> N times of heapifying are needed in each iteration
+> log(N) + log(N-1) + log(N-2) + ... + log2 = O(NlogN)
 
 ~~~c++
 #include <iostream>
@@ -36,7 +47,7 @@ void heap_sort(vector<int>& heap_tree) {
 
 	for (int i = tree_size - 1; i > 0; i--) {
 		cout << "---Swap the root with index (" << i << ")\n"; // Show the process
-		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements in ascending order
+		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements to the right in ascending order
 		print_elements(heap_tree);
 
 		printf("---Max heapify up to index (%d)\n", i - 1); // Show the process

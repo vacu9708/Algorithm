@@ -8,12 +8,12 @@
 * Its speed is not influenced by how elements are arranged before sorting, in other words, in all cases the time complexity is **O(nlogn)**
 >Because of these strengths, merge sort runs stably in any situation.
 
-## Time complexity (N : the number of elements to sort)
+## Time complexity
 ![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
 
 >The way of calculating the time complexity of Merge sort is derives from the principle of calculating that of Binary search.<br>
 >In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials is cn * (L+1)<br>
->As written in [my binary search page](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search), L is log(n). 
+>As written in [my binary search page](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search), L is log(N). 
 >Therefore, the time complexity of merge sort is **O(nlogn)**
 
 ~~~c++

@@ -1,5 +1,5 @@
 # Dijikstra's algorithm
->Dijkstra's algorithm is an algorithm for finding the shortest paths between nodes in a graph, which may represent, for example, road networks.<br>
+>Dijkstra's algorithm is an algorithm for finding the shortest distances and paths between nodes in a graph, which may represent, for example, road networks.<br>
 >It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph.
 
 ## Working process

@@ -11,9 +11,10 @@ Merge sort is a comparison-based sorting algorithm which is one of the most effi
 ## Time complexity (N : the number of elements to sort)
 ![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
 
->The way of calculating the time complexity of Merge sort is derives from the principle of calculating that of Binary search that I already wrote in my page.
->In each recursive iteration, the number of elements halves. If the last level of the recursion tree is L, the total number of trials is (L+1) * cn 
->As written in the Binary search page, L is log(n). Therefore, the time complexity of Merge sort is **O(nlogn)**
+>The way of calculating the time complexity of Merge sort is derives from the principle of calculating that of Binary search.<br>
+>In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials is cn * (L+1)<br>
+>As written in [my binary search page](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search), L is log(n). 
+>Therefore, the time complexity of merge sort is **O(nlogn)**
 
 ~~~c++
 #include <iostream>

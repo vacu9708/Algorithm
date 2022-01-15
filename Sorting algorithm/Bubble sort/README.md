@@ -1,5 +1,5 @@
 # Bubble sort
-Bubble sort is simple to implement but is the slowest of sorting algorithms
+>Bubble sort is a sorting algorithm simple to implement but is the slowest of sorting algorithms
 
 ## Time complexity
 > N = the number of elements to sort.
@@ -9,6 +9,8 @@ Bubble sort is simple to implement but is the slowest of sorting algorithms
 > Time complexity : **O(n^2)**
 
 ## Working process
+>Stack numbers from the far right in ascending order
+
 ![image](https://user-images.githubusercontent.com/67142421/149490296-a057ecca-c8ec-44c6-b3fc-603a0dcd7031.png)
 
 ~~~c++

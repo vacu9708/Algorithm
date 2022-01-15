@@ -6,10 +6,11 @@ Heapsort is a comparison-based sorting algorithm. Heapsort can be thought of as 
 > 2. Move the root which is the biggest value except sorted elements to the right in ascending order
 > 3. Repeat this process
 
-## Time complexity (Let the number of elements be N)
-> Heapifying : log(N)
-> N times of heapifying are needed in each iteration
-> log(N) + log(N-1) + log(N-2) + ... + log2 = O(NlogN)
+## Time complexity
+* Let the number of elements be N
+* Heapifying : log(N)<br>
+>N times of heapifying are needed in each swap<br>
+>log(N) + log(N-1) + log(N-2) + ... + log2 = **O(NlogN)**
 
 ~~~c++
 #include <iostream>

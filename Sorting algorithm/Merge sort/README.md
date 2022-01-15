@@ -3,16 +3,17 @@ Merge sort is a comparison-based sorting algorithm which is one of the most effi
 
 ![image](https://user-images.githubusercontent.com/67142421/149567895-7ef189fb-abcd-4430-bf6a-5cef1dd9ea8f.png)
 
+## Characteristics
+* Merge sort is a stable sort, which means that the order of equal elements is maintain their original positions in the input and output.
+* Its speed is not influenced by how elements are arranged before sorting, in other words, in all cases the time complexity is **O(nlogn)**
+>Because of these strengths, merge sort runs stably in any situation.
+
 ## Time complexity (N : the number of elements to sort)
 ![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
 
 >The way of calculating the time complexity of Merge sort is derives from the principle of calculating that of Binary search that I already wrote in my page.
 >In each recursive iteration, the number of elements halves. If the last level of the recursion tree is L, the total number of trials is (L+1) * cn 
 >As written in the Binary search page, L is log(n). Therefore, the time complexity of Merge sort is **O(nlogn)**
-
-## Characteristics
-* Merge sort is a stable sort, which means that the order of equal elements is maintain their original positions in the input and output.
-* It is not influenced by how elements are arranged before sorting, in other words, in all cases the time complexity is **O(nlogn)**
 
 ~~~c++
 #include <iostream>

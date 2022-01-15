@@ -53,13 +53,13 @@ void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { 
 	//-----
 }
 
-void merge_sort(vector<int>& list, vector<int>& temp, int left, int right) {
+void divide_and_conquer(vector<int>& list, vector<int>& temp, int left, int right) {
 	if (left == right) // Termination condition(base case) of recursion
 		return;
 
 	int mid = (left + right) / 2;
-	merge_sort(list, temp, left, mid);
-	merge_sort(list, temp, mid + 1, right);
+	divide_and_conquer(list, temp, left, mid);
+	divide_and_conquer(list, temp, mid + 1, right);
 	sort(list, temp, left, mid, right);
 }
 
@@ -67,7 +67,7 @@ int main(void) {
 	vector<int> list = { 8,7,6,5,4,3,2,1 };
 	vector<int> temp(list.size()); // Essential for merge sort
 	printf("Elements to sort : "); print_elements(list);
-	merge_sort(list, temp, 0, list.size() - 1);
+	divide_and_conquer(list, temp, 0, list.size() - 1);
 }
 ~~~
 

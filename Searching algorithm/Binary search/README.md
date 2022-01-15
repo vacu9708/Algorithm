@@ -1,6 +1,6 @@
 # Binary search
-Binary search is an efficient algorithm for finding an item from a sorted list of items. 
-It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
+>Binary search is an efficient algorithm for finding an item from a sorted list of items.<br>
+>It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
 
 ## How it works
 ![image](https://user-images.githubusercontent.com/67142421/149464404-17ab5222-a2bd-4f2a-9d0f-5ddf522979bc.png)

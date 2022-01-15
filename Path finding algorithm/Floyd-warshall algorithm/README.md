@@ -1,5 +1,6 @@
 # Floyd-warshal algorithm
->Floyd warshal algorithm is for finding shortest paths like Dijikstra's algorithm. But in contrast to Dijikstra's algorithm, floyd-warshal algorithm finds all shortest distances and paths between every pair of vertices.
+>Floyd warshal algorithm is for finding shortest paths like Dijikstra's algorithm. But in contrast to Dijikstra's algorithm, floyd-warshal algorithm finds all shortest distances and paths between every pair of vertices.<br>
+>Weight table has information of the shortest distances.
 
 ~~~c++
 #include <iostream>

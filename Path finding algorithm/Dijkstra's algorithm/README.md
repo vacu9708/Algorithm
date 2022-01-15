@@ -10,23 +10,19 @@
 
 ~~~C++
 #include <iostream>
+#include <vector>
 #include <string>
 using namespace std;
 
 int INF = 987654321;
-const char GRAPH_SIZE = 10;
+const char GRAPH_SIZE = 9;
 
-//vector<vector<int>> graph(10);
-int graph[GRAPH_SIZE][GRAPH_SIZE]; // Adjacent matrix
+vector<vector<int>> graph(GRAPH_SIZE, vector<int>(GRAPH_SIZE)); // Adjacent matrix
+//int graph[GRAPH_SIZE][GRAPH_SIZE];
 
 void add_edge(int vertex1, int vertex2, int weight) {
 	graph[vertex1][vertex2] = weight;
 	graph[vertex2][vertex1] = weight;
-
-	/*if (vertex1 >= graph.size())
-		graph.resize(vertex1);
-	if (vertex2 >= graph[vertex1].size())
-		graph[vertex1].resize(vertex2);*/
 }
 
 int weight_table[GRAPH_SIZE];
@@ -70,7 +66,7 @@ void dijkstra(int start) {
 	//-----
 }
 
-void print_result(int start){
+void print_result(int start) {
 	cout << "Weight table : ";
 	for (int i = 0; i < GRAPH_SIZE; i++)
 		cout << weight_table[i] << " ";

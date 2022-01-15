@@ -19,35 +19,41 @@ void add_edge(int vertex1, int vertex2, int weight) {
 	graph[vertex2][vertex1] = weight;
 }
 
-void floyd_warshall() {
-	int weight_table[GRAPH_SIZE][GRAPH_SIZE];
-	list<int> shortest_paths[GRAPH_SIZE][GRAPH_SIZE];
+int weight_table[GRAPH_SIZE][GRAPH_SIZE];
+list<int> shortest_paths[GRAPH_SIZE][GRAPH_SIZE];
 
-	// Initialize the solution matrix and shortest paths.
+void floyd_warshall() {
+	// Initialize weight table and shortest paths.
 	for (int from = 0; from < GRAPH_SIZE; from++)
 		for (int to = 0; to < GRAPH_SIZE; to++) {
 			weight_table[from][to] = graph[from][to];
 			shortest_paths[from][to].push_back(from);
-			if (graph[from][to] != INF && graph[from][to] != 0)
+			if (from != to && graph[from][to] != INF)
 				shortest_paths[from][to].push_back(to);
 		}
-
+	//-----
 	// Update
 	for (int through = 0; through < GRAPH_SIZE; through++) // intermediate vertices
 		for (int from = 0; from < GRAPH_SIZE; from++) // source vertices
 			for (int to = 0; to < GRAPH_SIZE; to++) { // destination vertices
 				int weight_of_new_path = weight_table[from][through] + weight_table[through][to]; // new path
-				if (weight_of_new_path < weight_table[from][to]) { // Update if the new path is better than the old path
+				// Update if the new path is better than the old path
+				if (weight_of_new_path < weight_table[from][to]) {
 					weight_table[from][to] = weight_of_new_path;
-
+					// Update the shortest path
 					shortest_paths[from][to] = shortest_paths[from][through];
-					auto crawler = shortest_paths[through][to].begin(); crawler++;
+					auto crawler = shortest_paths[through][to].begin(); 
+					crawler++; // To exclude the overlapping vertex of "through"
 					for (auto i = crawler; i != shortest_paths[through][to].end(); i++)
 						shortest_paths[from][to].push_back(*i);
+					//-----
 				}
+				//-----
 			}
+	//-----
+}
 
-	// Print
+void print_result() {
 	printf("-----Weight table\n");
 	for (int i = 0; i < GRAPH_SIZE; i++) {
 		for (int j = 0; j < GRAPH_SIZE; j++)
@@ -64,8 +70,7 @@ void floyd_warshall() {
 			cout << "From " << from << " to " << to << " : ";
 			auto i = shortest_paths[from][to].begin();
 			while (true) {
-				cout << *i;
-				i++;
+				cout << *i; i++;
 				if (i != shortest_paths[from][to].end())
 					printf(" -> ");
 				else {
@@ -77,9 +82,11 @@ void floyd_warshall() {
 }
 
 int main() {
+	// Intialize the graph with infinity
 	for (int i = 0; i < GRAPH_SIZE; i++)
 		for (int j = 0; j < GRAPH_SIZE; j++)
 			i == j ? graph[i][j] = 0 : graph[i][j] = INF;
+	//-----
 
 	add_edge(0, 1, 5);
 	add_edge(1, 2, 5);
@@ -101,6 +108,7 @@ int main() {
 	add_edge(7, 6, 3);
 
 	floyd_warshall();
+	print_result();
 }
 ~~~
 

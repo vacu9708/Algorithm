@@ -20,7 +20,7 @@ void counting_sort() {
     //-----
     int* count = new int[max + 1]{ 0, };
 
-    for (int i = 0; i < length; i++) // Sort
+    for (int i = 0; i < length; i++) // Sort by counting the number of occurences of elements)
         count[arr[i]]++;
 
     for (int i = 0; i <= max; i++) // Print the result

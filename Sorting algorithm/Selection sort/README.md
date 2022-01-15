@@ -1,5 +1,9 @@
 # Selection sort
-Selection sort is a comparison sorting algorithm. It is faster than bubble sort and simple to implement.
+>Selection sort is a comparison sorting algorithm. It is faster than bubble sort and simple to implement.
+
+## Working process
+1. Look for the minimum
+2. Put the minimum from the far left.
 
 ## Time complexity (N : the number of elements)
 > (N-1) + (N-2) + (N-3) + ... + 1 -> the sum of arithmetic series : [(N-1){2(N-1) + (N-1-1) * -1}] / 2 = **O(n^2)**

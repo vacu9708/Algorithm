@@ -1,5 +1,5 @@
 # Heap sort
-Heapsort is a comparison-based sorting algorithm. Heapsort can be thought of as an improved selection sort because maxima or minima are looked for and then they are moved.
+Heapsort is a comparison-based sorting algorithm. Heapsort can be thought of as an improved selection sort in that maxima or minima are looked for and then they are moved like in selection sort.
 
 ## Process (ascending order)
 > 1. Max heapify

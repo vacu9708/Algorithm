@@ -1,5 +1,5 @@
 # Insertion sort
-* In the best case, insertion sort is very fast with the time complexity **O(n)**. It's a good algorithm to the extent of being used as part of other sorting algorithms.
+>It is a good sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.
 
 ## Time complexity
 * **Best case**

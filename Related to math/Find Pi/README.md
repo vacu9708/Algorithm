@@ -1,7 +1,8 @@
 # How to find the value of Pi
 
 ## Using integral
-Principle : The area of a circle whose radius is 1 is equal to pi. (Area of a circle = r^2 * pi)
+>Principle : The area of a circle whose radius is 1 is equal to pi. (Area of a circle = r^2 * pi)
+
 ![image](https://user-images.githubusercontent.com/67142421/149086756-188a218e-90b2-4221-a46c-bdf6eceed801.png)
 
 ### C++
@@ -50,7 +51,8 @@ print(f"Elapsed time : {time.time() - start}"
 
 ---
 ## Using monte-carlo method
-Principle : Find pi making use of the ratio of points that got into a circle inscribed in a square.
+>Finding pi by making use of the ratio of points that got into a circle inscribed in a square.
+
 ![image](https://user-images.githubusercontent.com/67142421/149093113-ddad47b1-4f85-460e-99d1-ad27870553c2.png)
 
 

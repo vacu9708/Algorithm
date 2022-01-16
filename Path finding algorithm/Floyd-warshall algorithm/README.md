@@ -27,6 +27,7 @@ void floyd_warshall() {
 	for (int from = 0; from < GRAPH_SIZE; from++)
 		for (int to = 0; to < GRAPH_SIZE; to++) {
 			weight_table[from][to] = graph[from][to];
+			
 			shortest_paths[from][to].push_back(from);
 			if (from != to && graph[from][to] != INF)
 				shortest_paths[from][to].push_back(to);

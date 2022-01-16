@@ -1,1 +1,1 @@
-설명 : https://techblog-history-younghunjo1.tistory.com/262 (Parent table이 실제 프로그램 진행과 달라서 페이지의 설명대로하면 작동안됨)
+설명 : https://techblog-history-younghunjo1.tistory.com/262 (Connection table이 실제 프로그램 진행과 달라서 페이지의 설명대로하면 작동안됨)

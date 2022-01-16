@@ -18,7 +18,7 @@ unsigned int INF = 987654321;
 const char GRAPH_SIZE = 10;
 
 vector<vector<int>> graph(GRAPH_SIZE, vector<int>(GRAPH_SIZE)); // Adjacent matrix
-//int graph[GRAPH_SIZE][GRAPH_SIZE];
+//int graph[GRAPH_SIZE][GRAPH_SIZE]; // The same as above
 
 void add_edge(int vertex1, int vertex2, int weight) {
 	graph[vertex1][vertex2] = weight;

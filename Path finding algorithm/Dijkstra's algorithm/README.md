@@ -54,14 +54,16 @@ void dijkstra(int start) {
 	for (int i = 0; i < GRAPH_SIZE; i++) {
 		int current_vertex = next_nearest_vertex();
 		already_shortest[current_vertex] = true;
-		for (int to = 0; to < GRAPH_SIZE; to++)
-			if (already_shortest[to] == false) {
-				int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
-				if (weight_of_new_path < weight_table[to]) { // Update weight table and shortest path if the new path is better than the old path
-					weight_table[to] = weight_of_new_path;
-					shortest_paths[to] = shortest_paths[current_vertex] + " -> " + to_string(to);
-				}
+		for (int to = 0; to < GRAPH_SIZE; to++) {
+			if (already_shortest[to] == true)
+				return;
+
+			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
+			if (weight_of_new_path < weight_table[to]) { // Update weight table and shortest path if the new path is better than the old path
+				weight_table[to] = weight_of_new_path;
+				shortest_paths[to] = shortest_paths[current_vertex] + " -> " + to_string(to);
 			}
+		}
 	}
 	//-----
 }

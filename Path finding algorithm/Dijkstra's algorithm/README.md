@@ -8,6 +8,7 @@
 ## Graph in this code
 ![Graph for dijikstra](https://user-images.githubusercontent.com/67142421/149639512-b50303aa-c579-45f6-9be7-21d48046626e.png)
 
+## Using adjacent matrix
 ~~~C++
 #include <iostream>
 #include <vector>
@@ -108,6 +109,118 @@ int main(void) {
 	print_result(start);
 }
 ~~~
+
+## Using adjacent list
+~~~c++
+#include <iostream>
+#include <vector>
+#include <string>
+using namespace std;
+
+unsigned int INF = 987654321;
+const char GRAPH_SIZE = 10;
+
+class Path {
+public:
+	unsigned int to;
+	unsigned int weight;
+	Path(unsigned int to, unsigned int weight) {
+		this->to = to;
+		this->weight = weight;
+	}
+};
+
+vector<vector<Path>> graph(GRAPH_SIZE); // Adjacent list
+
+void add_edge(int vertex1, int vertex2, int weight) {
+	graph[vertex1].push_back(Path(vertex2, weight));
+	graph[vertex2].push_back(Path(vertex1, weight));
+}
+
+vector<int> weight_table(GRAPH_SIZE, INF);
+bool already_shortest[GRAPH_SIZE]; // All the paths where already_shortest == true are shorter than paths where already_shortest == false.
+string shortest_paths[GRAPH_SIZE];
+
+int next_nearest_vertex() { // Find the best vertex to go that hasn't been visited (Can be more efficient by putting the weight table into a priority queue)
+	int min_weight = INF, vertex_to_visit = 0;
+	for (int i = 0; i < GRAPH_SIZE; i++)
+		if (already_shortest[i] == false && weight_table[i] < min_weight) {
+			min_weight = weight_table[i]; // Update current minimum
+			vertex_to_visit = i;
+		}
+
+	return vertex_to_visit;
+}
+
+void dijkstra(int start) {
+	// Initialize weights and shortest paths
+	already_shortest[start] = true;
+
+	for (int i = 0; i < graph[start].size(); i++){
+		weight_table[graph[start][i].to] = graph[start][i].weight;
+		shortest_paths[graph[start][i].to] = to_string(start) + " -> " + to_string(graph[start][i].to);
+	}
+	//-----
+	// Update. All the shortest paths from start vertex have to be found to know one shortest path.
+	for (int i = 0; i < GRAPH_SIZE; i++) {
+		int current_vertex = next_nearest_vertex();
+		already_shortest[current_vertex] = true;
+		for (int j = 0; j < graph[current_vertex].size(); j++) {
+			if (already_shortest[graph[current_vertex][j].to] == true)
+				continue;
+
+			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][j].weight; // new path
+			if (weight_of_new_path < weight_table[graph[current_vertex][j].to]) { // Update weight table and shortest path if the new path is better than the old path
+				weight_table[graph[current_vertex][j].to] = weight_of_new_path;
+				shortest_paths[graph[current_vertex][j].to] = shortest_paths[current_vertex] + " -> " + to_string(graph[current_vertex][j].to);
+			}
+		}
+	}
+	//-----
+}
+
+void print_result(int start) {
+	cout << "Weight table : ";
+	for (int i = 0; i < GRAPH_SIZE; i++)
+		cout << weight_table[i] << " ";
+
+	cout << "\n\n" << "-----Shortest paths" << "\n";
+	for (int to = 0; to < GRAPH_SIZE; to++)
+		if (start != to)
+			cout << "From " << start << " to " << to << " : " << shortest_paths[to] << "\n";
+}
+
+int main(void) {
+	add_edge(0, 1, 5);
+	add_edge(1, 2, 5);
+	add_edge(0, 2, 6);
+	add_edge(0, 9, 14);
+	add_edge(0, 8, 7);
+	add_edge(8, 9, 15);
+	add_edge(8, 7, 8);
+	add_edge(1, 3, 4);
+	add_edge(3, 2, 3);
+	add_edge(3, 4, 6);
+	add_edge(2, 4, 10);
+	add_edge(4, 5, 8);
+	add_edge(2, 5, 11);
+	add_edge(2, 9, 5);
+	add_edge(9, 5, 6);
+	add_edge(9, 6, 4);
+	add_edge(5, 6, 7);
+	add_edge(7, 6, 3);
+
+	int start = 0;
+	dijkstra(start);
+	print_result(start);
+}
+~~~
+
+## Using priority queue
+~~~c++
+
+~~~
+
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149639505-ae12585a-fa9c-41b6-a996-2a0d154a89d1.png)
 

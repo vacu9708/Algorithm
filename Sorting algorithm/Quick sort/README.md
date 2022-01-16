@@ -51,7 +51,7 @@ void quick_sort(vector<int>& container, int start, int end) { // Sorting in asce
             i++;
         //-----
         // Find an element smaller than pivot. Only elements bigger than or equal to pivot remain on the right of j.
-        while (j > start && container[j] >= container[start])
+        while (j > start + 1 && container[j] >= container[start])
             j--;
         //-----
         // container[i] is always bigger than container[j] when i is on the left of j, so they have to swapped 

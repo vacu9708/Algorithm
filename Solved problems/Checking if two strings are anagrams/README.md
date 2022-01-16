@@ -7,12 +7,12 @@ using namespace std;
 
 void is_anagram(string s1, string s2)
 {
-	bool done[111] = { 0, }; //To check if a letter has already been done
 	if (s1.length() != s2.length()) {
 		cout << "Result : not anagram(different length)";
 		return;
 	}
-
+	
+	bool done[111] = { 0, }; //To check if a letter has already been done
 	for (int i = 0; i < s1.length(); i++)
 		for (int j = 0; j < s2.length(); j++) {
 			if (done[j] == 1) // Skip if the letter's already done

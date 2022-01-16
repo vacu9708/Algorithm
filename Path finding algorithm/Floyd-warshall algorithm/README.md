@@ -21,7 +21,7 @@ void add_edge(int vertex1, int vertex2, int weight) {
 
 int weight_table[GRAPH_SIZE][GRAPH_SIZE];
 list<int> shortest_paths[GRAPH_SIZE][GRAPH_SIZE];
-//vector<vector<list<int>>> shortest_paths(GRAPH_SIZE, vector<list<int>>(GRAPH_SIZE));
+//vector<vector<list<int>>> shortest_paths(GRAPH_SIZE, vector<list<int>>(GRAPH_SIZE)); // The same as above
 
 void floyd_warshall() {
 	// Initialize weight table and shortest paths.

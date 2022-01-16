@@ -14,8 +14,8 @@
 #include <string>
 using namespace std;
 
-int INF = 987654321;
-const char GRAPH_SIZE = 9;
+unsigned int INF = 987654321;
+const char GRAPH_SIZE = 10;
 
 vector<vector<int>> graph(GRAPH_SIZE, vector<int>(GRAPH_SIZE)); // Adjacent matrix
 //int graph[GRAPH_SIZE][GRAPH_SIZE];

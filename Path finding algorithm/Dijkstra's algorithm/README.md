@@ -56,7 +56,7 @@ void dijkstra(int start) {
 		already_shortest[current_vertex] = true;
 		for (int to = 0; to < GRAPH_SIZE; to++) {
 			if (already_shortest[to] == true)
-				return;
+				continue;
 
 			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
 			if (weight_of_new_path < weight_table[to]) { // Update weight table and shortest path if the new path is better than the old path

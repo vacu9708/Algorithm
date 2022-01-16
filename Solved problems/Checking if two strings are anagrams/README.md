@@ -21,7 +21,7 @@ void is_anagram(string s1, string s2)
 				done[j] = 1;
 				break;
 			}
-			if (j >= s2.length() - 1) { // If it's the final index when both letters are diferent
+			if (j >= s2.length() - 1) { // If it's the final index and both letters are diferent, not anagram.
 				cout << "Result : not anagram ";
 				return;
 			}

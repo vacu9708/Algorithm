@@ -26,6 +26,7 @@ void is_anagram(string s1, string s2)
 				return;
 			}
 		}
+		
 	cout << "Result : They are anagrams";
 }
 

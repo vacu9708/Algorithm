@@ -45,7 +45,7 @@ void floyd_warshall() {
 					weight_table[from][to] = weight_of_new_path;
 					// Update the shortest path
 					shortest_paths[from][to] = shortest_paths[from][through];
-					shortest_paths[from][to].pop_back(); To exclude the overlapping vertex of "through"
+					shortest_paths[from][to].pop_back(); // To exclude the overlapping vertex of "through"
 					for (auto i = shortest_paths[through][to].begin(); i != shortest_paths[through][to].end(); i++)
 						shortest_paths[from][to].push_back(*i);
 					//-----

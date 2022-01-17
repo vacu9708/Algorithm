@@ -29,7 +29,7 @@ void sum_of_big_numbers(string num1, string num2) {
 		sum[calculation_index--] = (sum_of_a_digit % 10) + '0'; // plus '0' is equal to [int to ASCII];
 		carry = sum_of_a_digit / 10;
 	}
-	if (carry != 0) // If there's a remaining carry
+	if (carry != 0) // If there's a remaining carry, add it
 		sum[calculation_index--] = carry + '0';
 	//-----
 	// Print

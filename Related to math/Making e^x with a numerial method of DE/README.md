@@ -1,5 +1,7 @@
 # Making f(x) = e^x with a numerical method of differential equation
 
+![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
+
 ~~~c++
 #include<iostream>
 using namespace std;

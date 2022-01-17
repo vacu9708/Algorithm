@@ -104,7 +104,7 @@ public:
 		if (level == r) {
 			n_of_cases++;
 			for (int i = 0; i < r; i++)
-				printf("%c ", *(a_case + 1));
+				printf("%c ", *(a_case + i));
 			printf("/ Number of cases : %d\n", n_of_cases);
 			return;
 		}
@@ -156,4 +156,4 @@ int main() {
 ~~~
 
 ## Output (Arranging a set {a, b, c, d} when r = 3)
-![a](https://user-images.githubusercontent.com/67142421/149755657-81e3cf0c-1b4e-47f7-b2c4-125a4b02527c.png)
+![image](https://user-images.githubusercontent.com/67142421/149829768-1ee5598a-a045-4521-a626-5af6ff23c77d.png)

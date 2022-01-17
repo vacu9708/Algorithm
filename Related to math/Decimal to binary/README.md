@@ -9,7 +9,7 @@
 #include <string>
 using namespace std;
 
-void decimal_number_to_binary1(int decimal_number) { // // Using a string. The simpleste
+void decimal_number_to_binary1(int decimal_number) { // // Using a string. The simplest
     string binary = "";
     int a_digit = 0, how_many_one = 0;
     while (decimal_number > 0) {

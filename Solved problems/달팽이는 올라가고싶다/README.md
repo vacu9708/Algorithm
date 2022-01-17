@@ -30,5 +30,8 @@ distance_in_daytime, distance_at_night, height_of_tree = map(int, sys.stdin.read
 print(solution(distance_in_daytime, distance_at_night, height_of_tree))
 '''
 ~~~
+## Input
+distance_in_daytime, distance_at_night, height_of_tree
+
 ## Output
 Days taken to reach the top

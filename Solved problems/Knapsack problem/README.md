@@ -1,5 +1,5 @@
 # Knapsack problem
->A theif
+>A thief has a knapsack of given capacity, and he wishes to maximize the profit with available valuables. What should he do?
 
 # 0-1 knapsack problem (true or false cases, take or not)
 >Item boxes cannot be opened which means the items in them cannot be divided to put in the knapsack.<br>

@@ -209,4 +209,4 @@ int main() {
 ~~~
 
 ## Output
-![image](https://user-images.githubusercontent.com/67142421/149819634-0241057f-a988-4d75-b50b-6070ced6afa5.png)
+![image](https://user-images.githubusercontent.com/67142421/149819785-fc363e2c-9644-4670-b20e-cf2b6d5a8055.png)

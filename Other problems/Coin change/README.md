@@ -70,7 +70,8 @@ int main() {
 ## Output
 ![image](https://user-images.githubusercontent.com/67142421/149828518-619a0090-676e-43ac-bcd4-05c58bd9676e.png)
 
-## Only finding the minimum number of coins needed to make target money without finding what coins are used
+## Dynamic programming(the fastest)
+>Only finding the minimum number of coins needed to make target money without finding what coins are used
 
 ~~~c++
 // Finding the minimum number of coins needed to make target money

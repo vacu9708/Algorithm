@@ -1,4 +1,6 @@
 # Adding very large numbers
+>Very large numbers can't be calculated in a normal way because the size of variable types is limited.
+>They can be calculated by using string containers.
 
 ~~~c++
 #include <iostream>

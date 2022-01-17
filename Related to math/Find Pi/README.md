@@ -50,7 +50,7 @@ print(f"Elapsed time : {time.time() - start}"
 ![Untitled](https://user-images.githubusercontent.com/67142421/149087590-95170557-b07f-4e71-8c18-3549582e7030.png)
 
 ---
-## Using monte-carlo method
+## Using Monte-Carlo method
 >Finding pi by making use of the ratio of points that got into a circle inscribed in a square.
 
 ![image](https://user-images.githubusercontent.com/67142421/149093113-ddad47b1-4f85-460e-99d1-ad27870553c2.png)

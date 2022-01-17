@@ -1,4 +1,4 @@
-// Finding the minimum number of coins needed to make target_money
+// Finding the minimum number of coins needed to make target money
 // Dynamic programming (The solution is always the most efficient)
 
 #include <iostream>

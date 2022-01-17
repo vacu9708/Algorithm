@@ -156,10 +156,4 @@ int main() {
 ~~~
 
 ## Output (Arranging a set {a, b, c, d} when r = 3)
-
-![Untitled](https://user-images.githubusercontent.com/67142421/149171691-ab7b9964-9d40-452f-8b23-a05a0bddf0ac.png)
-
-![Untitled](https://user-images.githubusercontent.com/67142421/149171860-5d313925-2cc4-4238-b230-203a09e0dfbd.png)
-
-![Untitled](https://user-images.githubusercontent.com/67142421/149171934-93f9e640-2411-4c44-a7c4-696a14820acc.png)
-
+![a](https://user-images.githubusercontent.com/67142421/149755657-81e3cf0c-1b4e-47f7-b2c4-125a4b02527c.png)

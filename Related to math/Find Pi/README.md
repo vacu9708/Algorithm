@@ -55,7 +55,6 @@ print(f"Elapsed time : {time.time() - start}"
 
 ![image](https://user-images.githubusercontent.com/67142421/149093113-ddad47b1-4f85-460e-99d1-ad27870553c2.png)
 
-
 ~~~c++
 #include <iostream>
 #include <random>
@@ -71,8 +70,8 @@ double random_real_number(double min, double max) {
 }
 
 void pi_using_monte_carlo() {
-	double n_of_points_in_circle = 0, x = 0, y = 0;
-	for (int i = 0; i < 654321; i++) {
+	double n_of_points = 54321, n_of_points_in_circle = 0, x = 0, y = 0;
+	for (int i = 0; i < n_of_points; i++) {
 		x = random_real_number(-1, 1);
 		y = random_real_number(-1, 1);
 
@@ -80,7 +79,7 @@ void pi_using_monte_carlo() {
 			n_of_points_in_circle++;
 	}
 
-	printf("%.20lf\n", (n_of_points_in_circle / 654321) * 4); // Because the area of the square is 4
+	printf("%.20lf\n", (n_of_points_in_circle / n_of_points) * 4); // Because the area of the square is 4
 }
 
 int main() {
@@ -93,4 +92,4 @@ int main() {
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149089208-e8d964c8-2e57-4e0e-9cab-a6155b45d721.png)
 
-Here we can see that Monte-carlo method is more ineffective than the way using integral when finding Pi
+Here we can see that Monte-Carlo method is more inefficient than the way using integral when finding Pi

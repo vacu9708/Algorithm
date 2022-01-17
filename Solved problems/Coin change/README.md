@@ -139,5 +139,5 @@ int main() {
 }
 ~~~
 
-## Output (Target money : 15, coins = {5, 2}
+## Output (Target money : 15, coins = {5, 2})
 3

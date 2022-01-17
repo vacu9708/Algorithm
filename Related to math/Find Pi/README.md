@@ -79,7 +79,7 @@ void pi_using_monte_carlo() {
 			n_of_points_in_circle++;
 	}
 
-	printf("%.20lf\n", (n_of_points_in_circle / n_of_points) * 4); // Because the area of the square is 4
+	printf("%.20lf\n", (n_of_points_in_circle / n_of_points) * 4); // Because the area of the square that inscribes the circle is 4
 }
 
 int main() {

@@ -72,10 +72,9 @@ void print_result() {
 			cout << "From " << from << " to " << to << " : ";
 			auto i = shortest_paths[from][to].begin();
 			while (true) {
-				cout << *i;
+				cout << *i; i++;
 				if (i != shortest_paths[from][to].end()){
 					printf(" -> ");
-					i++;
 				}
 				else {
 					printf("\n");

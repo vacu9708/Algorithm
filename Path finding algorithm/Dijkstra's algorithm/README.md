@@ -216,11 +216,5 @@ int main(void) {
 }
 ~~~
 
-## Using priority queue
-~~~c++
-
-~~~
-
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149639505-ae12585a-fa9c-41b6-a996-2a0d154a89d1.png)
-

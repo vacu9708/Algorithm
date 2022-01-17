@@ -60,10 +60,12 @@ void dijkstra(int start) {
 				continue;
 
 			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
-			if (weight_of_new_path < weight_table[to]) { // Update weight table and shortest path if the new path is better than the old path
+			// Update weight table and shortest path if the new path is better than the old path
+			if (weight_of_new_path < weight_table[to]) {
 				weight_table[to] = weight_of_new_path;
 				shortest_paths[to] = shortest_paths[current_vertex] + " -> " + to_string(to);
 			}
+			//-----
 		}
 	}
 	//-----
@@ -170,10 +172,12 @@ void dijkstra(int start) {
 				continue;
 
 			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][j].weight; // new path
-			if (weight_of_new_path < weight_table[graph[current_vertex][j].to]) { // Update weight table and shortest path if the new path is better than the old path
+			// Update weight table and shortest path if the new path is better than the old path
+			if (weight_of_new_path < weight_table[graph[current_vertex][j].to]) {
 				weight_table[graph[current_vertex][j].to] = weight_of_new_path;
 				shortest_paths[graph[current_vertex][j].to] = shortest_paths[current_vertex] + " -> " + to_string(graph[current_vertex][j].to);
 			}
+			//-----
 		}
 	}
 	//-----
@@ -216,11 +220,5 @@ int main(void) {
 }
 ~~~
 
-## Using priority queue
-~~~c++
-
-~~~
-
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149639505-ae12585a-fa9c-41b6-a996-2a0d154a89d1.png)
-

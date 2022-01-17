@@ -1,13 +1,21 @@
-직각삼각형
+# Drawing shapes with loops
+
+## Right-angled triangle
+~~~c++
 void right_triangle(int n){
-	for(int i=0;i<5;i++){
+	for(int i=0; i<n; i++){
 		for(int j=0; j<i+1; j++) 
  	   		printf("*");
 	printf("\n");
 	}
 }
+~~~
+## Output
+![Untitled](https://user-images.githubusercontent.com/67142421/149676026-e54bac3d-b9f5-4ea2-9fa5-558078234def.png)
 
-역 직각삼각형
+
+## Inverted right-angled triangle
+~~~c++
 void inverted_right_triangle(int n){
 	for(int i=0; i<n; i++){
 		for(int j=0; j<n-i; j++) 
@@ -15,8 +23,12 @@ void inverted_right_triangle(int n){
 	printf("\n");
 	}
 }
+~~~
+## Output
+![image](https://user-images.githubusercontent.com/67142421/149676047-2cff333a-6b81-4af1-8810-63ee771f3a16.png)
 
-피라미드
+## Pyramid
+~~~c++
 void pyramid(int n){
 	for(int i=0; i<n; i+=1){
 		for(int j=0; j<n-i-1; j++)
@@ -26,8 +38,12 @@ void pyramid(int n){
 		printf("\n");
 	}
 }
+~~~
+## Output
+![image](https://user-images.githubusercontent.com/67142421/149676064-de9b024f-3af3-410d-95c5-24355f81b6c9.png)
 
-역피라미드
+## Inverted pyramid
+~~~c++
 void inverted_pyramid(int n){
 	for(int i=0; i<n; i++){
 		for(int j=0; j<i; j++)
@@ -37,15 +53,20 @@ void inverted_pyramid(int n){
 		printf("\n");
 	}
 }
+~~~
+## Output
+![image](https://user-images.githubusercontent.com/67142421/149676095-c210a9c5-7534-458b-8ea6-09d23ca833a5.png)
 
-다이아몬드
+
+## Diamond
+~~~c++
 for(int i=0; i<5; i++){
 	for(int j=0; j<4-i; j++) 
 		printf(" ");
 	for(int j=0; j<i*2+1; j++)
 		printf("*");
 	printf("\n");
-}    
+}
     
 for(int i=0; i<4; i++){
 	for(int j=0; j<i+1; j++)
@@ -54,8 +75,10 @@ for(int i=0; i<4; i++){
 		printf("*");
 	printf("\n");
 }
+~~~
 
-모래시계
+## sandglass
+~~~c++
 for(int i=0; i<5; i++){
 	for(int j=0; j<i; j++)
 		printf(" ");
@@ -71,3 +94,4 @@ for(int i=0; i<4; i++){
 		printf("*");
 	printf("\n");
 }
+~~~

@@ -1,3 +1,8 @@
+# 수포자
+
+![Problem](https://user-images.githubusercontent.com/67142421/149675796-cdeb06d8-73fb-4140-9da0-bd80a985b86c.png)
+
+~~~c++
 #include <iostream>
 #include <list>
 #include <vector>
@@ -34,3 +39,6 @@ int main() {
 	list<int> winner;
 	solution(answers, winner);
 }
+~~~
+## Output
+1

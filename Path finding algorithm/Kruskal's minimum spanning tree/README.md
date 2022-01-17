@@ -43,7 +43,9 @@ int get_parent(int vertex) {
 		return vertex;
 	
 	get_parent(connection_table[vertex]);
-	// return connection_table[vertex] = get_parent(connection_table[vertex]); // Also possible instead of get_parent(connection_table[vertex]);
+	// Also possible instead of get_parent(connection_table[vertex]);
+	return connection_table[vertex] = get_parent(connection_table[vertex]);
+	//-----
 }
 
 bool is_cycle_made(int parent1, int parent2) { // Check if a cycle is made by checking if the 2 vertices have the same parent.

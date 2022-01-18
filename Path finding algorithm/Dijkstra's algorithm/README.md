@@ -44,6 +44,8 @@ int next_nearest_vertex() { // Find the best vertex to go that hasn't been visit
 void dijkstra(int start) {
 	// Initialize weights and shortest paths
 	already_shortest[start] = true;
+	weight_table[start] = 0;
+	
 	for (int to = 0; to < GRAPH_SIZE; to++) {
 		weight_table[to] = graph[start][to];
 

@@ -8,7 +8,7 @@
 ## Graph in this code
 ![Graph for dijikstra](https://user-images.githubusercontent.com/67142421/149639512-b50303aa-c579-45f6-9be7-21d48046626e.png)
 
-## Using adjacent matrix
+## Using adjacent matrix (The most ineffective)
 ~~~C++
 #include <iostream>
 #include <vector>

@@ -1,10 +1,10 @@
 # Quick sort
->Quick sort is the most effective sorting algorithm that takes **O(nlog(n)) time** on average.<br>
+>Quick sort is the most effective sorting algorithm that takes **nlog(n) time** on average.<br>
 >It is one of *Divide and conquer* algorithms.
 
 ## Characteristics
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
-* In the worst case where the worst pivot is selected, **O(n^2)** time might be taken. This problem can be solved by using a random pivot.
+* In the worst case where the worst pivot is selected, **O(n^2)** time might be taken. But its possibility is very low and this problem can be solved by using a random pivot.
 * A list is divided into sublists and they are sorted. This process is repeated. 
 * There are only elements smaller than or equal to pivot on the left of a dividing index and only elements bigger than or equal to pivot on the right of a dividng index.
 

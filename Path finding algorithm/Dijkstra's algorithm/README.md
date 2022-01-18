@@ -256,7 +256,6 @@ bool already_shortest[GRAPH_SIZE]; // All the paths where already_shortest == tr
 string shortest_paths[GRAPH_SIZE];
 
 void dijkstra(int start) {
-	int count = 0;
 	// Initialize weights and shortest paths
 	weight_table[start] = 0;
 	shortest_paths[start] = to_string(start);

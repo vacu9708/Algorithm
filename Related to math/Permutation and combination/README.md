@@ -65,7 +65,7 @@ public:
 	}
 };
 //-----
-//Combination_without_repetition
+//-----Combination_without_repetition
 class Combination_without_repetition {
 	int n_of_cases = 0;
 	char* a_case = new char[r];

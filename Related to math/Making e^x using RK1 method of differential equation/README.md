@@ -47,7 +47,7 @@ void e_to_the_x_without_arrays(int target_x) { // RK1
 
 int main() {
     int x = 5;
-    printf("The function value of e^x on x = %d\n", x);
+    printf("e^x at x = %d\n", x);
     e_to_the_x(x);
     e_to_the_x_without_arrays(x);
 }

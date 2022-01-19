@@ -1,7 +1,8 @@
 # Making e^x using Euler's method of differential equation
 ![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
 
-### RK1 method
+### Euler's method(RK1)
+>Euler's method(RK1) : A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>
 ![image](https://user-images.githubusercontent.com/67142421/150194690-5656e5cd-6411-4e41-97f2-f07142c0e727.png)
 
 ~~~c++

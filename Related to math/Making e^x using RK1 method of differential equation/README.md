@@ -17,7 +17,7 @@ int dy_dx_function(int x, int y) {
     return y; // = dy/dx
 }
 
-void e_to_the_x(int target_x) {
+void e_to_the_x(int target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
 
@@ -31,7 +31,7 @@ void e_to_the_x(int target_x) {
     cout << "x = " << x_points[i] << " y = " << y_points[i] << " dy/dx = " << dy_dxs[i] << endl;
 }
 
-void e_to_the_x_without_arrays(int target_x) {
+void e_to_the_x_without_arrays(int target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1, dy_dx = 1;

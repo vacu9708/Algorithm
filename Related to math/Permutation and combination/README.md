@@ -6,7 +6,8 @@ using namespace std;
 
 char set[] = { 'a','b','c','d' };
 int r = 3; // the number of elements to arrange
- 
+
+//-----Permutation_without_repetition
 class Permutation_without_repetition {
 	char* a_case = new char[r];
 	int n_of_cases = 0; // number of cases
@@ -36,7 +37,8 @@ public:
 			}
 	}
 };
-
+//-----
+//-----Permutation_with_repetition
 class Permutation_with_repetition {
 	int n_of_cases = 0;
 	char* a_case = new char[r];
@@ -62,7 +64,8 @@ public:
 		}
 	}
 };
-
+//-----
+//Combination_without_repetition
 class Combination_without_repetition {
 	int n_of_cases = 0;
 	char* a_case = new char[r];
@@ -88,8 +91,8 @@ public:
 		}
 	}
 };
-
-
+//-----
+//-----Combination_with_repetition
 class Combination_with_repetition {
 	int n_of_cases = 0;
 	char* a_case = new char[r];
@@ -115,6 +118,7 @@ public:
 		}
 	}
 };
+//-----
 
 /* A list can be used to print cases like this instead of an array.
 class Combination_without_repetition {

@@ -17,7 +17,7 @@ double dy_dx_function(double x, double y) {
     return y; // = dy/dx
 }
 
-void e_to_the_x(double target_x) { // RK1
+void e_to_the_x_RK1_with_arrays(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
 
@@ -31,7 +31,7 @@ void e_to_the_x(double target_x) { // RK1
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x_points[i], y_points[i], dy_dxs[i]);
 }
 
-void e_to_the_x_without_arrays(double target_x) { // RK1
+void e_to_the_x_RK1(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1, dy_dx = dy_dx_function(x, y);
@@ -48,8 +48,7 @@ void e_to_the_x_without_arrays(double target_x) { // RK1
 int main() {
     int x = 5;
     printf("e^x at x = %d\n", x);
-    e_to_the_x(x);
-    e_to_the_x_without_arrays(x);
+    e_to_the_x_RK1(x);
 }
 ~~~
 ## Output

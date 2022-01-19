@@ -3,7 +3,8 @@
 
 ### 4th order Runge-Kutta (RK4) 
 >4th order Runge-Kutta (RK4) : The most practical and useful method to solve an ordinary differential equation, which finds 4 slopes and uses the average of them to find
->a change in a y point.
+>a change in a y point.<br>
+>The error of this method is proportional to the step size to the power of 4, which means reducing the step size to half decreases the error by about 16 times. 
 
 ![image](https://user-images.githubusercontent.com/67142421/150205501-f7e0c899-69ba-4212-9d07-3406762d7261.png)
 

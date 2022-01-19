@@ -11,7 +11,11 @@ using namespace std;
 
 double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
-double dy_dx[9876543]{ 1 };
+double dy_dxs[9876543]{1};
+
+int dy_dx_function(int x, int y) {
+    return y; // = dy/dx
+}
 
 void e_to_the_x(int target_x) {
     double compensation_for_x_step = 98765;
@@ -19,12 +23,12 @@ void e_to_the_x(int target_x) {
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x_points[i + 1] = x_points[i] + x_step;
-        y_points[i + 1] = y_points[i] + dy_dx[i] * x_step; // y_points[i+1] is equal to y_points[i] + change in y
-        dy_dx[i + 1] = y_points[i + 1]; // The solution of this differential equation(dy/dx = y) is y=e^x. (using separation of variables method)
+        y_points[i + 1] = y_points[i] + dy_dxs[i] * x_step; // y_points[i+1] is equal to y_points[i] + change in y
+        dy_dxs[i + 1] = dy_dx_function(x_points[i + 1], y_points[i + 1]); // The solution of this differential equation(dy/dx = y) is y=e^x. (using separation of variables method)
     }
 
     int i = target_x * compensation_for_x_step;
-    cout << "x = " << x_points[i] << " y = " << y_points[i] << " dy/dx = " << dy_dx[i] << endl;
+    cout << "x = " << x_points[i] << " y = " << y_points[i] << " dy/dx = " << dy_dxs[i] << endl;
 }
 
 void e_to_the_x_without_arrays(int target_x) {
@@ -35,7 +39,7 @@ void e_to_the_x_without_arrays(int target_x) {
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x = x + x_step;
         y = y + dy_dx * x_step;
-        dy_dx = y;
+        dy_dx = dy_dx_function(x, y);
     }
 
     printf("x = %lf, y = %lf, dy/dx = %lf\n", x, y, dy_dx);

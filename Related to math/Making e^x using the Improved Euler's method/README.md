@@ -27,7 +27,7 @@ void e_to_the_x_RK2(double target_x) { // RK2
         k2 = dy_dx_function(x + x_step, y + x_step * k1);
     }
 
-    printf("x = %lf, y = %.10lf, dy/dx = %lf\n", x, y, k1);
+    printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, k1);
 }
 
 int main() {

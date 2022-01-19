@@ -4,7 +4,6 @@
 
 ## Characteristics
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
-* In the worst case where the worst pivot is selected, **O(n^2)** time might be taken. But its possibility is very low and this problem can be solved by using a random pivot.
 * A list is divided into sublists and they are sorted. This process is repeated. 
 * There are only elements smaller than or equal to pivot on the left of a dividing index and only elements bigger than or equal to pivot on the right of a dividng index.
 
@@ -13,8 +12,19 @@
 2. "i" starts searching for elements bigger than the pivot from the first index and "j" starts searching for elements smaller than the pivot from the last index.
    All the elements of "i" bigger than the pivot and all the elements of "j" smaller than the pivot are swapped
    In this process, only elements smaller than or equal to pivot remain on the left of "i" and only elements bigger than or equal to the pivot remain on the right of "j"
-3. Once "i" is not on the left of "j", swap "j", which is smaller than or equal to the pivot, and the start index(which is a pivot) 
+3. Once "i" is not on the left of "j", swap "j", which is smaller than or equal to the pivot, and the start index(which is a pivot)
    because "j" is going to be a dividing index and there have to be only elements smaller than the dividing number on the left of it.
+
+## The worst case where O(n^2) is taken
+>If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** time might be taken.<br>
+>But this situation occurs only when elements are already sorted in either ascending or descending order(and when a random pivot is not used), which is a very low possibility. Most of the time we have to sort elements not sorted, not already sorted elements.<br>
+>Also, this problem can be solved by using a random pivot.
+### Example
+>There are sorted elements {1,2,3,4,5}(n = 5). What will happen if only the minimum is selected as a pivot?<br>
+>Let's pick the minimum 1 as a pivot. "i" can pass only elements smaller than or equal to 1 and "j" can pass only elements bigger than or equal to 1.<br>
+>In the end, "j" will get to the pivot and one iteration will be finished, where 5 iterations were performed. And then, the minimum in the next sublist, 2 is selected
+>as a pivot and the same process is performed(n-1 times of iteration will be performed).<br>
+>(n-1) + (n-2) + (n-3) + ... + 1 = **O(n^2)**
 
 ~~~c++
 #include <iostream>

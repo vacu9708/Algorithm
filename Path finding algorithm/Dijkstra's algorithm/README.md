@@ -242,7 +242,7 @@ if (already_shortest[current_vertex] == true) // If the path is already the shor
 #include <queue>
 using namespace std;
 
-#define INF 987654321
+const unsigned int INF = 987654321;
 const char GRAPH_SIZE = 10;
 
 class Path {

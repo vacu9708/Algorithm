@@ -1,4 +1,4 @@
-# Making e^x using Runge-Kutta method
+# Making e^x using Runge-Kutta method(RK4)
 ![image](https://user-images.githubusercontent.com/67142421/150205521-0650b5f3-b837-4e23-a65e-389afa208193.png)
 
 ### 4th order Runge-Kutta (RK4) 

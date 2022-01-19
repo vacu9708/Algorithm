@@ -1,4 +1,4 @@
-# Making e^x using RK1 method of differential equation
+# Making e^x using Euler's method of differential equation
 ![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
 
 ### RK1 method

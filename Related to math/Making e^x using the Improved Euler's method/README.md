@@ -10,14 +10,14 @@
 #include <iostream>
 using namespace std;
 
-int dy_dx_function(int x, int y) {
+double dy_dx_function(double x, double y) {
     return y; // = dy/dx
 }
 
-void e_to_the_x_RK2(int target_x) {
+void e_to_the_x_RK2(double target_x) { // RK2
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1; // initial x and y
+    double x = 0, y = 1;
     double k1 = dy_dx_function(x, y), k2 = dy_dx_function(x + x_step, y + x_step * k1); // two slopes
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
@@ -27,14 +27,8 @@ void e_to_the_x_RK2(int target_x) {
         k2 = dy_dx_function(x + x_step, y + x_step * k1);
     }
 
-    printf("x = %lf, y = %lf, dy/dx = %lf\n", x, y, k1);
-}
-
-int main() {
-    int x = 5;
-    printf("e^x at x = %d\n", x);
-    e_to_the_x_RK2(x);
+    printf("x = %lf, y = %.10lf, dy/dx = %lf\n", x, y, k1);
 }
 ~~~
 ## Output
-![image](https://user-images.githubusercontent.com/67142421/150201459-2a278e3c-8501-432f-b834-de16d6136575.png)
+![image](https://user-images.githubusercontent.com/67142421/150207209-9c37d21d-28d9-4dd7-8f92-6d720b44bd9b.png)

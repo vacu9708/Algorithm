@@ -222,7 +222,7 @@ int main(void) {
 >In the methods used above, linear search is used to find current_vertex, which takes **O(n^2)**.<br>
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
 
-### Code to skip old paths in the priority queue
+### Code to skip old paths that are in the priority queue
 ~~~c++
 if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
 			continue;
@@ -230,8 +230,9 @@ if (already_shortest[current_vertex] == true) // If the path is already the shor
 		//if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
 			//continue;
 ~~~
-### Example picture of this case. The old path is skipped in the last procedure.
-![image](https://user-images.githubusercontent.com/67142421/150092462-c62fb5ae-f52e-409a-a1da-782e18e4b236.png)
+### Example picture of this case
+>The old path to vertex 3 that is in the priority queue is skipped in the last procedure.
+![image](https://user-images.githubusercontent.com/67142421/150093837-b1494e8a-0e5f-4473-bb7c-83887a4d8877.png)
 
 ---
 ~~~c++

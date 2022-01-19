@@ -14,7 +14,7 @@ int dy_dx_function(int x, int y) {
     return y; // = dy/dx
 }
 
-void e_to_the_x(int target_x) { // RK2
+void e_to_the_x_RK2(int target_x) {
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1; // initial x and y
@@ -33,7 +33,7 @@ void e_to_the_x(int target_x) { // RK2
 int main() {
     int x = 5;
     printf("e^x at x = %d\n", x);
-    e_to_the_x(x);
+    e_to_the_x_RK2(x);
 }
 ~~~
 ## Output

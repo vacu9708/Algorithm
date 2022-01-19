@@ -10,6 +10,7 @@ using namespace std;
 double x_points[10000001] = { 0 };
 double y_points[10000001] = { 1 };
 double dy_dx[10000001] = { 1 };
+//-----
 void e_to_the_x(int x) {
     double x_step = 0.000001;
 

@@ -231,7 +231,7 @@ if (already_shortest[current_vertex] == true) // If the path is already the shor
 			//continue;
 ~~~
 ### Example picture of this case
->The old path to vertex 3 that is in the priority queue is skipped in the last procedure.
+>The old path to vertex 3 that is in the priority queue is skipped in the last procedure.<br>
 ![image](https://user-images.githubusercontent.com/67142421/150093837-b1494e8a-0e5f-4473-bb7c-83887a4d8877.png)
 
 ---

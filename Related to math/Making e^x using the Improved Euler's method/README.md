@@ -28,6 +28,12 @@ void e_to_the_x_RK2(double target_x) { // RK2
 
     printf("x = %lf, y = %.10lf, dy/dx = %lf\n", x, y, k1);
 }
+
+int main() {
+    int x = 5;
+    printf("e^x at x = %d\n", x);
+    e_to_the_x_RK2(x);
+}
 ~~~
 ## Output
-![image](https://user-images.githubusercontent.com/67142421/150207209-9c37d21d-28d9-4dd7-8f92-6d720b44bd9b.png)
+![image](https://user-images.githubusercontent.com/67142421/150208208-a07f6bd3-11a5-4a36-b822-c5bfa79b10f5.png)

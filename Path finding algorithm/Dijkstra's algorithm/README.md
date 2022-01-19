@@ -221,6 +221,18 @@ int main(void) {
 ## Using priority queue(This is the most effective and useful)
 >In the methods used above, linear search is used to find current_vertex, which takes **O(n^2)**.<br>
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
+
+### Code to skip old paths in the priority queue
+~~~c++
+if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
+			continue;
+		already_shortest[current_vertex] = true;
+		//if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
+			//continue;
+~~~
+### Example picture of this case. The old path is skipped in the last procedure.
+![image](https://user-images.githubusercontent.com/67142421/150092462-c62fb5ae-f52e-409a-a1da-782e18e4b236.png)
+
 ~~~c++
 #include <iostream>
 #include <vector>
@@ -268,11 +280,13 @@ void dijkstra(int start) {
 		int current_vertex = pq.top().to;
 		int current_weight = pq.top().weight;
 		pq.pop();
+		// Code to skip old paths in the priority queue
 		if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
 			continue;
 		already_shortest[current_vertex] = true;
 		//if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
 			//continue;
+		//-----
 		
 		for (int i = 0; i < graph[current_vertex].size(); i++) {
 			if (already_shortest[graph[current_vertex][i].to] == true) // If the path is already the shortest path, continue

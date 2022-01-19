@@ -11,7 +11,7 @@ using namespace std;
 
 double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
-double dy_dxs[9876543]{1};
+double dy_dxs[9876543]{ 1 };
 
 int dy_dx_function(int x, int y) {
     return y; // = dy/dx
@@ -34,7 +34,7 @@ void e_to_the_x(int target_x) { // RK1
 void e_to_the_x_without_arrays(int target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1, dy_dx = 1;
+    double x = 0, y = 1, dy_dx = dy_dx_function(x, y);
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x = x + x_step;

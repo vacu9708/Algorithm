@@ -53,4 +53,4 @@ int main() {
 }
 ~~~
 ## Output
-![image](https://user-images.githubusercontent.com/67142421/150188873-5f5c926d-f25b-47cb-a7ae-a5dc69ac5947.png)
+![image](https://user-images.githubusercontent.com/67142421/150201155-055212a9-7429-4b4e-b78c-c696e9bd931c.png)

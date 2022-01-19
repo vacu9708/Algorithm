@@ -233,6 +233,7 @@ if (already_shortest[current_vertex] == true) // If the path is already the shor
 ### Example picture of this case. The old path is skipped in the last procedure.
 ![image](https://user-images.githubusercontent.com/67142421/150092462-c62fb5ae-f52e-409a-a1da-782e18e4b236.png)
 
+---
 ~~~c++
 #include <iostream>
 #include <vector>

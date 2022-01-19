@@ -219,7 +219,7 @@ int main(void) {
 ~~~
 
 ## Using priority queue(This is the most effective and useful)
->In the methods used above, linear search is used to find current_vertex, which takes **O(n^2)**.<br>
+>In the methods used above, linear search is performed to find current_vertex, which takes **O(n^2)**.<br>
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
 
 ### Code to skip old paths that are in the priority queue

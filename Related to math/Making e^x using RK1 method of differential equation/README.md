@@ -4,7 +4,6 @@
 ### RK1 method
 ![image](https://user-images.githubusercontent.com/67142421/150194690-5656e5cd-6411-4e41-97f2-f07142c0e727.png)
 
-
 ~~~c++
 #include <iostream>
 using namespace std;
@@ -13,11 +12,11 @@ double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
 double dy_dxs[9876543]{ 1 };
 
-int dy_dx_function(int x, int y) {
+double dy_dx_function(double x, double y) {
     return y; // = dy/dx
 }
 
-void e_to_the_x(int target_x) { // RK1
+void e_to_the_x(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
 
@@ -28,10 +27,10 @@ void e_to_the_x(int target_x) { // RK1
     }
 
     int i = target_x * compensation_for_x_step;
-    cout << "x = " << x_points[i] << " y = " << y_points[i] << " dy/dx = " << dy_dxs[i] << endl;
+    printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x_points[i], y_points[i], dy_dxs[i]);
 }
 
-void e_to_the_x_without_arrays(int target_x) { // RK1
+void e_to_the_x_without_arrays(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1, dy_dx = dy_dx_function(x, y);
@@ -42,7 +41,7 @@ void e_to_the_x_without_arrays(int target_x) { // RK1
         dy_dx = dy_dx_function(x, y);
     }
 
-    printf("x = %lf, y = %lf, dy/dx = %lf\n", x, y, dy_dx);
+    printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, dy_dx);
 }
 
 int main() {
@@ -53,4 +52,4 @@ int main() {
 }
 ~~~
 ## Output
-![image](https://user-images.githubusercontent.com/67142421/150201155-055212a9-7429-4b4e-b78c-c696e9bd931c.png)
+![image](https://user-images.githubusercontent.com/67142421/150207611-e7d93bfb-fde7-4ba7-b296-0ef40250864e.png)

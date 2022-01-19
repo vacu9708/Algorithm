@@ -1,4 +1,4 @@
-# Making f(x) = e^x with a numerical method of differential equation
+# Making e^x using RK1 method of differential equation
 
 ### RK1 method
 ![image](https://user-images.githubusercontent.com/67142421/150194690-5656e5cd-6411-4e41-97f2-f07142c0e727.png)

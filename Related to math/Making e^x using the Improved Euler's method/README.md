@@ -2,19 +2,19 @@
 ![image](https://user-images.githubusercontent.com/67142421/150201715-d2add600-ac30-4f92-bf3c-007255ea6b3c.png)
 
 ## RK2 method(Improved Euler's method)
->Improved Euler's method : A method to solve an ordinary differential equation by repeatedly finding two slopes at a point of a function and using them to find a change in 
->a y point.<br>
+>Improved Euler's method : A method to solve an ordinary differential equation by repeatedly finding two slopes at points of a function and using them to find changes in 
+>y points.<br>
 ![image](https://user-images.githubusercontent.com/67142421/150201532-c7a4f44a-4cbc-4861-af31-9ecb29f13ca8.png)
 
 ~~~c++
 #include <iostream>
 using namespace std;
 
-double dy_dx_function(double x, double y) {
-    return y; // = dy/dx
+double dy_dx_function(double x, double y) { // y = e^x
+    return y;
 }
 
-void e_to_the_x_RK2(double target_x) { // RK2
+void RK2(double target_x) { // RK2
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1;
@@ -33,7 +33,7 @@ void e_to_the_x_RK2(double target_x) { // RK2
 int main() {
     int x = 5;
     printf("e^x at x = %d\n", x);
-    e_to_the_x_RK2(x);
+    RK2(x);
 }
 ~~~
 ## Output

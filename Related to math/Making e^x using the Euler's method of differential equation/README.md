@@ -1,4 +1,4 @@
-# Making e^x using Euler's method of differential equation
+# Making e^x using the Euler's method of differential equation
 ![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
 
 ### Euler's method(RK1)
@@ -13,11 +13,11 @@ double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
 double dy_dxs[9876543]{ 1 };
 
-double dy_dx_function(double x, double y) {
-    return y; // = dy/dx
+double dy_dx_function(double x, double y) { // y = e^x
+    return y;
 }
 
-void e_to_the_x_RK1_with_arrays(double target_x) { // RK1
+void RK1_with_arrays(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
 
@@ -31,7 +31,7 @@ void e_to_the_x_RK1_with_arrays(double target_x) { // RK1
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x_points[i], y_points[i], dy_dxs[i]);
 }
 
-void e_to_the_x_RK1(double target_x) { // RK1
+void RK1(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1, dy_dx = dy_dx_function(x, y);
@@ -48,7 +48,8 @@ void e_to_the_x_RK1(double target_x) { // RK1
 int main() {
     int x = 5;
     printf("e^x at x = %d\n", x);
-    e_to_the_x_RK1(x);
+    RK1(x);
+    RK1_with_arrays(x);
 }
 ~~~
 ## Output

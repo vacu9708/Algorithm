@@ -13,11 +13,11 @@
 #include <iostream>
 using namespace std;
 
-double dy_dx_function(double x, double y) {
-    return y; // = dy/dx
+double dy_dx_function(double x, double y) { // y = e^x
+    return y;
 }
 
-void e_to_the_x_RK4(double target_x) {
+void RK4(double target_x) {
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1;
@@ -41,7 +41,7 @@ void e_to_the_x_RK4(double target_x) {
 int main() {
     int x = 5;
     printf("e^x at x = %d\n", x);
-    e_to_the_x_RK4(x);
+    RK4(x);
 }
 ~~~
 ## Output

@@ -1,5 +1,5 @@
 # Algorithm
-![image](https://user-images.githubusercontent.com/67142421/150480775-05fc32f6-f373-4cf4-a255-f32cfa19a425.png)
+<img src="https://user-images.githubusercontent.com/67142421/150480775-05fc32f6-f373-4cf4-a255-f32cfa19a425.png" width="500" height="300">
 
 I tried to write comments on the code as in much detail as possible.
 * [Making string functions on my own](https://github.com/vacu9708/Algorithm/tree/main/Making%20string%20functions%20on%20my%20own)

@@ -1,7 +1,6 @@
 # Newton-Raphson method (plus babylonian method)
 * Newton-raphson method : A numerical algorithm to solve equations, which square roots can also be found with.
-* Babylonian method : An algorithm used for approximating the value of square roots, which is derived from Newton-Raphson method. This method is much faster than finding
-  the value of square roots using the Newton-Raphson method.
+* Babylonian method : An algorithm used for approximating the value of square roots, which is derived from Newton-Raphson method. This method is much faster than finding it using the Newton-Raphson method.
 
 ## Process
 ![image](https://user-images.githubusercontent.com/67142421/149330217-6fd2fd36-1d0f-4210-8c69-289ea03a96d6.png)

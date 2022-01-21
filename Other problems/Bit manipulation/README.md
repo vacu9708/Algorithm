@@ -1,4 +1,4 @@
-# Bit shift
+# Bit manipulation
 >Write a program that gets 4 inputs of characters and stores them in an unsigned int type variable.<br>
 >The first character is stored from bit 0 to bit 7. The second character is stored from bit 8 to bit 15.<br>
 >The third character is stored from bit 16 to bit 23. The fourth character is stored from bit 24 to bit 31.<br>

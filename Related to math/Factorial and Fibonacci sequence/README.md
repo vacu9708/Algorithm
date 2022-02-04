@@ -35,7 +35,7 @@ int main() {
 ~~~
 
 ## Output
-24
+24<br>
 24
 
 # Fibonacci sequence
@@ -74,8 +74,8 @@ print(fibonacci_loop2(5));
 print(fibonacci_recursive(5));
 ~~~
 ## Output
-8
-8
+8<br>
+8<br>
 8
 
 ## Using dynamic programming

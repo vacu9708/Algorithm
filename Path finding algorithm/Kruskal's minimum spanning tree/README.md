@@ -9,7 +9,7 @@
 2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far. If cycle is not formed, include this edge. Else, discard it.
 3. Repeat step#2 until there are (V-1) edges in the spanning tree. (until MST is finished). 
 
-## Graph used and the the Minimum Spanning Tree made in this code
+## Graph used and the Minimum Spanning Tree made in this code
 <img src="https://user-images.githubusercontent.com/67142421/149641825-299e573d-f986-4e29-8f4d-d85907f419a9.png" width="600" height="500">
 
 

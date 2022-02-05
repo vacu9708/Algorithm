@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/67142421/150201715-d2add600-ac30-4f92-bf3c-007255ea6b3c.png)
 
 ## RK2 method(Improved Euler's method)
->Improved Euler's method : A method to solve an ordinary differential equation by repeatedly finding two slopes at points of a function and using them to find changes in 
+>Improved Euler's method : A method to solve an ordinary differential equation by repeatedly finding two slopes at the points of a function and using them to find changes in 
 >y points.<br>
 ![image](https://user-images.githubusercontent.com/67142421/150201532-c7a4f44a-4cbc-4861-af31-9ecb29f13ca8.png)
 

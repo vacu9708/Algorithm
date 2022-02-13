@@ -1,5 +1,6 @@
 # Goldbach's conjecture
 >Goldbach's conjecture : All even numbers over 2 can be expressed as the sum of 2 prime numbers.
+>Sieve of Eratosthenes : A method to find prime numbers fast.
 
 ~~~c++
 #include <iostream>

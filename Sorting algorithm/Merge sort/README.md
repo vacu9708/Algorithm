@@ -4,9 +4,9 @@
 ![image](https://user-images.githubusercontent.com/67142421/149567895-7ef189fb-abcd-4430-bf6a-5cef1dd9ea8f.png)
 
 ## Characteristics
-* Merge sort is a stable sort, which means that the order of equal elements is maintain their original positions in the input and output.
+* Merge sort is a stable sort, which means that the order of equal elements is maintained
 * Its speed is not influenced by how elements are arranged before sorting, in other words, in all cases the time complexity is **O(nlogn)**
->Because of these strengths, merge sort runs stably in any situation.
+>Due to these strengths, merge sort runs stably in any situation.
 
 ## Time complexity
 ![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
@@ -43,7 +43,7 @@ void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { 
 	while (j <= right) // Copy the remaining elements of second half, if there are any
 		temp[temp_index++] = list[j++];
 	//-----
-	for (int i = left; i <= right; i++) // Copy temp list to original list
+	for (int i = left; i <= right; i++) // Copy temp list to original list(Merging)
 		list[i] = temp[i];
 
 	// Show the process

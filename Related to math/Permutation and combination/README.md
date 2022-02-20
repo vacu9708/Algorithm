@@ -1,5 +1,7 @@
 # Permutation and combination
 
+>DFS(Depth First Search) is used to find the number of cases.
+
 ~~~c++
 #include <iostream>
 using namespace std;

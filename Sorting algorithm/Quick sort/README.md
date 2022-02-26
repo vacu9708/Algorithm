@@ -46,7 +46,7 @@ void print_elements(vector<int> container) {
 }
 
 void quick_sort(vector<int>& container, int start, int end) { // Sorting in ascending order
-    if (start >= end) // If the length of sublist is 1, terminate.
+    if (start == end) // If the length of sublist is 1, terminate.
         return;
 
     int pivot_index = (start + end) / 2; // Any index can be pivot. But a middle element is stable in time complexity.

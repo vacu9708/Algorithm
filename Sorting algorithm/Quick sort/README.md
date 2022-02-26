@@ -10,10 +10,9 @@
 ## Working process (ascending order)
 1. A pivot is selected and moved to the first index.
 2. "i" starts searching for elements bigger than the pivot from the first index and "j" starts searching for elements smaller than the pivot from the last index.
-   All the elements of "i" bigger than the pivot and all the elements of "j" smaller than the pivot are swapped
-   In this process, only elements smaller than or equal to pivot remain on the left of "i" and only elements bigger than or equal to the pivot remain on the right of "j"
-3. Once "i" is not on the left of "j", swap "j", which is smaller than or equal to the pivot, and the start index(which is a pivot)
-   because "j" is going to be a dividing index and there have to be only elements smaller than the dividing number on the left of it.
+3. Whenever they have been found, swap them. In this process, only elements smaller than or equal to pivot remain on the left of "i" and only elements bigger than or equal to the pivot remain on the right of "j".
+4. Once "i" is not on the left of "j", swap "j", which is smaller than or equal to the pivot, with the start index, which is the pivot,
+   because "j" is going to be a dividing index and on the left of it, there have to be only elements smaller than the dividing number.
 
 ## The worst case where O(n^2) is taken
 >If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** time might be taken.<br>

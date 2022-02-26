@@ -27,7 +27,7 @@ void print_elements(vector<int>& heap_tree) {
 void heapify(vector<int>& heap_tree, int parent_index, int heapify_upto) { // Function to max-heapify the tree
 	int tree_size = heap_tree.size(), left_child = 2 * parent_index + 1, right_child = 2 * parent_index + 2;
 
-	if (left_child  <= heapify_upto && heap_tree[left_child] > heap_tree[parent_index]) {
+	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[parent_index]) {
 		swap(heap_tree[parent_index], heap_tree[left_child]);
 		heapify(heap_tree, left_child, heapify_upto);
 	}
@@ -40,11 +40,12 @@ void heapify(vector<int>& heap_tree, int parent_index, int heapify_upto) { // Fu
 void heap_sort(vector<int>& heap_tree) {
 	int tree_size = heap_tree.size();
 	printf("---Max heapify\n");
-	for (int i = tree_size / 2 - 1; i >= 0; i--) {; // Max-heapify from the last parent ( (child+1) / 2 -1 is its parent)
+	for (int i = tree_size / 2 - 1; i >= 0; i--) {
+		; // Max-heapify from the last parent ( (child+1) / 2 -1 is its parent)
 		heapify(heap_tree, i, tree_size - 1);
 		print_elements(heap_tree); // Show the process
 	}
-	cout << "---Max-heap made\n\n";
+	cout << "-----\n\n";
 
 	for (int i = tree_size - 1; i > 0; i--) {
 		cout << "---Swap the root with index (" << i << ")\n"; // Show the process
@@ -63,7 +64,6 @@ int main() {
 
 	heap_sort(heap_tree);
 }
-
 ~~~
 
 ## Output

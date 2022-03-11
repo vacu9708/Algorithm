@@ -8,13 +8,13 @@
 * [Permutation and combination](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Permutation%20and%20combination)
 * [Newton-raphson method (plus babylonian method)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Newton-raphson%20method)
 
+## Linear algebra
+* [Cross product of matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Cross%20product%20of%202%20matrices)
+* [Gaussian elimination](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Gaussian%20elimination)
+
 ## Problems related to math
 * [Find how many numbers in a certain range have the sum of their proper divisors as itself](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Sum%20of%20proper%20divisors%20is%20itself)
 * [Gold bach's conjecture(Sieve of Eratosthenes)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Goldbach's%20conjecture)
-
-## Linear algebra
-* [Cross product of 2 matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Cross%20product%20of%202%20matrices)
-* [Gaussian elimination](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Gaussian%20elimination)
 
 ## Understanding recursion and dynamic programming
 * [Factorial and fibonacci sequence](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Factorial%20and%20Fibonacci%20sequence)

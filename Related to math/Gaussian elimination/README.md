@@ -28,7 +28,7 @@ def gaussian_elimination(A, b):
             # Make a new row from X_(k+1)th column
             # X_k doesn't need to be calculated since it is 0, which means 
             # it won't be taken into account in the back substitution after all.
-            # So, calculate from (k+1)th column
+            # So, calculate from (k+1)th column not kth column to save time.
             for j in range(k, n_of_columns):
                 A[i][j] -= m*A[k][j]
             b[i] -= m*b[k]

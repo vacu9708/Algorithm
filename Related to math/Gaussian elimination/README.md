@@ -1,6 +1,11 @@
 # Gaussian elimination
 >Gaussian elimination is an algorithm for solving simultaneous equations.
 
+## The number of solutions
+* When all numbers on the left side are 0 and the right side is also 0 : The linear system has infinitely many solutions
+* When all numbers on the left side are 0 and the right side is not 0 : The linear system has no solution
+* When the left side is not 0 and the simultaneous equation is undetermined (When there are more unknowns than equations)
+
 ## Augmented matrix used in this code
 |Coefficient| |
 |:---------:|-|
@@ -51,8 +56,8 @@ def gaussian_elimination(A, b):
         else: # If the right side isn't 0
             print('There is no solution')
             return
-    elif n_of_columns != n_of_rows: # Else if the simultaneous equation is undetermined
-        print('Infinitely many solutions(Undetermined with the left side that is not 0)')
+    elif n_of_columns != n_of_rows: # Else if the simultaneous equation is under-determined
+        print('Infinitely many solutions(Under-determined with the left side that is not 0)')
         return
     #-----
     # Back substitution

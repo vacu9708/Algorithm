@@ -2,9 +2,14 @@
 >Gaussian elimination is an algorithm for solving simultaneous equations.
 
 ## The number of solutions
-* When all numbers on the left side are 0 and the right side is also 0 : The linear system has infinitely many solutions
-* When all numbers on the left side are 0 and the right side is not 0 : The linear system has no solution
-* When the left side is not 0 and the simultaneous equation is undetermined (When there are more unknowns than equations)
+![image](https://user-images.githubusercontent.com/67142421/158058839-72a650b5-6038-4fbf-a025-16110b739cf8.png)
+
+* When all numbers on the left side are 0 and the right side is also 0
+  >: The linear system has infinitely many solutions.
+* When all numbers on the left side are 0 and the right side is not 0
+  >: The linear system has no solution.
+* When the left side is not 0 and the simultaneous equation is under-determined (When there are more unknowns than equations)
+  >: The linear system has infintely many solutions.
 
 ## Augmented matrix used in this code
 |Coefficient| |
@@ -71,8 +76,8 @@ def gaussian_elimination(A, b):
     print(x)
 
 # infinitely many solutions
-A = numpy.array([ [3,2,2,-5], [0.6,1.5,1.5,-5.4], [1.2,-0.3,-0.3,2.4] ], dtype=float)
-b = numpy.array([8, 2.7, 2.1], dtype=float)
+#A = numpy.array([ [3,2,2,-5], [0.6,1.5,1.5,-5.4], [1.2,-0.3,-0.3,2.4] ], dtype=float)
+#b = numpy.array([8, 2.7, 2.1], dtype=float)
 #-----
 # No solution
 #A = numpy.array([ [3,2,1], [2,1,1], [6,2,4] ], dtype=float)
@@ -83,8 +88,8 @@ b = numpy.array([8, 2.7, 2.1], dtype=float)
 #b = numpy.array( [14, 13, 5], dtype=float)
 #-----
 # One solution
-#A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
-#b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
+A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
+b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
 #-----
 gaussian_elimination(A,b)
 ~~~

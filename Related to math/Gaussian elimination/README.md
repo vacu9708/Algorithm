@@ -77,8 +77,8 @@ def gaussian_elimination(A, b):
 #A = numpy.array([ [2,8,2,9], [1,6,-1,9], [2,-1,2,9] ], dtype=float)
 #b = numpy.array( [14, 13, 5], dtype=float)
 #-----
-#A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
-#b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
+A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
+b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
 
 gaussian_elimination(A,b)
 ~~~

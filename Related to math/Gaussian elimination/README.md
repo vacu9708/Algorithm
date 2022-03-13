@@ -15,11 +15,11 @@
 import numpy
 
 def gaussian_elimination(A, b):
-    n_of_columns = len(A[0])
     n_of_rows = len(A)
+    n_of_columns = len(A[0])
     last_row = n_of_rows - 1
 
-    x = numpy.zeros(n_of_rows) # The answer
+    x = numpy.zeros(n_of_columns) # The answer
     # Forward elimination
     for k in range(0, n_of_rows-1): # Use kth row to eliminate X_k
         for i in range(k+1, n_of_rows): # from (k+1)th row.
@@ -39,8 +39,8 @@ def gaussian_elimination(A, b):
     # Check if all numbers on the left side of the last row are 0
     infinitesimal = 1/987654321 # Due to the inaccuracy of float data
     is_left_side_zero = True
-    for i in range(n_of_columns-1, n_of_columns):
-        if A[last_row][i] >= infinitesimal or A[last_row][i] <= -infinitesimal: # if the left side is 0
+    for column in range(last_row, n_of_columns):
+        if A[last_row][column] >= infinitesimal or A[last_row][column] <= -infinitesimal: # if the left side is 0
             is_left_side_zero = False
             break
     #-----
@@ -48,11 +48,11 @@ def gaussian_elimination(A, b):
         if b[last_row] <= infinitesimal and b[last_row] >= -infinitesimal: # If the right side is 0
             print('Infinitely many solutions')
             return
-        else: ## If the right side doesn't approach 0
+        else: # If the right side isn't 0
             print('There is no solution')
             return
     elif n_of_columns != n_of_rows: # Else if the simultaneous equation is undetermined
-        print('Infinitely many solutions(Undetermined with the left side that is not 0')
+        print('Infinitely many solutions(Undetermined with the left side that is not 0)')
         return
     #-----
     # Back substitution
@@ -73,13 +73,14 @@ def gaussian_elimination(A, b):
 #A = numpy.array([ [3,2,1], [2,1,1], [6,2,4] ], dtype=float)
 #b = numpy.array([3,0,6], dtype=float)
 #-----
-# infinitely many solutions 
+# Infinitely many solutions(Undetermined with the left side that is not 0)
 #A = numpy.array([ [2,8,2,9], [1,6,-1,9], [2,-1,2,9] ], dtype=float)
 #b = numpy.array( [14, 13, 5], dtype=float)
 #-----
+# One solution
 A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
 b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
-
+#-----
 gaussian_elimination(A,b)
 ~~~
 

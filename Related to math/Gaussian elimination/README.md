@@ -28,7 +28,7 @@ def gaussian_elimination(A, b):
             # Make a new row from X_(k+1)th column
             # X_k doesn't need to be calculated since it is 0, which means 
             # it won't be taken into account in the back substitution after all.
-            # So, calculate from (k+1)th column not kth column to save time.
+            # So, calculate from (k+1)th column
             for j in range(k, n_of_columns):
                 A[i][j] -= m*A[k][j]
             b[i] -= m*b[k]
@@ -40,12 +40,12 @@ def gaussian_elimination(A, b):
     infinitesimal = 1/987654321 # Due to the inaccuracy of float data
     is_left_side_zero = True
     for column in range(last_row, n_of_columns):
-        if A[last_row][column] >= infinitesimal or A[last_row][column] <= -infinitesimal: # if the left side is 0
+        if abs(A[last_row][column]) > infinitesimal: # if the left side isn't 0
             is_left_side_zero = False
             break
     #-----
     if is_left_side_zero == True:
-        if b[last_row] <= infinitesimal and b[last_row] >= -infinitesimal: # If the right side is 0
+        if abs(b[last_row]) < infinitesimal: # If the right side is 0
             print('Infinitely many solutions')
             return
         else: # If the right side isn't 0
@@ -66,8 +66,8 @@ def gaussian_elimination(A, b):
     print(x)
 
 # infinitely many solutions
-#A = numpy.array([ [3,2,2,-5], [0.6,1.5,1.5,-5.4], [1.2,-0.3,-0.3,2.4] ], dtype=float)
-#b = numpy.array([8, 2.7, 2.1], dtype=float)
+A = numpy.array([ [3,2,2,-5], [0.6,1.5,1.5,-5.4], [1.2,-0.3,-0.3,2.4] ], dtype=float)
+b = numpy.array([8, 2.7, 2.1], dtype=float)
 #-----
 # No solution
 #A = numpy.array([ [3,2,1], [2,1,1], [6,2,4] ], dtype=float)
@@ -78,8 +78,8 @@ def gaussian_elimination(A, b):
 #b = numpy.array( [14, 13, 5], dtype=float)
 #-----
 # One solution
-A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
-b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
+#A = numpy.array([ [2,8,2], [1,6,-1], [2,-1,2] ]) # Coefficient matrix
+#b = numpy.array( [14, 13, 5] ) # The right side of the simultaneous equation
 #-----
 gaussian_elimination(A,b)
 ~~~

@@ -9,7 +9,7 @@
 >Due to these strengths, merge sort runs stably in any situation.
 
 ## Time complexity
-![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
+![image](https://user-images.githubusercontent.com/67142421/158380312-a1b7a32a-5230-4ae7-b50b-f9d47e2dbdb8.png)
 
 >The way of calculating the time complexity of Merge sort derives from the principle of calculating that of Binary search.<br>
 >In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials in a series of branches is cn * L<br>

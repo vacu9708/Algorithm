@@ -12,7 +12,7 @@
 ![image](https://user-images.githubusercontent.com/67142421/149573847-f3907973-8d7b-473f-aa43-cdc9507d4838.png)
 
 >The way of calculating the time complexity of Merge sort derives from the principle of calculating that of Binary search.<br>
->In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials is cn * (L+1)<br>
+>In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials in a series of branches is cn * L<br>
 >As written in [my binary search page](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search), L is log(N). 
 >Therefore, the time complexity of merge sort is **O(nlogn)**
 

@@ -38,7 +38,7 @@ double newton_raphson(double square_root) {
     double infinitesimal = 1.0 / 987654321, f_x = 0, derivative = 0;
     while (true) {
         f_x = fx(x);
-        if (abs(f_x) < infinitesimal) // If f(x) converges to 0, the x is the answer.
+        if (f_x < infinitesimal) // If f(x) converges to 0, the x is the answer.
             return x;
 
         derivative = (fx(x + infinitesimal) - fx(x - infinitesimal)) / (infinitesimal * 2); // Derivative at x
@@ -47,14 +47,13 @@ double newton_raphson(double square_root) {
 }
 
 double babylonian_method(double square_root) {
-    ::square_root = square_root;
     // Find the best initial x point
     double x = 0;
     while (pow(x, 2) < square_root)
         x++;
     //-----
     while (true) {
-        if (abs(fx(x)) < 0.000001) // If f(x) converges to 0, the x is the answer.
+        if (pow(x, 2) - square_root < 0.000001) // If f(x) converges to 0, the x is the answer.
             return x;
 
         x = (x + (square_root / x)) / 2; // Find the next x
@@ -62,7 +61,7 @@ double babylonian_method(double square_root) {
 }
 
 int main() {
-    double target = 2.5;
+    double target = 27;
     cout << "The square root of (" << target << ") = " << newton_raphson(target) << "\n";
     cout << "The square root of (" << target << ") = " << babylonian_method(target) << "\n";
 }

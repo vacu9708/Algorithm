@@ -24,5 +24,9 @@ int main() {
 }
 ~~~
 
+## Input
+list = {0,1,2,3,4,5,6};
+slice(list, 1, list.size(), 2);
+
 ## Output
 ### 1 3 5

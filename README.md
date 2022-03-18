@@ -5,5 +5,6 @@
 * [Sorting algorithm](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm)
 * [Path finding algorithm](https://github.com/vacu9708/Algorithm/tree/main/Path%20finding%20algorithm)
 * [Searching algorithm](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm)
-* [Making string functions on my own](https://github.com/vacu9708/Algorithm/tree/main/Making%20string%20functions%20on%20my%20own)
 * [Other problems](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems)
+
+* [Making basic functions](https://github.com/vacu9708/Algorithm/tree/main/Making%20basic%20functions)

@@ -7,4 +7,4 @@
 * [Searching algorithm](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm)
 * [Other problems](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems)
 
-* [Making basic functions](https://github.com/vacu9708/Algorithm/tree/main/Making%20basic%20functions)
+[Making basic functions](https://github.com/vacu9708/Algorithm/tree/main/Making%20basic%20functions)

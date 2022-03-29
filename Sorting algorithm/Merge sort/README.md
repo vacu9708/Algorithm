@@ -31,7 +31,7 @@ void print_elements(vector<int>& list) {
 void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { // Sort elements in ascending order
 	// First half and second half have already been sorted.
 	int i = left, j = mid + 1, temp_index = left; // i : index in 1st half / j : index in 2nd half
-	while (i <= mid && j <= right) { // While i and j are within 1st half and 2nd half each
+	while (i <= mid && j <= right) { // While both i and j are within 1st half and 2nd half
 		if (list[i] < list[j])
 			temp[temp_index++] = list[i++];
 		else if (list[j] < list[i])

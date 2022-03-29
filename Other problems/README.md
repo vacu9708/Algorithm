@@ -4,7 +4,7 @@
 ---
 * [Adding very large numbers](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/Adding%20very%20large%20numbers)
 * [Bit manipulation](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/Bit%20manipulation)
-* [How many times should dice be thrown?](https://github.com/vacu9708/Algorithm/blob/main/Other%20problems/How%20many%20times%20should%20dice%20be%20thrown%3F)
+* [How many times should dice be thrown?](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/How%20many%20times%20should%20dice%20be%20thrown)
 * [Checking if two strings are anagrams](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/Coin%20change)
 * [Tower of hanoi](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/Tower%20of%20Hanoi)
 * [Drawing shapes with loops](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems/Drawing%20shapes%20with%20loops)

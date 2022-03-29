@@ -1,5 +1,5 @@
 # Merge sort
->Merge sort is a comparison-based sorting algorithm which is one of the most efficient sorting algorithms. It is one of *Divide and conquer algorithms*.<br>
+>Merge sort is a comparison-based sorting algorithm that takes **O(nlogn)** time which is one of the most efficient sorting algorithms. It is one of *Divide and conquer algorithms*.<br>
 
 ![image](https://user-images.githubusercontent.com/67142421/149567895-7ef189fb-abcd-4430-bf6a-5cef1dd9ea8f.png)
 

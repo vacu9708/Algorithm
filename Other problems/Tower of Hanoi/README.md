@@ -12,7 +12,7 @@
 3. Move the N-1th disk that was in the auxiliary rod to the target rod.
 
 ~~~python
-A = [0, 1, 2]
+A = [3, 2, 1]
 B = []
 C = []
 
@@ -33,4 +33,4 @@ def tower_of_hanoi(disk, source, target, auxiliary):
 
 tower_of_hanoi(len(A) - 1, A, C, B) # Move 3 disks from source A to target C with auxiliary B, starting from the disk at the bottom.
 ~~~
-![image](https://user-images.githubusercontent.com/67142421/160592614-3f1b3b57-23ad-4e6f-a7c2-d49bb440f0fb.png)
+![image](https://user-images.githubusercontent.com/67142421/160593181-716bd6b5-cef8-4f01-8e22-e0463666eacd.png)

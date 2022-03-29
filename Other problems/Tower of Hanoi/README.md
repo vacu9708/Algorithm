@@ -12,21 +12,25 @@
 3. Move the N-1th disk that was in the auxiliary rod to the target rod.
 
 ~~~python
-A = [3, 2, 1]
+A = [0, 1, 2]
 B = []
 C = []
 
 def tower_of_hanoi(disk, source, target, auxiliary):
-    if disk == 0: # Termination condition
+    if disk == -1: # Termination condition (Top disk found)
         return 
-    tower_of_hanoi(disk - 1, source, auxiliary, target) # Step 1
-    # Step 2 : moving
+        
+    # Step 1 : Move (N-1)disk to the auxiliary rod to move the Nth disk.
+    tower_of_hanoi(disk - 1, source, auxiliary, target)
+    
+    # Move Nth disk from source to target.
     print("Move disk : (", disk,')')
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')
-    #-----
-    tower_of_hanoi(disk - 1, auxiliary, target, source) # Step 3
 
-tower_of_hanoi(len(A), A, C, B) # Move 3 disks from source A to target C with auxiliary B
+    # Step 3 : Move the N-1th disk that was in the auxiliary rod to the target rod.
+    tower_of_hanoi(disk - 1, auxiliary, target, source)
+
+tower_of_hanoi(len(A) - 1, A, C, B) # Move 3 disks from source A to target C with auxiliary B, starting from the disk at the bottom.
 ~~~
-![image](https://user-images.githubusercontent.com/67142421/149809489-804d05a9-6654-4a4e-8fff-2908e4834f24.png)
+![image](https://user-images.githubusercontent.com/67142421/160592614-3f1b3b57-23ad-4e6f-a7c2-d49bb440f0fb.png)

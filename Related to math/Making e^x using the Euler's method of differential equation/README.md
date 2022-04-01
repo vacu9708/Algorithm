@@ -4,6 +4,8 @@
 ### Euler's method(RK1)
 >Euler's method(RK1) : A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>
 ![image](https://user-images.githubusercontent.com/67142421/150194690-5656e5cd-6411-4e41-97f2-f07142c0e727.png)
+* h = step size
+* f = instantaneous rate of change
 
 ~~~c++
 #include <iostream>

@@ -1,11 +1,8 @@
-# Cross product of 2 matrices
-
-# Python code
 ~~~python
 matrix1 = [[1,2,3], [4,5,6]]
 matrix2 = [[1,2], [3,4], [5,6]]
 
-def cross_product(matrix1, matrix2):
+def multiplication_of_matrices(matrix1, matrix2):
     row1 = len(matrix1)
     column1 = len(matrix1[0])
     row2 = len(matrix2)
@@ -30,7 +27,7 @@ def cross_product(matrix1, matrix2):
     print(result_matrix)
 
 print(matrix1, " X ", matrix2, " = ", end = "");
-cross_product(matrix1, matrix2)
+multiplication_of_matrices(matrix1, matrix2)
 ~~~
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149186390-e335f0b8-e312-425d-a137-444dd8178690.png)

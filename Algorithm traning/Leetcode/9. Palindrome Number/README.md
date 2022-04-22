@@ -1,5 +1,6 @@
 ![image](https://user-images.githubusercontent.com/67142421/164774001-7fb5df82-d114-4689-aee8-f2508018c49d.png)
 
+~~~javascript
 var isPalindrome = function(x) {
     num_string = x.toString();
     num_length = num_string.length;
@@ -9,3 +10,4 @@ var isPalindrome = function(x) {
     }
     return true;
 };
+~~~

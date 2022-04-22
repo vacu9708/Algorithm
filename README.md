@@ -6,5 +6,6 @@
 * [Path finding algorithm](https://github.com/vacu9708/Algorithm/tree/main/Path%20finding%20algorithm)
 * [Searching algorithm](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm)
 * [Other problems](https://github.com/vacu9708/Algorithm/tree/main/Other%20problems)
+* [Algorithm trading](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning)
 
 [Making basic functions](https://github.com/vacu9708/Algorithm/tree/main/Making%20basic%20functions)

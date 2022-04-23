@@ -34,7 +34,7 @@ def gaussian_elimination(A, b):
     for k in range(0, n_of_rows-1): # Use k'th row to eliminate X_k from
         for i in range(k+1, n_of_rows): # (k+1)th row.
             m = A[i][k] / A[k][k] # Find m_ik to multiply to make a new row.
-            #-----
+
             # Make a new row from X_(k+1)th column
             # X_k doesn't need to be calculated since it will be 0, which means 
             # it won't be taken into account in the back substitution after all.

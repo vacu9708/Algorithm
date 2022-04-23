@@ -19,7 +19,7 @@
 |2   -1    2|5|
 
 ## Solving manually
-![KakaoTalk_20220311_225949094](https://user-images.githubusercontent.com/67142421/157882047-da871823-0e94-4a36-903d-e53371c74a50.jpg)
+![image](https://user-images.githubusercontent.com/67142421/164889029-625df72b-a048-445b-9939-f2bc357ee588.png)
 
 ~~~Python
 import numpy
@@ -31,15 +31,15 @@ def gaussian_elimination(A, b):
 
     x = numpy.zeros(n_of_columns) # The answer
     # Forward elimination
-    for k in range(0, n_of_rows-1): # Use kth row to eliminate X_k
-        for i in range(k+1, n_of_rows): # from (k+1)th row.
-            m = A[i][k] / A[k][k] # Find m_ik to multiply by the new row. (m_ik means eliminating X_k in i'th row)
+    for k in range(0, n_of_rows-1): # Use k'th row to eliminate X_k from
+        for i in range(k+1, n_of_rows): # (k+1)th row.
+            m = A[i][k] / A[k][k] # Find m_ik to multiply to make a new row.
             #-----
             # Make a new row from X_(k+1)th column
-            # X_k doesn't need to be calculated since it is 0, which means 
+            # X_k doesn't need to be calculated since it will be 0, which means 
             # it won't be taken into account in the back substitution after all.
             # So, calculate from (k+1)th column
-            for j in range(k, n_of_columns):
+            for j in range(k+1, n_of_columns):
                 A[i][j] -= m*A[k][j]
             b[i] -= m*b[k]
         

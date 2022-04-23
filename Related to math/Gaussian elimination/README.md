@@ -46,14 +46,14 @@ def gaussian_elimination(A, b):
         print('After eliminating X_{}\n{} = {}\n'.format(k,A,b))
     #-----
     # Exception handling
-    # Check if all numbers on the left side of the last row are 0
+      # Check if all numbers on the left side of the last row are 0
     infinitesimal = 1/987654321 # Due to the inaccuracy of float data
     is_left_side_zero = True
     for column in range(last_row, n_of_columns):
         if abs(A[last_row][column]) > infinitesimal: # if the left side isn't 0
             is_left_side_zero = False
             break
-    #-----
+      #-----
     if is_left_side_zero == True:
         if abs(b[last_row]) < infinitesimal: # If the right side is 0
             print('Infinitely many solutions')

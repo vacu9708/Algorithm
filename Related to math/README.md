@@ -16,9 +16,6 @@
 * [Find how many numbers in a certain range have the sum of their proper divisors as itself](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Sum%20of%20proper%20divisors%20is%20itself)
 * [Gold bach's conjecture(Sieve of Eratosthenes)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Goldbach's%20conjecture)
 
-## Understanding recursion and dynamic programming
-* [Factorial and fibonacci sequence](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Factorial%20and%20Fibonacci%20sequence)
-
 ## etc
 * [Calculating a remainder](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Calculating%20a%20remainder)
 * [Decimal number to binary](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Decimal%20to%20binary)

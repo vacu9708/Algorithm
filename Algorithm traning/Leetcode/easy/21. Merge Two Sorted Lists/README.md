@@ -1,4 +1,4 @@
-[21. Merge Two sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
+# [21. Merge Two sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 ## This solution is similar to how the merge sort works
 ~~~Python

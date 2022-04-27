@@ -13,7 +13,7 @@ using namespace std;
 int target_money = 15, n_of_coin_type = 3, min_n_of_coins = 987654321;
 vector<int> values_of_coins = { 1,5,12 }, numbers_of_remaining_coins = { 33,33,33 }, best_case(n_of_coin_type);
 
-void backtracking(int level, int start_index, int sum_of_coins, int n_of_coins_used, vector<int> a_case, vector<int> numbers_of_remaining_coins) {
+void backtracking(int start_index, int sum_of_coins, int n_of_coins_used, vector<int> a_case, vector<int> numbers_of_remaining_coins) {
 	if (sum_of_coins == target_money) {
 		if (n_of_coins_used < min_n_of_coins) {
 			min_n_of_coins = n_of_coins_used;
@@ -36,7 +36,7 @@ void backtracking(int level, int start_index, int sum_of_coins, int n_of_coins_u
 		a_case[i]++;
 		n_of_coins_used++;
 		// Store the number of coins used and sum of coins upto the previous cases in the parameters
-		backtracking(level + 1, i, sum_of_coins + values_of_coins[i], n_of_coins_used, a_case, numbers_of_remaining_coins);
+		backtracking(i, sum_of_coins + values_of_coins[i], n_of_coins_used, a_case, numbers_of_remaining_coins);
 		numbers_of_remaining_coins[i]++; // Recover the changed information for the next coin
 		a_case[i]--;
 		n_of_coins_used--;
@@ -62,7 +62,7 @@ int main() {
 	for (int i = 0; i < n_of_coin_type; i++)
 		cin >> values_of_coins[i] >> numbers_of_remaining_coins[i];*/
 
-	backtracking(0, 0, 0, 0, best_case, numbers_of_remaining_coins);
+	backtracking(0, 0, 0, best_case, numbers_of_remaining_coins);
 	print_answer();
 }
 ~~~

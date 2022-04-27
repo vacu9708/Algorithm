@@ -34,16 +34,15 @@ void knapsack_backtracking(int level, int sum_of_weights, int sum_of_values) { /
 
 	for (int i = 0; i <= 1; i++) { // DFS on a tree
 		truth_table[level] = i;
-
-		if (i == 1) { // If the item in this level is to be put in the knapsack, add the item.
-			// If the sum of weights exceeds max weight, the branches from this node are useless, so cut the branch for backtracking.
+		if (i == 1) { // If the item in this level is to be put in the knapsack
+			// If the sum of weights exceeds max weight, nodes from the current node are useless, so cut the branch for backtracking.
 			if (sum_of_weights + item_weights[level] > max_weight)
 				return;
-			//-----
-			// Store information up to the previous cases in the parameters.
+
+			// Update information in the parameters.
 			knapsack_backtracking(level + 1, sum_of_weights + item_weights[level], sum_of_values + item_values[level]);
 		}
-		else // If the item is this level is not to be put in the knapsack, go to the next level without adding the item.
+		else // If the item in this level is not to be put in the knapsack, go to the next level without adding the item.
 			knapsack_backtracking(level + 1, sum_of_weights, sum_of_values);
 	}
 }

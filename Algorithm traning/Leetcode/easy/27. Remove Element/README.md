@@ -13,10 +13,11 @@ class Solution:
                     how_many_to_move+=1
                     removed_elements+=1
                     j+=1
-                for k in range(j, length):
-                    nums[k-how_many_to_move]=nums[k]
+                for j in range(j, length):
+                    nums[j-how_many_to_move]=nums[j]
                 length-=how_many_to_move
             else:
                 i+=1
         return len(nums)-removed_elements
+
 ~~~

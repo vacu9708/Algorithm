@@ -86,7 +86,9 @@ public:
 			printf("/ Number of cases : %d\n", n_of_cases);
 			return;
 		}
-
+			
+		// If a_case[i] has already been sorted chosen, it cannot be chosen again in the next recursion because
+		// cases where only the order is different with the same elements are considered one in combination.
 		for (int i = start_index; i < sizeof(set); i++) {
 			a_case[level] = set[i];
 			DFS(level + 1, i + 1);

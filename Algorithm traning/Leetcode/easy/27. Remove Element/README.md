@@ -1,4 +1,5 @@
 [27. Remove Element](https://leetcode.com/problems/remove-element/submissions/)
+### My first solution
 ~~~Python
 class Solution:
     def removeElement(self, nums, val: int) -> int:
@@ -19,5 +20,14 @@ class Solution:
             else:
                 i+=1
         return len(nums)-removed_elements
-
+~~~
+## Better solution
+~~~python
+def removeElement(self, nums, val):
+    i = 0
+    for x in nums:
+        if x != val:
+            nums[i] = x
+            i += 1
+    return i
 ~~~

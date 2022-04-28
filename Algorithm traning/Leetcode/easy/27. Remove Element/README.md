@@ -1,5 +1,5 @@
-[27. Remove Element](https://leetcode.com/problems/remove-element/submissions/)
-### My first solution
+# [27. Remove Element](https://leetcode.com/problems/remove-element/submissions/)
+## My first solution
 ~~~Python
 class Solution:
     def removeElement(self, nums, val: int) -> int:

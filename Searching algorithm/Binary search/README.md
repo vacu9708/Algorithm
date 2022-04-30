@@ -21,9 +21,9 @@ string binary_search(vector<int>& vector, int target) {
 		int mid = (first + last) / 2;
 		if (target == vector[mid])
 			return "At index (" + to_string(mid) + ") found";
-		if (target < vector[mid])
+		else if (target < vector[mid])
 			last = mid - 1;
-		if (target > vector[mid])
+		else if (target > vector[mid])
 			first = mid + 1;
 	}
 	return "Not found";

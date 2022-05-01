@@ -71,7 +71,7 @@ int main() {
 ## Output
 ![image](https://user-images.githubusercontent.com/67142421/149814608-fc4dc878-7669-4fd7-a1e6-82b89d38df67.png)
 
-## Finding only the biggest profit without finding the best way to put them.
+## Finding only the biggest profit without finding the best way to put them. (Dynamic programming)
 
 ~~~c++
 // Finding the biggest profit for a knapsack

@@ -33,10 +33,11 @@ double fx(double x) {
 double newton_raphson(double target) {
     ::target = target;
     // Find the best initial x point
-    double x = 0;
+    /*double x = 0;
     while (pow(x, 2) < target)
-        x++;
+        x++;*/
     //-----
+    double x = target;
     double infinitesimal = 1.0 / 987654321, f_x = 0, derivative = 0;
     while (true) {
         f_x = fx(x);
@@ -49,11 +50,7 @@ double newton_raphson(double target) {
 }
 
 double babylonian_method(double target) {
-    // Find the best initial x point
-    double x = 0;
-    while (pow(x, 2) < target)
-        x++;
-    //-----
+    double x = target;
     while (true) {
         if (pow(x, 2) - target < 0.000001) // If f(x) converges to 0, the x is the answer.
             return x;

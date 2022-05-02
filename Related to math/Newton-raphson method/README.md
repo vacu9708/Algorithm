@@ -26,7 +26,7 @@ or
 using namespace std;
 
 double target = 0;
-double fx(double x) {
+double f(double x) {
     return pow(x, 2) - target;
 }
 
@@ -38,26 +38,24 @@ double newton_raphson(double target) {
         x++;*/
     //-----
     double x = target;
-    double infinitesimal = 1.0 / 987654321, f_x = 1, derivative = 0;
-    while (f_x > infinitesimal) { // If f(x) converges to 0, the x is the answer.
-        f_x = fx(x);
-
-        derivative = (fx(x + infinitesimal) - fx(x - infinitesimal)) / (infinitesimal * 2); // Derivative at x
-        x = x - (f_x / derivative); // Find the next x
+    double infinitesimal = 1.0 / 987654321;
+    while (f(x) > infinitesimal) { // If f(x) converges to 0, the x is the answer.
+        double derivative = (f(x + infinitesimal) - f(x - infinitesimal)) / (infinitesimal * 2); // Derivative at x
+        x = x - (f(x) / derivative); // Find the next x
     }
     return x;
 }
 
 double babylonian_method(double target) {
     double x = target;
-    while (x * x > target) { // If f(x) converges to 0, the x is the answer.
+    while (target/(x * x) < 0.9999999) { // If f(x) converges to 0, the x is the answer.
         x = (x + (target / x)) / 2; // Find the next x
     }
     return x;
 }
 
 int main() {
-    double target = 27;
+    double target = 5;
     cout << "The square root of (" << target << ") = " << newton_raphson(target) << "\n";
     cout << "The square root of (" << target << ") = " << babylonian_method(target) << "\n";
 }

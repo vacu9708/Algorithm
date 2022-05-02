@@ -16,23 +16,25 @@
 ### Babylonian method
 <img src="https://user-images.githubusercontent.com/67142421/149328802-7c02f898-dedb-4ec7-b5b8-77116c1fc2aa.png" width="550" height="300">
 
-## How to derive the 2 formulas
-![KakaoTalk_20220113_204543213](https://user-images.githubusercontent.com/67142421/149327997-af3a7a06-b48f-4d71-836c-196090a42123.jpg)
+## How to derive the formulas
+![KakaoTalk_20220113_204543213](https://user-images.githubusercontent.com/67142421/149327997-af3a7a06-b48f-4d71-836c-196090a42123.jpg)<br>
+or
+![KakaoTalk_20220503_010407053](https://user-images.githubusercontent.com/67142421/166267186-43b2b195-7371-4c8a-8ed1-e9faa6be92f4.jpg)
 
 ~~~c++
 #include <iostream>
 using namespace std;
 
-double square_root = 0;
+double target = 0;
 double fx(double x) {
-    return pow(x, 2) - square_root;
+    return pow(x, 2) - target;
 }
 
-double newton_raphson(double square_root) {
-    ::square_root = square_root;
+double newton_raphson(double target) {
+    ::target = target;
     // Find the best initial x point
     double x = 0;
-    while (pow(x, 2) < square_root)
+    while (pow(x, 2) < target)
         x++;
     //-----
     double infinitesimal = 1.0 / 987654321, f_x = 0, derivative = 0;
@@ -46,17 +48,17 @@ double newton_raphson(double square_root) {
     }
 }
 
-double babylonian_method(double square_root) {
+double babylonian_method(double target) {
     // Find the best initial x point
     double x = 0;
-    while (pow(x, 2) < square_root)
+    while (pow(x, 2) < target)
         x++;
     //-----
     while (true) {
-        if (pow(x, 2) - square_root < 0.000001) // If f(x) converges to 0, the x is the answer.
+        if (pow(x, 2) - target < 0.000001) // If f(x) converges to 0, the x is the answer.
             return x;
 
-        x = (x + (square_root / x)) / 2; // Find the next x
+        x = (x + (target / x)) / 2; // Find the next x
     }
 }
 

@@ -38,25 +38,22 @@ double newton_raphson(double target) {
         x++;*/
     //-----
     double x = target;
-    double infinitesimal = 1.0 / 987654321, f_x = 0, derivative = 0;
-    while (true) {
+    double infinitesimal = 1.0 / 987654321, f_x = 1, derivative = 0;
+    while (f_x > infinitesimal) { // If f(x) converges to 0, the x is the answer.
         f_x = fx(x);
-        if (f_x < infinitesimal) // If f(x) converges to 0, the x is the answer.
-            return x;
 
         derivative = (fx(x + infinitesimal) - fx(x - infinitesimal)) / (infinitesimal * 2); // Derivative at x
         x = x - (f_x / derivative); // Find the next x
     }
+    return x;
 }
 
 double babylonian_method(double target) {
     double x = target;
-    while (true) {
-        if (pow(x, 2) - target < 0.000001) // If f(x) converges to 0, the x is the answer.
-            return x;
-
+    while (x * x > target) { // If f(x) converges to 0, the x is the answer.
         x = (x + (target / x)) / 2; // Find the next x
     }
+    return x;
 }
 
 int main() {

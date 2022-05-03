@@ -4,8 +4,8 @@
 var climbStairs = function(n) {
     a = b = 1 // 0th and 1st term
     while (n--){
-        b += a
-        a = b - a
+        b += a // new b = old b + old a
+        a = b - a // new a = old b
     }
     return a
 };

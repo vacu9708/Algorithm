@@ -20,15 +20,12 @@ void backtracking(int start_index, int sum_of_coins, int n_of_coins_used, vector
 			for (int i = 0; i < n_of_coin_type; i++)
 				best_case[i] = a_case[i];
 		}
-
 		return;
 	}
+	else if (sum_of_coins > target_money)
+		return;
 
 	for (int i = start_index; i < n_of_coin_type; i++) { // Combination with repetition
-		// Cutting a branch for backtracking
-		if (sum_of_coins + values_of_coins[i] > target_money) // Cut if adding this coin makes the sum of the coins exceed target money
-			return;
-		//-----
 		if (numbers_of_remaining_coins[i] == 0) // Use other coins if one of the coins has run out
 			continue;
 

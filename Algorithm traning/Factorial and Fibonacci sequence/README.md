@@ -90,7 +90,6 @@ int fibonacci(unsigned int n) {
         return memo[n];
 
     memo[n] = fibonacci(n - 1) + fibonacci(n - 2); // Top-down
-    return memo[n];
 }
 
 void main() {

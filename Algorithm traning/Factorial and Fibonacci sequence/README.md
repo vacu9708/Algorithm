@@ -86,7 +86,7 @@ using namespace std;
 
 int memo[100]{ 1,1 };
 int fibonacci(unsigned int n) {
-    if (memo[n] != 0) // If memo[n] is availale, use it in order not to do the same procedure.
+    if (memo[n] != 0) // If memo[n] is availale, use it in order not to repeat the same operation.
         return memo[n];
 
     memo[n] = fibonacci(n - 1) + fibonacci(n - 2); // Top-down

@@ -1,4 +1,5 @@
 # [69. Sqrt(x)](https://leetcode.com/problems/sqrtx/)
+### Newton's method
 ~~~javascript
 var mySqrt = function(x) {
     current_x=x

@@ -6,7 +6,7 @@
 2. Put the minimum from the far left.
 
 ## Time complexity (N : the number of elements)
-> (N-1) + (N-2) + (N-3) + ... + 1 -> the sum of arithmetic series : [(N-1){2(N-1) + (N-1-1) * -1}] / 2 = **O(n^2)**
+> (N-1) + (N-2) + (N-3) + ... + 1 -> the sum of arithmetic series : [(N-1){2(N-1) + (N-1-1) * -1}] / 2 => **O(n^2)**
 
 ~~~c++
 #include <iostream>

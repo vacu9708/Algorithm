@@ -18,7 +18,7 @@ class Solution:
             cur.next = list2
             list2 = list2.next
         cur = cur.next
-    cur.next = list1 if list1 else list2
+    cur.next = list1 if list1 else list2 # remaining elements
     return head.next
 ~~~
 

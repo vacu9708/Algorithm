@@ -34,7 +34,7 @@ void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { 
 	while (i <= mid && j <= right) { // While both i and j are within 1st half and 2nd half
 		if (list[i] < list[j])
 			temp[temp_index++] = list[i++];
-		else if (list[j] < list[i])
+		else
 			temp[temp_index++] = list[j++];
 	}
 	// Pick up the remaining elements and put them in temp

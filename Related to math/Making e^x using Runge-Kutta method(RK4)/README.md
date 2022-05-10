@@ -27,8 +27,8 @@ void RK4(double target_x) {
     double k4 = dy_dx_function(x + x_step, y + x_step * k3);
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
-        x = x + x_step; // Change in x
-        y = y + x_step * ((k1 + 2*k2 + 2*k3 + k4) / 6); // Find the change in y using the average of the two slopes.
+        x = x + x_step; // Move x as much as x step
+        y = y + x_step * ((k1 + 2*k2 + 2*k3 + k4) / 6); // Find the change in y
         k1 = dy_dx_function(x, y);
         k2 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k1); // Add x_step / 2 to x and the change in y by it to y.
         k3 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k2);

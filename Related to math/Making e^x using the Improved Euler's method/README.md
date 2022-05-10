@@ -10,7 +10,7 @@
 #include <iostream>
 using namespace std;
 
-double dy_dx_function(double x, double y) { // y = e^x
+double dy_dx(double x, double y) { // y = e^x
     return y;
 }
 
@@ -18,13 +18,14 @@ void RK2(double target_x) { // RK2
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1;
-    double k1 = dy_dx_function(x, y), k2 = dy_dx_function(x + x_step, y + x_step * k1); // two slopes
+    double k1, k2; // two slopes
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
-        x = x + x_step; // Change in x
-        y = y + x_step * ((k1 + k2) / 2); // Find the change in y using the average of the two slopes.
-        k1 = dy_dx_function(x, y);
-        k2 = dy_dx_function(x + x_step, y + x_step * k1);
+        k1 = dy_dx(x, y);
+        k2 = dy_dx(x + x_step, y + x_step * k1);
+        x = x + x_step; // new x
+        y = y + x_step * ((k1 + k2) / 2); // Find new y with the change in y using the average of two slopes.
+
     }
 
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, k1);

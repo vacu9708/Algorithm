@@ -23,8 +23,8 @@ void RK2(double target_x) { // RK2
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         k1 = dy_dx(x, y);
         k2 = dy_dx(x + x_step, y + x_step * k1);
-        x = x + x_step; // new x
-        y = y + x_step * ((k1 + k2) / 2); // Find new y with the change in y using the average of two slopes.
+        x += x_step; // new x
+        y += x_step * ((k1 + k2) / 2); // Find new y with the change in y using the average of two slopes.
 
     }
 

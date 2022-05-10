@@ -4,6 +4,7 @@
 ## RK2 method(Improved Euler's method)
 >Improved Euler's method : A method to solve an ordinary differential equation by repeatedly finding two slopes at the points of a function and using them to find changes in 
 >y points.<br>
+>### h means x step(dx)
 ![image](https://user-images.githubusercontent.com/67142421/150201532-c7a4f44a-4cbc-4861-af31-9ecb29f13ca8.png)
 
 ~~~c++

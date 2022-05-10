@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/67142421/150201715-d2add600-ac30-4f92-bf3c-007255ea6b3c.png)
 
 ## RK2 method(Improved Euler's method)
->Improved Euler's method : A numerical method to solve an ordinary differential equation where the error is reduced by considering both the current slope and the slope.<br>
+>Improved Euler's method : A numerical method to solve an ordinary differential equation where the error of dy is reduced by considering both the current slope and next slope.<br>
 >### h means x step(dx)
 ![image](https://user-images.githubusercontent.com/67142421/150201532-c7a4f44a-4cbc-4861-af31-9ecb29f13ca8.png)
 

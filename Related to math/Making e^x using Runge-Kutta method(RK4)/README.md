@@ -28,8 +28,8 @@ void RK4(double target_x) {
         k2 = dy_dx(x + x_step / 2, y + (x_step / 2) * k1);
         k3 = dy_dx(x + x_step / 2, y + (x_step / 2) * k2);
         k4 = dy_dx(x + x_step, y + x_step * k3);
-        x = x + x_step; // Move x as much as x step
-        y = y + x_step * ((k1 + 2 * k2 + 2 * k3 + k4) / 6); // Find new y with dy   
+        x += x_step; // Move x as much as x step
+        y += x_step * ((k1 + 2 * k2 + 2 * k3 + k4) / 6); // Find new y with dy   
     }
 
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, k1);

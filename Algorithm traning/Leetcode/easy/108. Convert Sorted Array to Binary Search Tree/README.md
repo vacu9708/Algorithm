@@ -1,24 +1,5 @@
 # [108. Convert Sorted Array to Binary Search Tree](https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/)
 
-## Iteratively
-~~~javascript
-var sortedArrayToBST = function(nums) {
-    let mid=Math.floor(nums.length/2)
-    let root=new TreeNode(nums[mid])
-    let current=root
-    for(let i=mid-1; i>=0; i--){
-        current.left=new TreeNode(nums[i])
-        current=current.left
-    }
-    current=root
-    for(let i=mid+1; i<nums.length; i++){
-        current.right=new TreeNode(nums[i])
-        current=current.right
-    }
-    return root
-}
-~~~
-
 ## Recursively
 ~~~javascript
 var sortedArrayToBST = function(nums) {

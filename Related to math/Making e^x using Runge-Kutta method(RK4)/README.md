@@ -13,7 +13,7 @@
 #include <iostream>
 using namespace std;
 
-double dy_dx_function(double x, double y) { // y = e^x
+double dy_dx(double x, double y) { // y = e^x
     return y;
 }
 
@@ -21,18 +21,15 @@ void RK4(double target_x) {
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
     double x = 0, y = 1;
-    double k1 = dy_dx_function(x, y);
-    double k2 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k1); // Add x_step / 2 to x and the change in y by it to y.
-    double k3 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k2);
-    double k4 = dy_dx_function(x + x_step, y + x_step * k3);
+    double k1,k2,k3,k4;
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
+        k1 = dy_dx(x, y);
+        k2 = dy_dx(x + x_step / 2, y + (x_step / 2) * k1);
+        k3 = dy_dx(x + x_step / 2, y + (x_step / 2) * k2);
+        k4 = dy_dx(x + x_step, y + x_step * k3);
         x = x + x_step; // Move x as much as x step
-        y = y + x_step * ((k1 + 2*k2 + 2*k3 + k4) / 6); // Find the change in y
-        k1 = dy_dx_function(x, y);
-        k2 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k1); // Add x_step / 2 to x and the change in y by it to y.
-        k3 = dy_dx_function(x + x_step / 2, y + (x_step / 2) * k2);
-        k4 = dy_dx_function(x + x_step, y + x_step * k3);
+        y = y + x_step * ((k1 + 2 * k2 + 2 * k3 + k4) / 6); // Find the change in y        
     }
 
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, k1);

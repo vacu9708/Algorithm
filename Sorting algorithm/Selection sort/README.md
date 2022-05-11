@@ -3,7 +3,7 @@
 
 ## Working process
 1. Look for the minimum
-2. Put the minimum from the far left.
+2. Place the found minimum from the far left to the right.
 
 ## Time complexity (N : the number of elements)
 > (N-1) + (N-2) + (N-3) + ... + 1 -> the sum of arithmetic series : [(N-1){2(N-1) + (N-1-1) * -1}] / 2 => **O(n^2)**

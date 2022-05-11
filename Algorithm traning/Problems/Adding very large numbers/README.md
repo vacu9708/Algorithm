@@ -13,13 +13,13 @@ void sum_of_big_numbers(string num1, string num2) {
 	vector<char> buffer1(BUFFER_LENGTH, '0'), buffer2(BUFFER_LENGTH, '0');
 	int buffer1_index = BUFFER_LENGTH - 1, buffer2_index = BUFFER_LENGTH - 1;
 
-	int from1 = num1.size() - 1;
+	int num1_i = num1.size() - 1;
 	while (from1 >= 0)
-		buffer1[buffer1_index--] = num1[from1--];
+		buffer1[buffer1_index--] = num1[num1_i--];
 
-	int from2 = num2.size() - 1;
+	int num2_i = num2.size() - 1;
 	while (from2 >= 0)
-		buffer2[buffer2_index--] = num2[from2--];
+		buffer2[buffer2_index--] = num2[num2_i--];
 	//-----
 	// Calculate
 	int calculation_index = BUFFER_LENGTH - 1, sum_of_a_digit = 0, carry = 0;

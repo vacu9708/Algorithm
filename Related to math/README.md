@@ -9,7 +9,7 @@
 * [Newton-raphson method (plus babylonian method)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Newton-raphson%20method)
 
 ## Linear algebra
-* [Cross product of matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Cross%20product%20of%202%20matrices)
+* [Cross product of matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Multiplication%20of%20matrices)
 * [Gaussian elimination](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Gaussian%20elimination)
 
 ## Problems related to math

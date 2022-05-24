@@ -29,7 +29,7 @@ def gaussian_elimination(A, b):
     n_of_columns = len(A[0])
 
     # Forward elimination
-    for k in range(0, n_of_rows-1): # Use k'th row to eliminate X_k from
+    for k in range(0, n_of_rows-1): # Use k'th row to eliminate X_k, starting from
         for i in range(k+1, n_of_rows): # (k+1)th row.
             m = A[i][k] / A[k][k] # Find m_ik to multiply to make a new row.
 

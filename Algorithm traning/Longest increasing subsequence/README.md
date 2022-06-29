@@ -15,8 +15,8 @@ int lis(vector<int> arr, int n)
 	vector<int> memo(n); // Longest lengths of subsequences
 	memo[0] = 1;
 
-	for (int i = 1; i < n; i++) { // Last index of subsequences
-		memo[i] = 1; // Initialize the length of a subsequence
+	for (int i = 1; i < n; i++) { // Last index of new subsequences
+		memo[i] = 1; // Initialize the length of the subsequence
 		for (int j = 0; j < i; j++) // Previously found LIS
 			if (arr[i] > arr[j] && memo[j] + 1 > memo[i]) { // Increasing && adding the [j] subsequence makes the current subsequence longer
 				printf("i: %d j: %d / ", i, j); print_list(memo); printf(" -> "); // To see the process

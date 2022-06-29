@@ -19,7 +19,7 @@ B = [] # Auxiliary
 C = [] # Target
 
 def tower_of_hanoi(disk, source, target, auxiliary):
-    if disk == -1: # Termination condition (Top disk found)
+    if disk == -1: # Termination condition (Last disk found)
         return 
         
     # Step 1 : Move  n'th disk to the auxiliary rod to move the Nth disk.

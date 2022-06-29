@@ -1,6 +1,6 @@
 # Tower of Hanoi
 
-![image](https://user-images.githubusercontent.com/67142421/176497527-436020ca-3951-4599-991a-73fc9b7322ac.png)
+![image](https://user-images.githubusercontent.com/67142421/176498793-a2874a2c-41c8-4a91-bc6f-687b45fe0be0.png)
 
 ## Rule
 * Only one disk may be moved at a time.
@@ -14,9 +14,9 @@
 3. Move the N-1th disk that was in the auxiliary rod to the target rod.
 
 ~~~python
-A = [2, 1, 0]
-B = []
-C = []
+A = [2, 1, 0] # Start
+B = [] # Target
+C = [] # Auxiliary
 
 def tower_of_hanoi(disk, source, target, auxiliary):
     if disk == -1: # Termination condition (Top disk found)

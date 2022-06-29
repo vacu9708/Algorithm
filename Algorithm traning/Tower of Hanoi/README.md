@@ -1,5 +1,7 @@
 # Tower of Hanoi
 
+![image](https://user-images.githubusercontent.com/67142421/176497527-436020ca-3951-4599-991a-73fc9b7322ac.png)
+
 ## Rule
 * Only one disk may be moved at a time.
 * No disk may be placed on top of a disk that is smaller than it.

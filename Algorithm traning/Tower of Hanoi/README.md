@@ -22,10 +22,10 @@ def tower_of_hanoi(disk, source, target, auxiliary):
     if disk == -1: # Termination condition (Top disk found)
         return 
         
-    # Step 1 : Move (N-1)disk to the auxiliary rod to move the Nth disk.
+    # Step 1 : Move  n'th disk to the auxiliary rod to move the Nth disk.
     tower_of_hanoi(disk - 1, source, auxiliary, target)
     
-    # Move Nth disk from source to target.
+    # Move n'th disk from source to target.
     print("Move disk : (", disk,')')
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')

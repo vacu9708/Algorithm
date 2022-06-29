@@ -9,7 +9,7 @@
 
 ## Explanation
 **How to move an Nth disk and disks on top of it to the target rod**
-1. The N-1th(a disk on top disk N) disk has to be moved to the auxiliary rod so that the Nth disk can be moved to the target rod.
+1. The (N-1)th(a disk on top disk N) disk has to be moved to the auxiliary rod so that the Nth disk can be moved to the target rod.
 2. Move the Nth disk to the target rod.
 3. Move the N-1th disk that was in the auxiliary rod to the target rod.
 
@@ -22,7 +22,7 @@ def tower_of_hanoi(disk, source, target, auxiliary):
     if disk == -1: # Termination condition (Last disk found)
         return 
         
-    # Step 1 : Move  n'th disk to the auxiliary rod to move the Nth disk.
+    # Step 1 : Move  (n-1)th disk to the auxiliary rod to move the (n)th disk.
     tower_of_hanoi(disk - 1, source, auxiliary, target)
     
     # Move n'th disk from source to target.

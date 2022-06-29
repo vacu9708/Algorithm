@@ -1,9 +1,8 @@
 # Coin change
+>Find the way to use the fewest coins to make target money with given coins.
+>We have $1, $5, $12 and have to make $15 with the given coins. There are 33 coins for each coin.
 
 ## Back tracking method
->Find the way to use the fewest coins to make target money with given coins.
->We have $1, $5, $12 and have to make $15 with the coins. There are 33 coins for each coin.
-
 ~~~c++
 #include <iostream>
 #include <vector>

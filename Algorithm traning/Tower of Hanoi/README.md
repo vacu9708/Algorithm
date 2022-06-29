@@ -15,8 +15,8 @@
 
 ~~~python
 A = [2, 1, 0] # Start
-B = [] # Target
-C = [] # Auxiliary
+B = [] # Auxiliary
+C = [] # Target
 
 def tower_of_hanoi(disk, source, target, auxiliary):
     if disk == -1: # Termination condition (Top disk found)

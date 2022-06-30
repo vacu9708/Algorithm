@@ -30,7 +30,9 @@ int weight_table[GRAPH_SIZE];
 bool already_shortest[GRAPH_SIZE]; // All the paths where already_shortest == true are shorter than paths where already_shortest == false.
 string shortest_paths[GRAPH_SIZE];
 
-int next_nearest_vertex() { // Find the best vertex to go that hasn't been visited (Can be more efficient by putting the weight table into a priority queue)
+// Find the next vertex that hasn't been visited and is nearest from the start vertext 
+// (Can be more efficient by putting the weight table into a priority queue)
+int next_nearest_vertex() {
 	int min_weight = INF, vertex_to_visit = 0;
 	for (int i = 0; i < GRAPH_SIZE; i++)
 		if (already_shortest[i] == false && weight_table[i] < min_weight) {
@@ -52,25 +54,23 @@ void dijkstra(int start) {
 		if (start != to && graph[start][to] != INF) // Initialize available paths
 			shortest_paths[to] = to_string(start) + " -> " + to_string(to);
 	}
-	//-----
-	// Update. All the shortest paths from start vertex have to be found to know one shortest path.
+
+	// Update.
 	for (int i = 0; i < GRAPH_SIZE; i++) {
 		int current_vertex = next_nearest_vertex();
-		already_shortest[current_vertex] = true;
-		for (int to = 0; to < GRAPH_SIZE; to++) {
-			if (already_shortest[to] == true)
+		already_shortest[current_vertex] = true; // The path to current_vertex is confirmed as the shortest
+		for (int to = 0; to < GRAPH_SIZE; to++) { // Update vertices connected to the current vertex
+			if (already_shortest[to] == true) // Not necessary because if the path is already shortest, it won't be updated below.
 				continue;
 
-			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
 			// Update weight table and shortest path if the new path is better than the old path
+			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][to]; // new path
 			if (weight_of_new_path < weight_table[to]) {
 				weight_table[to] = weight_of_new_path;
 				shortest_paths[to] = shortest_paths[current_vertex] + " -> " + to_string(to);
 			}
-			//-----
 		}
 	}
-	//-----
 }
 
 void print_result(int start) {

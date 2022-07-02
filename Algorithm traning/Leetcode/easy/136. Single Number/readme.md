@@ -1,0 +1,41 @@
+### [136. Single Number](https://leetcode.com/problems/single-number/)
+
+## First solution(slower)
+~~~python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        natural_counter_table=[0 for i in range(3 * 10**4+1)]
+        negative_counter_table=[0 for i in range(3 * 10**4+1)]
+        for num in nums: # Count how often numbers appear
+            if num>=0:
+                natural_counter_table[num]+=1
+            else:
+                negative_counter_table[-num]+=1
+        
+        # Find the single number
+        for i, how_many in enumerate(natural_counter_table):
+            if how_many==1:
+                return i
+        for i, how_many in enumerate(negative_counter_table):
+            if how_many==1:
+                return -i
+~~~
+
+~~~python
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        xor = 0
+        for num in nums:
+            xor ^= num    
+        return xor
+~~~
+## How it works?
+Suppose the nums array is [1, 1, 2, 2, 3]. 
+1. 0 xor 1 = 1
+2. 1 xor 1 = 0
+3. 0 xor 2 = 2
+4. 2 xor 2 = 0
+5. 0 xor 3 = 3
+
+3 is returned as the result.<br>
+XOR satisfies the commutative property, therefore it works when the single number in in another index.

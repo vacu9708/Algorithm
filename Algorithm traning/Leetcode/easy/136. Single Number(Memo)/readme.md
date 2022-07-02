@@ -21,6 +21,7 @@ class Solution:
                 return -i
 ~~~
 
+## Brilliant solution
 ~~~python
 class Solution:
     def singleNumber(self, nums: List[int]) -> int:

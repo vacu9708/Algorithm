@@ -39,4 +39,4 @@ Suppose the nums array is [1, 1, 2, 2, 3].
 5. 0 xor 3 = 3
 
 3 is returned as the result.<br>
-XOR satisfies the commutative property, therefore it works when the single number in in another index.
+XOR satisfies the commutative property, therefore it works when the single number in in another index too.

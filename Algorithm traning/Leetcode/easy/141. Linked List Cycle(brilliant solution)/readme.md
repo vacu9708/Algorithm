@@ -1,6 +1,6 @@
 ### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
-## First solution(ineffective)
+## First solution(slower)
 Using a dictionary that has information on if a node has previously been visited or not
 ~~~python
 class Solution:

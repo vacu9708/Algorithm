@@ -7,18 +7,15 @@ class Solution:
     def hasCycle(self, head: Optional[ListNode]) -> bool:
         pointer=head
         visiteds={}
-            
-        pointer=head
-        while True:
+        while pointer:
             visiteds[id(pointer)]=True
             pointer=pointer.next
-            if not pointer:
-                return False
             try:
                 if visiteds[id(pointer)]:
                     return True
             except:
                 visiteds[id(pointer)]=False
+        return False
 ~~~
 
 ## Brilliant solution

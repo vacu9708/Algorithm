@@ -1,6 +1,6 @@
 ### [141. Linked List Cycle](https://leetcode.com/problems/linked-list-cycle/)
 
-## First solution(slower)
+## Solution 1
 Using a dictionary that has information on if a node has previously been visited or not
 ~~~python
 class Solution:
@@ -8,17 +8,17 @@ class Solution:
         pointer=head
         visiteds={}
         while pointer:
-            visiteds[id(pointer)]=True
+            visiteds[pointer]=True
             pointer=pointer.next
             try:
-                if visiteds[id(pointer)]:
+                if visiteds[pointer]:
                     return True
             except:
-                visiteds[id(pointer)]=False
+                visiteds[pointer]=False
         return False
 ~~~
 
-## Brilliant solution
+## Solution 2
 Using a slow pointer and a fast pointer
 ~~~python
 class Solution:

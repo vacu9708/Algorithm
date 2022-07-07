@@ -1,3 +1,5 @@
+![image](https://user-images.githubusercontent.com/67142421/177835349-148f09c2-8d40-435c-9e1a-820a426e147e.png)
+
 # Coin change
 >Find the way to use the fewest coins to make target money with given coins.
 >We have $1, $5, $12 and have to make $15 with the given coins. There are 33 coins for each coin.

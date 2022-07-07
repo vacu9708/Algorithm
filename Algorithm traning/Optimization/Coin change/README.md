@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/67142421/177835349-148f09c2-8d40-435c-9e1a-820a426e147e.png)
+<img src="https://user-images.githubusercontent.com/67142421/177835491-441dc710-f04e-40dc-bb68-42b17319adff.png" width=640 height=400>
 
 # Coin change
 >Find the way to use the fewest coins to make target money with given coins.

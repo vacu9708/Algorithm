@@ -58,25 +58,25 @@ void quick_sort(vector<int>& container, int start, int end) { // Sorting in asce
         // Find an element bigger than pivot. Only elements smaller than or equal to pivot remain on the left of i.
         while (container[i] <= container[start] && i < end)
             i++;
-        //-----
+
         // Find an element smaller than pivot. Only elements bigger than or equal to pivot remain on the right of j.
         while (container[j] >= container[start] && j > start)
             j--;
-        //-----
-        // Swap container[i], which is bigger than pivot and container[j], which is smaller than pivot 
-        // so that they are in ascending order.
+
+        /* Swap container[i], which is bigger than pivot and container[j], which is smaller than pivot 
+           so that they are in ascending order.*/
         if (i < j)
             swap(container[i], container[j]);
-        //-----
-        // When i is on the right of j, container[i] and container[j] are in ascending order, so don't swap them.
-        // Container[j] is smaller than pivot, so swap them.
+        
+        /* When i is on the right of j, container[i] and container[j] are in ascending order, so don't swap them.
+           Container[j] is smaller than pivot, so swap them.*/
         else {
             swap(container[j], container[start]);
             printf("Dividing number : (%d) -> ", container[j]);
             print_elements(container);
             break;
         }
-        //-----
+        
     }
 
     // Divide the list into 2 sublists.

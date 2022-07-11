@@ -43,7 +43,8 @@ int main() {
 >For example, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, ...
 
 ## A recursive method and regular iterative methods
-
+* **Recursive fibonacci** : **O(n^2)** because values that have already been calculated are calculated again. 
+* **DP and iterative fibonacci** : **O(n)**
 ~~~python
 def fibonacci_loop1(n):
     fibonacci_sequence = [1,1]

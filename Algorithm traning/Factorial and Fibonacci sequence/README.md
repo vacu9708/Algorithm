@@ -40,10 +40,12 @@ int main() {
 
 # Fibonacci sequence
 >The Fibonacci sequence is the series of numbers where each number is the sum of the two preceding numbers.<br>
->For example, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, ...
+1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610, ...
 
 ## A recursive method and regular iterative methods
 * **Recursive fibonacci** : **O(n^2)** because values that have already been calculated are calculated again. 
+![image](https://user-images.githubusercontent.com/67142421/178239230-18553100-0f4a-49d6-a34e-4ca265f1aaa2.png)
+
 * **DP and iterative fibonacci** : **O(n)**
 ~~~python
 def fibonacci_loop1(n):

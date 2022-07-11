@@ -14,11 +14,11 @@ var isSymmetric = function(root) {
     }
     function right_first(node){
         if(!node){
-            if(null!=queue.shift())
+            if(queue.shift()!=null)
                 is_symmetric=false
             return
         }
-        if(node.val!=queue.shift()){
+        if(queue.shift()!=node.val){
             is_symmetric=false
             return
         }

@@ -12,7 +12,7 @@
 
 ### Time complexity
 E : edge, V : vertice<br>
-Union find takes **O(1), Sorting takes **O(ElogV)
+Union find takes **O(1)**, Sorting takes **O(ElogV)**
 
 ## Graph used and the Minimum Spanning Tree made in this code
 <img src="https://user-images.githubusercontent.com/67142421/149641825-299e573d-f986-4e29-8f4d-d85907f419a9.png" width="600" height="500">

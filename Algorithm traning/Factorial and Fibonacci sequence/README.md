@@ -1,8 +1,8 @@
 # Recursive method
 ## When to use?
 >A recursive method takes a lot of stack memory, so it should be used only when it is complex to write regular iterative code.
-* When the answer can be found by solving the problem that is a level below. For example, if you know 4!, you can find 5! by 4! X 5. Tower of hanoi is an example too.
-* It is used in graph searching such as DFS, BFS. (The main use)
+* Used when the answer can be found by solving the problem that is a level below. For example, if you know 4!, you can find 5!. Tower of hanoi is included in this example.
+* Used for searching a graph such as DFS, BFS. (The main use)
 
 ## Recursive methods and a regular iterative method
 ~~~c++

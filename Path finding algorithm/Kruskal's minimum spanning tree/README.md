@@ -1,17 +1,17 @@
 # Kruskal's minimum spanning tree
+E : edge, V : vertice<br>
 >A minimum spanning tree is a subset of an edge-weighted undirected graph that connects all the vertices together with the minimum number of edges and 
 >minimum total edge weight, that is, **without any cycles**. <br>
->A minimum spanning tree has (V – 1) edges where V is the number of vertices in the given graph. 
+>A minimum spanning tree has (V – 1) edges.
 
 ## Working process
 >Greedy algorithm that uses the union find and sorting
-1. Sort all the edges in ascending order.
-2. Pick the first edge that has the smallest weight. 
+1. Sort all edges in ascending order.
+2. Pick an edge that has the smallest weight at the moment. 
 3. Check if it forms a cycle with the spanning tree formed so far. If a cycle is not formed, include this edge. Else, discard it.
 4. Repeat until there are (V-1) edges in the spanning tree. (until making the MST is finished). 
 
 ### Time complexity
-E : edge, V : vertice<br>
 Union find takes **O(1)**, Sorting takes **O(ElogV)**
 
 ## Graph used and the Minimum Spanning Tree made in this code

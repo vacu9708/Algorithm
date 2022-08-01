@@ -11,6 +11,7 @@
 2. "i" searches for an element bigger than the pivot from the 2nd index and "j" searches for an element smaller than the pivot from the last index.
 3. Swap found 2 elements. This process leaves elements smaller than pivot on the left of i and elements bigger than pivot on the right of j.
 4. Once "i" is no longer on the left of "j", swap list[j] and the pivot so that elements on the left of j are in ascending order.
+5. Split the list into 2 sublists with j that is the center.
 
 ## The worst case where O(n^2) is taken
 >If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** is taken.<br>

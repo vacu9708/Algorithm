@@ -4,7 +4,7 @@
 
 ## Features
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
-* A list is divided into 2 sublists. This process is repeated.
+* A list is divided into 2 sublists. This process is repeated. (Divde and conquer algorithm)
 
 ## Repeated process (ascending order)
 1. A pivot is selected and swapped with the first element.

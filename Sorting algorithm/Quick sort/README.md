@@ -6,7 +6,7 @@
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
 * A list is divided into 2 sublists. This process is repeated.
 
-## Working process (ascending order)
+## Repeated process (ascending order)
 1. A pivot is selected and swapped with the first element.
 2. "i" searches for an element bigger than the pivot from the 2nd index and "j" searches for an element smaller than the pivot from the last index.
 3. Swap found 2 elements. This process leaves elements smaller than pivot on the left of i and elements bigger than pivot on the right of j.

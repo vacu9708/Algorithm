@@ -15,8 +15,8 @@
    because "j" is going to be a dividing index and on the left of it, there have to be only elements smaller than the dividing number.
 
 ## The worst case where O(n^2) is taken
->If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** time might be taken.<br>
->But this situation occurs only when elements are already sorted in either ascending or descending order(and when a random pivot is not used), which is a very low possibility. Most of the time we have to sort elements not sorted, not already sorted elements.<br>
+>If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** is taken.<br>
+>But this situation occurs only when elements are already sorted in either ascending or descending order, which rarely happens. Most of the time we have to sort unsorted elements.<br>
 >Also, this problem can be solved by using a random pivot.
 ### Example
 >There are sorted elements {1,2,3,4,5}(n = 5). What will happen if only the minimum is selected as a pivot?<br>

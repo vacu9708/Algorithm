@@ -1,6 +1,6 @@
 # [160. Intersection of Two Linked Lists](https://leetcode.com/problems/intersection-of-two-linked-lists/)
 
-## Using hashmap
+## Using hashmap (first solution)
 ~~~python
 class Solution:
     def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
@@ -22,4 +22,21 @@ class Solution:
                 return headB
             else:
                 headB=headB.next
+~~~
+
+## More effective
+~~~python
+class Solution:
+    def getIntersectionNode(self, headA, headB):
+        pA = headA # 2 pointers
+        pB = headB
+
+        while pA != pB: # The 2 pointers will meet eventually. 
+            # if either pointer hits the end, switch head
+            # if not hit the end, just move on to next
+            pA = headB if pA == None else pA.next  
+            pB = headA if pB == None else pB.next
+
+        return pA # only 2 ways to get out of the loop, they meet or the both hit the end
+
 ~~~

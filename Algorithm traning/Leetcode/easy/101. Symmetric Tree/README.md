@@ -36,10 +36,11 @@ var isSymmetric = function(root) {
 
 ## Better solution
 ~~~javascript
+var isSymmetric = function(root) {
     function DFS(pointer1, pointer2){  
-        if(!pointer1&&!pointer2) // If all nodes are symmetric
+        if(!pointer1&&!pointer2)
             return true
-        if((!pointer1||!pointer2) || (pointer1.val!=pointer2.val)) // If 2 nodes are different
+        if((!pointer1||!pointer2) || (pointer1.val!=pointer2.val))
             return false
         // Return true if the tree is symmetric
         return DFS(pointer1.left, pointer2.right)&&DFS(pointer1.right, pointer2.left)

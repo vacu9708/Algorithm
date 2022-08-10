@@ -25,7 +25,7 @@ def tower_of_hanoi(disk, source, target, auxiliary):
     # Step 1 : Move  (n-1)th disk to the auxiliary rod to move the (n)th disk.
     tower_of_hanoi(disk - 1, source, auxiliary, target)
     
-    # Move n'th disk from source to target.
+    # Step 2 : Move n'th disk from source to target.
     print("Move disk : (", disk,')')
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')

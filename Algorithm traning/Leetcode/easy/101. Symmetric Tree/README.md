@@ -35,7 +35,7 @@ var isSymmetric = function(root) {
 ~~~
 
 ## Better solution
-~~~javacsript
+~~~javascript
     function DFS(pointer1, pointer2){  
         if(!pointer1&&!pointer2) // If all nodes are symmetric
             return true

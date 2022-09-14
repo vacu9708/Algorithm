@@ -3,7 +3,8 @@
 >It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph.
 
 ## Working process
->Shortest paths are found by comparing old paths with new paths and updating a weight table. The weight table has information of shortest distances.
+>Shortest paths are found by visiting the nearest path that hasn't been visited and comparing old paths with new paths and updating the weight table.
+<br>The weight table has information of shortest distances.
 
 ## Graph in the code
 ![Graph for dijikstra](https://user-images.githubusercontent.com/67142421/149639512-b50303aa-c579-45f6-9be7-21d48046626e.png)

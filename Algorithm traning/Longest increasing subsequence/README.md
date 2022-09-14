@@ -63,8 +63,8 @@ int main() // test code
 {
 	vector<int> arr = { 10,20,10,30,20,50 };
 	int n = arr.size();
-	printf("Length of LIS is %d\n", LIS_nlogn(arr));
-
+	printf("Length of LIS is %d\n\n", LIS_nlogn(arr));
+	printf("Length of LIS is %d\n", LIS_n_squared(arr));
 	return 0;
 }
 ~~~

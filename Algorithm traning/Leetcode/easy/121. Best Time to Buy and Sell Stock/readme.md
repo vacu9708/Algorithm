@@ -10,7 +10,7 @@ class Solution:
             currentProfit = prices[right] - prices[left]
             if prices[left] < prices[right]: # + profit
                 max_profit =max(currentProfit,max_profit)
-            else: loss
+            else: # - profit
                 left = right # Start from the new left
             right += 1
         return max_profit

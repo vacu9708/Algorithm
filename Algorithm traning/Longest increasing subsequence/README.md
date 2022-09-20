@@ -14,10 +14,10 @@ void print_list(vector<int> arr) {
 int LIS_n_squared(vector<int> arr)
 {
 	int n = arr.size();
-	vector<int> memos(n); // Longest length of subsequences
+	vector<int> memos(n); // Longest length of subsequences. Each index of memos is the last index of LIS
 	memos[0] = 1;
 
-	for (int i = 1; i < n; i++) { // Find LIS whose last index is i
+	for (int i = 1; i < n; i++) { // LIS whose last index is i
 		memos[i] = 1; // Initialize the length of the LIS
 		for (int j = 0; j < i; j++) // Previously found LIS whose last index is j
 			if (arr[i] > arr[j] && memos[j] + 1 > memos[i]) { // Increasing sequence && adding the [j] LIS makes the current subsequence longer

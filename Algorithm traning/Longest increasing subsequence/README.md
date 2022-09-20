@@ -14,7 +14,7 @@ void print_list(vector<int> arr) {
 int LIS_n_squared(vector<int> arr)
 {
 	int n = arr.size();
-	vector<int> memos(n); // Longest lengths of subsequences
+	vector<int> memos(n); // Longest length of subsequences
 	memos[0] = 1;
 
 	for (int i = 1; i < n; i++) { // Find LIS whose last index is i

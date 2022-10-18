@@ -54,16 +54,13 @@ void quick_sort(vector<int>& elements, int first, int last) { // Sorting in ascl
 
     while (1) {
         //Find an element bigger than pivot to leave only elements smaller than pivot on the left of i.
-        while (i < last && elements[i] <= elements[first])
-            i++;
+        while (i < last && elements[i] <= elements[first]) i++;
 
         //Find an element smaller than pivot to leave only elements bigger than pivot on the right of j.
-        while (j > first && elements[j] >= elements[first])
-            j--;
+        while (j > first && elements[j] >= elements[first]) j--;
 
         //Swap elements[i], which is bigger than pivot with elements[j], which is smaller than pivot
-        if (i < j)
-            swap(elements[i], elements[j]);
+        if (i < j) swap(elements[i], elements[j]);
 
         //Once "i" is no longer on the left of "j", swap list[j] and the pivot so that elements on the left of j are in ascending order.
         else {
@@ -71,7 +68,6 @@ void quick_sort(vector<int>& elements, int first, int last) { // Sorting in ascl
             // Show the process
             printf("Dividing number : (%d) -> ", elements[j]);
             print_elements(elements);
-
             break;
         }
     }

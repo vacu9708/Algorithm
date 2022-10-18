@@ -1,6 +1,6 @@
 # Quick sort
 >Quick sort is the most effective sorting algorithm that takes **nlog(n) time** on average.<br>
->It is one of *Divide and conquer* algorithms.
+>It is one of the *Divide and conquer* algorithms.
 
 ## Features
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.

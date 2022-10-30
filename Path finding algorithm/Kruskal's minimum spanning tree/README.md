@@ -48,7 +48,7 @@ int get_parent(int vertex) {
 		return vertex;
 	
 	get_parent(connection_table[vertex]);
-	// Also possible instead of get_parent(connection_table[vertex]);
+	// Also possible instead of return get_parent(connection_table[vertex]);
 	return connection_table[vertex] = get_parent(connection_table[vertex]);
 	//-----
 }

@@ -46,11 +46,7 @@ vector<int> connection_table(graph_size);
 int get_parent(int vertex) {
 	if (vertex == connection_table[vertex])
 		return vertex;
-	
-	get_parent(connection_table[vertex]);
-	// Also possible instead of return connection_table[vertex] = get_parent(connection_table[vertex]);
 	return get_parent(connection_table[vertex]);
-	//-----
 }
 
 bool is_cycle_made(int parent1, int parent2) { // Check if a cycle is made by checking if the 2 vertices have the same parent.

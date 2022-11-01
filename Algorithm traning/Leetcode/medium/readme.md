@@ -1,1 +1,1 @@
-# two pointers, sort, hashmap, recursion(DFS, backtracking), DP
+# sort, hashmap, recursion(DFS, backtracking), DP, two pointers

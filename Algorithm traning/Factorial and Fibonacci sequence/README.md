@@ -104,3 +104,6 @@ void main() {
 
 ## Output
 ![image](https://user-images.githubusercontent.com/67142421/149926604-5ea07991-3061-41ae-bedd-fa8e0f93ed1e.png)
+
+Memoization : taking advantage of previous results
+Dynamic programming : solving a problem by breaking it down into subproblems

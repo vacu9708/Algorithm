@@ -1,4 +1,4 @@
-# Subquery
+# Subquery, EXISTS
 - ### [example](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/SQL%20training/medium/%ED%97%A4%EB%B9%84%20%EC%9C%A0%EC%A0%80%EA%B0%80%20%EC%86%8C%EC%9C%A0%ED%95%9C%20%EC%9E%A5%EC%86%8C.md)
 
 # CASE, is null, date comparison

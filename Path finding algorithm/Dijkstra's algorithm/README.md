@@ -13,7 +13,7 @@
 >In the other methods, linear search is performed to find min vertex, which takes **O(n^2)**.<br>
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
 
-### Code to skip old paths that are in the priority queue
+### Code to skip already shortest paths that are in the priority queue
 ~~~c++
 if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
 	continue;
@@ -22,8 +22,6 @@ already_shortest[current_vertex] = true;
 	//continue;
 ~~~
 ### Example picture of this case
->The old path to vertex 3 that is in the priority queue is skipped in the last procedure.
-
 ![image](https://user-images.githubusercontent.com/67142421/150093837-b1494e8a-0e5f-4473-bb7c-83887a4d8877.png)
 
 ---

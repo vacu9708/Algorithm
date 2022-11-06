@@ -1,4 +1,4 @@
-# CASE, date comparison
+# CASE, is null, date comparison
 - ### [date format(MySQL official)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-format)
 - ### [example](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/SQL%20training/medium/%EC%A1%B0%EA%B1%B4%EB%B3%84%EB%A1%9C%20%EB%B6%84%EB%A5%98%ED%95%98%EC%97%AC%20%EC%A3%BC%EB%AC%B8%EC%83%81%ED%83%9C%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0.md)
 # GROUP BY, HAVING

@@ -23,6 +23,7 @@ already_shortest[current_vertex] = true;
 ~~~
 ### Example picture of this case
 Vertex 3 is processed twice, which should be prevented.
+
 ![image](https://user-images.githubusercontent.com/67142421/200169241-76460bf5-e714-4f40-9267-91f76dc31a78.png)
 
 ---

@@ -1,5 +1,5 @@
 # CASE, date comparison
-### [date format](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-format)
+### [date format(MySQL official)](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html#function_date-format)
 ~~~sql
 SELECT ORDER_ID, DATE_FORMAT(OUT_DATE, '%Y-%m-%d'),
     case

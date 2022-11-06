@@ -17,7 +17,7 @@
 ~~~c++
 if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
 	continue;
-	already_shortest[current_vertex] = true;
+already_shortest[current_vertex] = true;
 //if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
 	//continue;
 ~~~

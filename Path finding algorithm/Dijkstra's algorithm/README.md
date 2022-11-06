@@ -69,21 +69,18 @@ void dijkstra(int start) {
 	priority_queue<Path, vector<Path>, less<Path>> pq;
 	pq.push(Path(start, 0));
 
-	// Update. All the shortest paths from start vertex have to be found to know one shortest path.
+	// Update.
 	while(pq.empty() == false) {
 		int current_vertex = pq.top().to;
 		int current_weight = pq.top().weight;
 		pq.pop();
 		// Code to skip old paths in the priority queue
-		if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
+		if (already_shortest[current_vertex] == true) // If the path is already the shortest path
 			continue;
 		already_shortest[current_vertex] = true;
-		//if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
-			//continue;
-		//-----
 		
 		for (int i = 0; i < graph[current_vertex].size(); i++) {
-			if (already_shortest[graph[current_vertex][i].to] == true) // If the path is already the shortest path, continue
+			if (already_shortest[graph[current_vertex][i].to] == true) // If the path is already the shortest path
 				continue;
 
 			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][i].weight; // new path
@@ -93,10 +90,8 @@ void dijkstra(int start) {
 				shortest_paths[graph[current_vertex][i].to] = shortest_paths[current_vertex] + " -> " + to_string(graph[current_vertex][i].to);
 				pq.push(Path(graph[current_vertex][i].to, weight_of_new_path));
 			}
-			//-----
 		}
 	}
-	//-----
 }
 
 void print_result(int start) {

@@ -83,7 +83,7 @@ void dijkstra(int start) {
 			if (already_shortest[graph[current_vertex][i].to] == true) // If the path is already the shortest path
 				continue;
 
-			int weight_of_new_path = weight_table[current_vertex] + graph[current_vertex][i].weight; // new path
+			int weight_of_new_path = current_weight + graph[current_vertex][i].weight; // new path
 			// Update weight table and shortest path if the new path is better than the old path
 			if (weight_of_new_path < weight_table[graph[current_vertex][i].to]) {
 				weight_table[graph[current_vertex][i].to] = weight_of_new_path;

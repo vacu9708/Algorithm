@@ -14,7 +14,7 @@
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
 
 ### Code to skip already shortest paths that are in the priority queue
-### [PYTHON](https://github.com/vacu9708/Algorithm/blob/main/Path%20finding%20algorithm/Dijkstra's%20algorithm/python.md)
+### [PYTHON CODE](https://github.com/vacu9708/Algorithm/blob/main/Path%20finding%20algorithm/Dijkstra's%20algorithm/python.md)
 ~~~c++
 if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
 	continue;

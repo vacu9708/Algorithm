@@ -1,5 +1,6 @@
 # Algorithm traning
-sort, hashmap, recursion(backtracking), memoization(DP), two pointers
+### two pointers, sort, recursion(backtracking), memoization(DP), dijkstra
+### data structure(hashmap, union-find)
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
 * [Programmers](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Programmers)

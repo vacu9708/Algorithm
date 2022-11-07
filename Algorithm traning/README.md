@@ -1,6 +1,6 @@
 # Algorithm traning
 - ### Consider the constraints if the solution keeps failing!
-- ### two pointers, sort, recursion(backtracking), memoization(DP), dijkstra
+- ### two pointers, sort, recursion(backtracking), memoization, dijkstra
 - ### data structure(dequeue, hashmap, union-find)
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)

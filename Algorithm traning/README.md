@@ -1,5 +1,5 @@
 # Algorithm traning
-- ### Consider the constraint if the solution keeps failing!
+- ### Consider the constraints if the solution keeps failing!
 - ### two pointers, sort, recursion(backtracking), memoization(DP), dijkstra
 - ### data structure(hashmap, union-find)
 ## Algorithm problems

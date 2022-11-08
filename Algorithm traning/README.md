@@ -1,5 +1,5 @@
 # Algorithm traning
-- Note down the images of algorithm without code
+- ### Note down the images of algorithm
 - ### Consider the constraints!
 - ### two pointers, sort, recursion(backtracking), memoization, dijkstra
 - ### data structure(dequeue, hashmap, union-find)

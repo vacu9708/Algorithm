@@ -1,5 +1,6 @@
 # Algorithm traning
-- ### Consider the constraints if the solution keeps failing!
+- Note down the images of algorithm without code
+- ### Consider the constraints!
 - ### two pointers, sort, recursion(backtracking), memoization, dijkstra
 - ### data structure(dequeue, hashmap, union-find)
 ## Algorithm problems

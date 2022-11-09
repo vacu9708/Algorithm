@@ -22,3 +22,11 @@
 - WHERE name LIKE '%a%' : any name that has a
 - WHERE name LIKE '%a' : any name that ends with a
 - WHERE name LIKE '__a__' : any name that has a in the middel of 4 characters
+## How to exclude results that have the same information with a different order
+-- GPA가 같은 학생들의 sID, sName, GPA 쌍(pair)을 열거
+Use < or >
+~~~sql
+SELECT A.sID, A.sName, A.GPA, B.sID, B.sName, B.GPA
+from Student as A, Student as B
+where A.GPA=B.GPA and A.sName!=B.sName and A.sName<B.sName
+~~~

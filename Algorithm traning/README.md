@@ -1,7 +1,7 @@
 # Algorithm traning
 - ### Note down the images of algorithm
 - ### Consider the constraints!
-- ### two pointers, sort, recursion(backtracking), memoization, dijkstra
+- ### two pointers, sort(binary search), recursion, memoization, dijkstra
 - ### data structure(dequeue, hashmap, union-find)
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)

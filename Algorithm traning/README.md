@@ -1,8 +1,8 @@
 # Algorithm traning
-- ### Note down the key images of algorithm
-- ### Consider the constraints!
-- ### two pointers, sort(binary search), recursion, memoization, dijkstra
-- ### data structure(hashmap, deque, union-find)
+- ### Note down key points
+- ### Consider the constraints! (Is efficiency important? / possible corner cases)
+- ### sort(binary search), recursion, memoization, two pointers, dijkstra
+- ### data structure(hashmap, deque)
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
 * [Programmers](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Programmers)

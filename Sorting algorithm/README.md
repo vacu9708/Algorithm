@@ -4,7 +4,7 @@
 * [Bubble sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Bubble%20sort)
 * [Selection sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Selection%20sort)
 * [Insertion sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Insertion%20sort)
-* [Heap sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Heap%20sort)
 * [Merge sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Merge%20sort)
 * [Quick sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Quick%20sort)
+* [Heap sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Heap%20sort)
 * [Counting sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Counting%20sort)

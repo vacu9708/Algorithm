@@ -28,44 +28,42 @@ void print_elements(vector<int>& list) {
 	printf("\n");
 }
 
-void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { // Sort elements in ascending order
-	// First half and second half have already been sorted.
-	int i = left, j = mid + 1, temp_index = left; // i : index in 1st half / j : index in 2nd half
-	while (i <= mid && j <= right) { // While both i and j are within 1st half and 2nd half
-		if (list[i] < list[j])
-			temp[temp_index++] = list[i++];
-		else
-			temp[temp_index++] = list[j++];
-	}
-	// Pick up the remaining elements and put them in temp
-	while (i <= mid) // Copy the remaining elements of first half, if there are any
-		temp[temp_index++] = list[i++];
-	while (j <= right) // Copy the remaining elements of second half, if there are any
-		temp[temp_index++] = list[j++];
-	//-----
-	for (int i = left; i <= right; i++) // Copy temp list to original list(Merging)
-		list[i] = temp[i];
-	// Show the process
-	//if (right - left == list.size() - 1) // The last procedure
-		//printf("-----Merge!\n");
-	//print_elements(list);
-}
-
-void divide_and_conquer(vector<int>& list, vector<int>& temp, int left, int right) {
-	if (left == right) // Termination condition(base case) of recursion
+void merge_sort(vector<int>& list, vector<int>& temp, int left, int right) {
+	if (left == right)
 		return;
 
 	int mid = (left + right) / 2;
-	divide_and_conquer(list, temp, left, mid);
-	divide_and_conquer(list, temp, mid + 1, right);
-	sort(list, temp, left, mid, right);
+	merge_sort(list, temp, left, mid);
+	merge_sort(list, temp, mid + 1, right);
+
+	int i = left, j = mid + 1, temp_i = left; // i : pointer in 1st half / j : pointer in 2nd half
+	// While i is within 1st half and j within 2nd half
+	while (i <= mid && j <= right) {
+		if (list[i] < list[j])
+			temp[temp_i++] = list[i++];
+		else
+			temp[temp_i++] = list[j++];
+	}
+	// Copy the remaining elements into temp
+	while (i <= mid) 
+		temp[temp_i++] = list[i++];
+	while (j <= right)
+		temp[temp_i++] = list[j++];
+	// Copy temp list to original list(Merge)
+	for (int i = left; i <= right; i++)
+		list[i] = temp[i];
+
+	// Show the process
+	//if (right - left == list.size() - 1) // The last procedure
+		//printf("-----Merge!\n");
 }
 
 int main(void) {
 	vector<int> list = { 8,7,6,5,4,3,2,1 };
 	vector<int> temp(list.size()); // Essential for merge sort
 	printf("Elements to sort : "); print_elements(list);
-	divide_and_conquer(list, temp, 0, list.size() - 1);
+	merge_sort(list, temp, 0, list.size() - 1);
+	print_elements(list);
 }
 ~~~
 

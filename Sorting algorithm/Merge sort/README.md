@@ -45,12 +45,10 @@ void sort(vector<int>& list, vector<int>& temp, int left, int mid, int right) { 
 	//-----
 	for (int i = left; i <= right; i++) // Copy temp list to original list(Merging)
 		list[i] = temp[i];
-
 	// Show the process
-	if (right - left == list.size() - 1) // The last procedure
-		printf("-----Merge!\n");
-	print_elements(list);
-	//-----
+	//if (right - left == list.size() - 1) // The last procedure
+		//printf("-----Merge!\n");
+	//print_elements(list);
 }
 
 void divide_and_conquer(vector<int>& list, vector<int>& temp, int left, int right) {

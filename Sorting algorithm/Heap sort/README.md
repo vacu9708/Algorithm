@@ -6,6 +6,10 @@
 > 2. Move the root which is the biggest value to the far right except sorted elements in ascending order
 > 3. Repeat this process
 
+## Features
+- Unstable like selection sort
+- Theoretically the best but in reality not that good because it is not cache-friendly
+
 ## Time complexity
 * Let the number of elements be N
 * Heapifying : log(N)<br>

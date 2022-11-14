@@ -63,8 +63,8 @@ void quick_sort(vector<int>& elements, int first, int last) { // Sorting in ascl
         else {
             swap(elements[j], elements[first]);
             // Show the process
-            printf("Dividing number : (%d) -> ", elements[j]);
-            print_elements(elements);
+            //printf("Dividing number : (%d) -> ", elements[j]);
+            //print_elements(elements);
             break;
         }
     }

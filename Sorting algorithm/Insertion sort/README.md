@@ -1,5 +1,5 @@
 # Insertion sort
->It is a good sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.
+>A **stable** sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.
 
 ## Time complexity
 * **Best case**
@@ -22,29 +22,26 @@ void print_array(int* arr, int length) {
 	cout << "\n";
 }
 
-void insertion_sort2(int arr[], int length) { // Using while-loop
-	int j, key;
-	for (int i = 1; i < length; i++) { //Sort the sublists in ascending order
-		key = arr[i];
-		j = i - 1;
-		while (j >= 0 && arr[j] > key)
-			arr[j + 1] = arr[j--];
-		arr[j + 1] = key;
-		print_array(arr, length); // Show the process
+void insertion_sort1(int arr[], int length) { // Using while-loop
+	for (int i = 0; i < length - 1; i++) {//Sort the sublists in ascending order
+		for (int j = i + 1; j > 0; j--) {
+			if (arr[j] < arr[j - 1])
+				swap(arr[j], arr[j - 1]);
+			print_array(arr, length); // Show the process
+		}
+		printf("-----A pass finished\n");
 	}
 }
-void insertion_sort1(int* arr, int length) { // Sort the elements by sorting the sublists in ascending order
+void insertion_sort2(int* arr, int length) { // Sort the elements by sorting the sublists in ascending order
 	int j, key;
 	for (int i = 1; i < length; i++) { // i : the index of key
-		printf("The index of key : (%d)\n", i);
 		key = arr[i];
 		for (j = i - 1; j >= 0 && arr[j] > key; j--) {// Sort a sublist up to index i. The sublist up to index i - 1 has already been sorted.
 			arr[j + 1] = arr[j];
 			print_array(arr, length); // Show the process
 		}
-
 		arr[j + 1] = key;
-		print_array(arr, length); printf("-----A pass finished\n"); // Show the process
+		print_array(arr, length); printf("-----A pass finished\n");
 	}
 }
 

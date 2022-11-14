@@ -1,5 +1,5 @@
 # Selection sort
->Selection sort is a comparison sorting algorithm. It is faster than bubble sort and simple to implement.
+>**Unstable** sorting algorithm. It is faster than bubble sort and simple to implement.
 
 ## Working process
 1. Look for the minimum

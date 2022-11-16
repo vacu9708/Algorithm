@@ -1,5 +1,5 @@
 # Algorithm traning
-- ### Think about the images of the algorithm
+- ### Think about the video of the algorithm
 - ### Consider the constraints! (Is efficiency important? / possible corner cases)
 - ### sort(binary search), two pointers, recursion, memoization(dijkstra)
 - ### data structure(hashmap, deque)

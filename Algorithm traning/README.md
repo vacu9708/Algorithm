@@ -1,8 +1,8 @@
 # Algorithm traning
 - ### Think about the video of the algorithm
-- ### Consider the constraints! (Is efficiency important? / possible corner cases)
 - ### sort(binary search), two pointers, recursion, memoization(dijkstra)
 - ### data structure(hashmap, deque)
+- ### Consider the constraints!
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
 * [Programmers](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Programmers)

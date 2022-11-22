@@ -1,6 +1,6 @@
 # Algorithm traning
 - ### Think about the video of the algorithm
-- ### sort(binary search), sliding window, recursion, memoization(dijkstra)
+- ### sort(binary search), two pointers, recursion, memoization(dijkstra)
 - ### data structure(hashmap, deque, heapq)
 - ### Consider the constraints!
 ## Algorithm problems

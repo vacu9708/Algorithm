@@ -3,7 +3,7 @@ Move all the disks to the target rod.
 
 ![image](https://user-images.githubusercontent.com/67142421/176498793-a2874a2c-41c8-4a91-bc6f-687b45fe0be0.png)
 
-## Rule
+# Rule
 * Only one disk may be moved at a time.
 * No disk may be placed on top of a smaller disk
 * Each move consists of taking the upper disk from one of the stacks and placing it on an empty rod.
@@ -26,4 +26,5 @@ def tower_of_hanoi(i, source, auxiliary, target):
 
 tower_of_hanoi(0, A, B, C) # Start with moving the disk at the bottom
 ~~~
+# Output
 ![image](https://user-images.githubusercontent.com/67142421/206175159-b03395a1-aafc-4ac6-a1ee-01c12521d718.png)

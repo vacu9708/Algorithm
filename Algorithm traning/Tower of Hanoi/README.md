@@ -1,4 +1,5 @@
 # Tower of Hanoi
+Move all the disks to the target rod.
 
 ![image](https://user-images.githubusercontent.com/67142421/176498793-a2874a2c-41c8-4a91-bc6f-687b45fe0be0.png)
 
@@ -6,12 +7,6 @@
 * Only one disk may be moved at a time.
 * No disk may be placed on top of a smaller disk
 * Each move consists of taking the upper disk from one of the stacks and placing it on an empty rod.
-
-## Explanation
-**How to move an Nth disk and disks on top of it to the target rod**
-1. The (N-1)th(a disk on top disk N) disk has to be moved to the auxiliary rod so that the Nth disk can be moved to the target rod.
-2. Move the Nth disk to the target rod.
-3. Move the N-1th disk that was in the auxiliary rod to the target rod.
 
 ~~~python
 A = [2, 1, 0] # Start

@@ -4,7 +4,7 @@
 
 ## Rule
 * Only one disk may be moved at a time.
-* No disk may be placed on top of a disk that is smaller than it.
+* No disk may be placed on top of a smaller disk
 * Each move consists of taking the upper disk from one of the stacks and placing it on an empty rod.
 
 ## Explanation
@@ -26,7 +26,7 @@ def tower_of_hanoi(disk, source, target, auxiliary):
     tower_of_hanoi(disk - 1, source, auxiliary, target)
     
     # Step 2 : Move n'th disk from source to target.
-    print("Move disk : (", disk,')')
+    print(f"Move disk: {disk)
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')
 

@@ -5,10 +5,11 @@
 ## Process
 ![image](https://user-images.githubusercontent.com/67142421/149330217-6fd2fd36-1d0f-4210-8c69-289ea03a96d6.png)
 
-1. Set an initial x point as near the answer as possible.
-2. Check if f(x) converges to 0.
-3. If it does, the x is the answer, if not, find the next x by differentiating.
-4. Repeat the 2nd and 3rd step.
+1. Set an initial x point as near the answer as possible.<br>
+Repeat
+2. If f(x) converges to 0, x is the solution
+3. Find the equation of tangent line
+4. Find the x intercept
 
 ## The formulas
 ### Newton-Raphson method

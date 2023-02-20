@@ -17,7 +17,7 @@ def tower_of_hanoi(i, source, auxiliary, target):
     if i == 0:
         return 
     # Step 1 : Move (i+1)th disk from source to auxiliary for step 2.
-    tower_of_hanoi(i-1, n, source, target, auxiliary)
+    tower_of_hanoi(i-1, source, target, auxiliary)
     # Step 2 : Move (i)th disk from source to target.
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')

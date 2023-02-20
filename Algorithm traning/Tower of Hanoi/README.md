@@ -13,18 +13,18 @@ A = [2, 1, 0] # Start
 B = [] # Auxiliary
 C = [] # Target
 
-def tower_of_hanoi(i, n, source, auxiliary, target):
-    if i == n:
+def tower_of_hanoi(i, source, auxiliary, target):
+    if i == 0:
         return 
     # Step 1 : Move (i+1)th disk from source to auxiliary for step 2.
-    tower_of_hanoi(i+1, n, source, target, auxiliary)
+    tower_of_hanoi(i-1, n, source, target, auxiliary)
     # Step 2 : Move (i)th disk from source to target.
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')
     # Step 3 : Move (i+1)th disk that was in auxiliary to target rod.
-    tower_of_hanoi(i+1, n, auxiliary, source, target)
+    tower_of_hanoi(i-1, auxiliary, source, target)
 
-tower_of_hanoi(0, len(A), A, B, C) # Start with moving the disk at the bottom
+tower_of_hanoi(len(A), A, B, C) # Start with moving the disk at the bottom
 ~~~
 # Output
 ![image](https://user-images.githubusercontent.com/67142421/206175159-b03395a1-aafc-4ac6-a1ee-01c12521d718.png)

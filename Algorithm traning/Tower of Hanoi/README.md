@@ -16,12 +16,12 @@ C = [] # Target
 def tower_of_hanoi(i, source, auxiliary, target):
     if i < 0:
         return 
-    # Step 1 : Move (i+1)th disk from source to auxiliary for step 2.
+    # Step 1 : Move disk (i+1) from source to auxiliary for step 2.
     tower_of_hanoi(i-1, source, target, auxiliary)
-    # Step 2 : Move (i)th disk from source to target.
+    # Step 2 : Move disk (i) from source to target.
     target.append(source.pop())
     print(A, B, C,"-----", sep = '\n')
-    # Step 3 : Move (i+1)th disk that was in auxiliary to target rod.
+    # Step 3 : Move disk (i+1) that was in auxiliary to target rod.
     tower_of_hanoi(i-1, auxiliary, source, target)
 
 tower_of_hanoi(len(A) - 1, A, B, C) # Start with moving the disk at the bottom

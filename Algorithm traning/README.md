@@ -1,5 +1,5 @@
 # Algorithm traning
-- ### Think about the video of the algorithm
+- ### Think about the process of the algorithm
 - ### sort(binary search), two pointers, recursion, memoization(dijkstra)
 - ### data structure(hashmap, deque, heapq)
 - ### Consider the constraints!

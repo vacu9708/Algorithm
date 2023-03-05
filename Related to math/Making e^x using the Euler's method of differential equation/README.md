@@ -15,7 +15,7 @@ double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
 double dy_dxs[9876543]{ 1 };
 
-double dy_dx_function(double x, double y) { // y = e^x
+double dy_dx_function(double x, double y) { // differential equation dy/dx = y -> y = e^x
     return y;
 }
 

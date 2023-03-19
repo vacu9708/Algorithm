@@ -9,7 +9,7 @@
 char not_prime[10001]; // Can store prime numbers upto 10000. If it's is_prime instead, all the elements have to be initialized to [true]
 
 void prime_number_sieve(int max) { // Sieve of Eratosthenes
-    for (int i = 2; i <= sqrt(max); i++) {
+    for (int i = 2; i*i <= max; i++) {
         if (not_prime[i] == true) // If i has been removed because it's not a prime number, then the multiples of i has already been removed earlier, so continue
             continue;
         for (int j = i; j <= max / i; j++) // The multiplies of i within max are not prime numbers.

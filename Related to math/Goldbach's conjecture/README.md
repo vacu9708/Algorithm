@@ -12,7 +12,7 @@ void prime_number_sieve(int max) {
     for (int i = 2; i*i <= max; i++) { // because i*i is the start
         if (not_prime[i] == true) // If i has been removed because it's not a prime number, then the multiples of i has already been removed earlier, so continue
             continue;
-        for (int j = i; j <= max / i; j++) // i*j<=max -> j<=max/i
+        for (int j = i; i*j <= max; j++) // i*j<=max -> j<=max/i
             not_prime[i * j] = true;
     }
 }

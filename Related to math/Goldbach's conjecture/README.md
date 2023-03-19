@@ -2,6 +2,8 @@
 >Goldbach's conjecture : All even numbers over 2 can be expressed as the sum of 2 prime numbers.<br>
 >Sieve of Eratosthenes : A method to find prime numbers fast.
 
+### [ref: the symmetry of divisors instead of sieve](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/Programmers/level2/k%EC%A7%84%EC%88%98%EC%97%90%EC%84%9C%20%EC%86%8C%EC%88%98%20%EA%B0%9C%EC%88%98%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
+
 ~~~c++
 #include <iostream>
 #include <math.h>

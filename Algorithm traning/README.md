@@ -3,6 +3,7 @@
 - ### data structure(hashmap, deque, heapq)
 - ### Memo on the overall process
 - ### Consider the constraints!
+- ### Don't try to be too efficient
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
 * [Programmers](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Programmers)

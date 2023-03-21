@@ -1,7 +1,7 @@
 # Algorithm traning
 - ### sort(binary search), two pointers, recursion, memoization(dijkstra)
 - ### data structure(hashmap, deque, heapq)
-- ### Memo on video of the process
+- ### Memo on the video of the algorithm
 - ### Consider the constraints!
 - ### Don't try to be too efficient
 ## Algorithm problems

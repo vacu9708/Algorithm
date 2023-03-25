@@ -9,9 +9,9 @@
 - [example(using LIKE)](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/SQL%20training/medium)
 
 # GROUP BY, HAVING
-Executed after FROM WHERE
-**GROUP BY**: Grouping rows before SELECT
-**HAVING**: Filtering grouped rows
+- Executed after FROM WHERE
+- **GROUP BY**: Grouping rows before SELECT
+- **HAVING**: Filtering grouped rows
 - [example(GROUP BY+HAVING)](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/SQL%20training/medium/%EC%9E%AC%EA%B5%AC%EB%A7%A4%EA%B0%80%20%EC%9D%BC%EC%96%B4%EB%82%9C%20%EC%83%81%ED%92%88%EA%B3%BC%20%ED%9A%8C%EC%9B%90%20%EB%A6%AC%EC%8A%A4%ED%8A%B8%20%EA%B5%AC%ED%95%98%EA%B8%B0.md)
 - [example(Subquery + GROUP BY)](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/SQL%20training/medium/%EC%A6%90%EA%B2%A8%EC%B0%BE%EA%B8%B0%EA%B0%80%20%EA%B0%80%EC%9E%A5%20%EB%A7%8E%EC%9D%80%20%EC%8B%9D%EB%8B%B9%20%EC%A0%95%EB%B3%B4%20%EC%B6%9C%EB%A0%A5%ED%95%98%EA%B8%B0.md)
 

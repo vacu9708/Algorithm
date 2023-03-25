@@ -1,4 +1,5 @@
-# Self cartesian product
+# (Self) cartesian product
+FROM performs cartesian product.
 ~~~sql
 from table1 A, table1 B
 ~~~

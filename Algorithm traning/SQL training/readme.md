@@ -1,6 +1,6 @@
-# Cartesian product
+# Self cartesian product
 ~~~sql
-from A, B
+from table1 A, table1 B
 ~~~
 
 # Subquery

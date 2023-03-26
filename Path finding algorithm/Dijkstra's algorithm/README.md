@@ -3,17 +3,15 @@
 >It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph.
 
 ## Working process
->Shortest paths are found by visiting the nearest path that hasn't been visited and comparing old paths with new paths and updating the weight table.
-<br>The weight table has information of shortest distances.
-
-## Graph in the code
-![Graph for dijikstra](https://user-images.githubusercontent.com/67142421/149639512-b50303aa-c579-45f6-9be7-21d48046626e.png)
+1. Visit the vertex that is easiest to get to and hasn't been visited
+2. Compare old paths with new paths
+3. Update the weight table(which has the information of shortest distances)
 
 ## Using priority queue(This is the most efficient and useful)
->In the other methods, linear search is performed to find a vertext that has a **min weight**, which takes **O(n^2)**.<br>
+>In the other methods, linear search is performed to find the easiest path, which takes **O(n^2)**.<br>
 >Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
 
-### Code to skip already shortest paths that are in the priority queue
+## Code to skip already shortest paths that are in the priority queue
 ### [PYTHON CODE](https://github.com/vacu9708/Algorithm/blob/main/Path%20finding%20algorithm/Dijkstra's%20algorithm/python.md)
 ~~~c++
 if (already_shortest[current_vertex] == true) // If the path is already the shortest path, continue
@@ -22,10 +20,13 @@ already_shortest[current_vertex] = true;
 //if (weight_table[current_vertex] < current_weight) // If there's the shortest path to this vertex, continue (the same function as right above)
 	//continue;
 ~~~
-### Example picture of this case
+### Example image of this case
 Vertex 3 is processed twice, which should be prevented.
 
 ![image](https://user-images.githubusercontent.com/67142421/200169241-76460bf5-e714-4f40-9267-91f76dc31a78.png)
+
+## Graph in the code
+![Graph for dijikstra](https://user-images.githubusercontent.com/67142421/149639512-b50303aa-c579-45f6-9be7-21d48046626e.png)
 
 ---
 ~~~c++

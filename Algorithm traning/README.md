@@ -1,6 +1,6 @@
 # Algorithm traning
-- ### sort(binary search), two pointers, recursion, DP
 - ### data structure(hashmap, deque, heapq, etc)
+- ### sort(binary search), two pointers, recursion, DP
 - ### Top-down memo
 - ### Consider the constraints!
 ## Algorithm problems

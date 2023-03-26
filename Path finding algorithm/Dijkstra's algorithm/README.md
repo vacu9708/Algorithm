@@ -3,7 +3,7 @@
 >It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph.
 
 ## Working process
-1. Visit the vertex that is easiest to get to and hasn't been visited
+1. Visit the vertex that is easiest to get to and hasn't been visited yet
 2. Compare old paths with new paths
 3. Update the weight table(which has the information of shortest distances)
 

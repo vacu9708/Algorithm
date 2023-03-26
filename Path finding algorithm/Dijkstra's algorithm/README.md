@@ -2,14 +2,16 @@
 >Dijkstra's algorithm is an algorithm for finding the shortest distances and paths between nodes in a graph, which may represent, for example, road networks.<br>
 >It differs from the minimum spanning tree because the shortest distance between two vertices might not include all the vertices of the graph.
 
-## Working process
-1. Visit the vertex that is easiest to get to and hasn't been visited yet
-2. Compare old paths with new paths
+### [Example problem: 배달](https://school.programmers.co.kr/learn/courses/30/lessons/12978)
+
+## Algorithm process
+1. Visit the location that is easiest to get to and hasn't been visited yet
+2. Compare the old paths to the new paths reached from the current location
 3. Update the weight table(which has the information of shortest distances)
 
 ## Using priority queue(This is the most efficient and useful)
->In the other methods, linear search is performed to find the easiest path, which takes **O(n^2)**.<br>
->Instead, priority queue can be used to reduce the time taken for linear search to **O(logn)**
+>In the other methods, linear search is performed to find the easiest path, which takes **O(n)**.<br>
+>Instead, priority queue can be used to reduce the time taken to **O(logn)**
 
 ## Code to skip already shortest paths that are in the priority queue
 ### [PYTHON CODE](https://github.com/vacu9708/Algorithm/blob/main/Path%20finding%20algorithm/Dijkstra's%20algorithm/python.md)

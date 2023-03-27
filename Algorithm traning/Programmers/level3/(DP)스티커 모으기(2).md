@@ -1,6 +1,6 @@
 # [스티커 모으기(2)](https://school.programmers.co.kr/learn/courses/30/lessons/12971)
-- dp[i-1]: Picking nothing
-- dp1[i-2]+sticker[i]: Picking one
+- dp[i] = dp[i-1]: Picking nothing
+- dp[i] = dp[i-2]+sticker[i]: Picking one
 ~~~python
 def solution(sticker):
     if len(sticker)==1:

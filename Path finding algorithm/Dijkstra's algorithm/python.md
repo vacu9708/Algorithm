@@ -15,14 +15,10 @@ def dijikstra(N, paths):
     # Dijikstra
     INF=999999999
     weights=[INF for i in range(N)]
-    #visited=[False for i in range(N)] # Optional
     pq=[(0,0)] # (weight, destination)
     while len(pq):
         curr=heapq.heappop(pq) # Location that hasn't been visited and is easiest to get to
-        #if visited[curr[1]]: continue # Optional
-        #visited[curr[1]]=True # Optional
         for path in adjacencies[curr[1]]:
-            #if visited[path.dest]: continue # Optional
             # Update if new path is better
             new_path_weight=curr[0]+path.weight
             if new_path_weight<weights[path.dest]:
@@ -60,14 +56,10 @@ def dijikstra(N, paths):
     path_table=[i for i in range(N)]
     INF=999999999
     weights=[INF for i in range(N)]
-    #visited=[False for i in range(N)] # Optional
     pq=[(0,0)] # (weight, destination)
     while len(pq):
         curr=heapq.heappop(pq) # Location that hasn't been visited and is easiest to get to
-        #if visited[curr[1]]: continue # Optional
-        #visited[curr[1]]=True # Optional
         for path in adjacencies[curr[1]]:
-            #if visited[path.dest]: continue # Optional
             # Update if new path is better
             new_path_weight=curr[0]+path.weight
             if new_path_weight<weights[path.dest]:

@@ -14,6 +14,7 @@
 ## Using priority queue(This is the most efficient and useful)
 >In the other methods, linear search is performed to find the easiest path, which takes **O(n)**.<br>
 >Instead, priority queue can be used to reduce the time taken to **O(logn)**
+>Also, "visited" list is not needed with priority queue.
 
 ## Code to skip already shortest paths that are in the priority queue
 ~~~c++

@@ -1,8 +1,8 @@
 # Algorithm traning
 - ### data structure(hashmap, deque, heapq, etc)
 - ### sort(binary search), two pointers, recursion, DP
-- ### Top-down memo
 - ### Imagine the process not code
+- ### Top-down memo
 - ### Consider the constraints!
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)

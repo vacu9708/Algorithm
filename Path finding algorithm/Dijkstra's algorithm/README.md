@@ -8,7 +8,7 @@
 ## Algorithm process
 0. Initialization (adjacency list, weight table, visited, priority queue)
 1. Visit the location that hasn't been visited yet and is easiest to get to
-2. Compare new paths with old paths (Skip if visited location)
+2. Compare new paths with old paths (Skip if visited)
 3. Update the weight table(which has the information of shortest distances)
 
 ## Using priority queue(This is the most efficient and useful)

@@ -6,7 +6,7 @@
 ### [Example problem: 배달](https://school.programmers.co.kr/learn/courses/30/lessons/12978)
 
 ## Algorithm process
-0. Initialization (adjacency list, weight table, priority queue)
+0. Initialization (adjacency list, weight table, visited, priority queue)
 1. Visit the location that hasn't been visited yet and is easiest to get to
 2. Compare the old paths to the new paths reached from the current location
 3. Update the weight table(which has the information of shortest distances)

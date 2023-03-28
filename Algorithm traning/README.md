@@ -1,7 +1,7 @@
 # Algorithm traning
 - ### data structure(hashmap, deque, heapq, etc)
 - ### sort(binary search), two pointers, recursion, DP
-- ### Imagine the process not code
+- ### Imagine the process
 - ### Top-down memo
 - ### Consider the constraints!
 ## Algorithm problems

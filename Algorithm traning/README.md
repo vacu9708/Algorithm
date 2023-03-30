@@ -2,7 +2,7 @@
 - ### data structure(hashmap, deque, heapq, etc)
 - ### sort(binary search), two pointers, recursion, DP
 - ### Imagine the process
-- ### Top-down memo
+- ### Memo per unit
 - ### Consider the constraints!
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)

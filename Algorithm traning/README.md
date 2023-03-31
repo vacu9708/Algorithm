@@ -1,6 +1,6 @@
 # Algorithm traning
 - ### data structure(hashmap, deque, heapq, etc)
-- ### sort(binary search), two pointers, recursion, DP
+- ### greedy, sort(binary search), two pointers, recursion, DP
 - ### Imagine the process
 - ### Memo per unit
 - ### Consider the constraints!

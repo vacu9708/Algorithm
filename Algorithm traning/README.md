@@ -3,7 +3,6 @@
 - ### greedy, sort(binary search), two pointers, recursion, DP
 - ### Imagine the process
 - ### Memo per unit
-- ### Consider the constraints!
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
 * [Programmers](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Programmers)

@@ -17,7 +17,7 @@ using namespace std;
 
 string binary_search(vector<int>& vector, int target) {
 	int left = 0, right = vector.size() - 1;
-	while (first <= last) {
+	while (left <= right) {
 		int mid = (left + right) / 2;
 		if (target == vector[mid])
 			return "At index (" + to_string(mid) + ") found";

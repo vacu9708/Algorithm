@@ -16,15 +16,15 @@
 using namespace std;
 
 string binary_search(vector<int>& vector, int target) {
-	int first = 0, last = vector.size() - 1;
+	int left = 0, right = vector.size() - 1;
 	while (first <= last) {
-		int mid = (first + last) / 2;
+		int mid = (left + right) / 2;
 		if (target == vector[mid])
 			return "At index (" + to_string(mid) + ") found";
 		else if (target < vector[mid])
-			last = mid - 1;
+			right = mid - 1;
 		else if (target > vector[mid])
-			first = mid + 1;
+			left = mid + 1;
 	}
 	return "Not found";
 }

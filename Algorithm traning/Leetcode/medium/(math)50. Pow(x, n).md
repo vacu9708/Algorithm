@@ -41,6 +41,9 @@ class Solution:
 
 ## Recursive method
 ![image](https://user-images.githubusercontent.com/67142421/229672228-224e6e47-8e3d-444a-a0db-1ef644c1e437.png)
+
+(n is odd) is the same as (n&1 == 1)<br>
+(n is even) is the same as (n&1 == 0)
 ~~~python
 class Solution:
     def myPow(self, x: float, n: int) -> float:

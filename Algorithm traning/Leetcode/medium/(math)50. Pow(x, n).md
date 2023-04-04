@@ -35,7 +35,7 @@ class Solution:
             if n & 1:
                 result *= x
             x *= x
-            n >>= 1
+            n >>= 1 # same as n//=2
         return result
 ~~~
 

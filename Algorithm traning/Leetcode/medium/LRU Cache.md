@@ -18,7 +18,7 @@ class LRUCache:
             self.dict.pop(key)
         else:
             if len(self.dict) == self.capacity:
-                del self.dict[next(iter(self.dict))]         
+                del self.dict[next(iter(self.dict))] # 1st element of hashmap
         self.dict[key] = value
 ~~~
 

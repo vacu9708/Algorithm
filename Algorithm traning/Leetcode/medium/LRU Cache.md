@@ -1,5 +1,5 @@
 # [LRU Cache](https://leetcode.com/problems/lru-cache/solutions/?orderBy=most_votes)
-## Taking advantage of python dict
+## Taking advantage of python dict (which does use a doubly linked list to maintain the order of the hashmap)
 ~~~python
 class LRUCache:
     def __init__(self, capacity: int):
@@ -22,4 +22,4 @@ class LRUCache:
         self.dict[key] = value
 ~~~
 
-## Deep solution
+## hashmap + doubly linked list

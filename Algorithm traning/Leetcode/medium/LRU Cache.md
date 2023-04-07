@@ -23,3 +23,61 @@ class LRUCache:
 ~~~
 
 ## hashmap + doubly linked list
+~~~python
+class Node:
+    def __init__(self, key, value):
+        self.key = key
+        self.value = value
+        self.left = self.right = None
+
+class Linked_list:
+    def __init__(self):
+        self.head=self.tail=None
+
+    def append(self, node):
+        if not self.head:
+            self.head=node
+            self.tail=self.head
+            return
+        self.tail.right=node
+        node.left=self.tail
+        self.tail=node
+
+    def remove(self, node):
+        if node.left:
+            node.left.right=node.right
+        if node.right:
+            node.right.left=node.left
+        if node==self.head:
+            self.head=self.head.right
+        if node==self.tail:
+            self.tail=self.tail.left
+        node.left=node.right=None
+
+class LRUCache:
+    def __init__(self, capacity):
+        self.capacity=capacity
+        self.map={}
+        self.order_list=Linked_list()
+
+    def get(self, key):
+        if key not in self.map:
+            return -1
+        self.order_list.remove(self.map[key])
+        self.order_list.append(self.map[key])
+        return self.map[key].value
+
+    def put(self, key, value):
+        if key not in self.map:
+            if len(self.map)==self.capacity:
+                head=self.order_list.head
+                del self.map[head.key]
+                self.order_list.remove(head)
+            node=Node(key, value)
+            self.order_list.append(node)
+            self.map[key]=node
+        else:
+            self.map[key].value=value
+            self.order_list.remove(self.map[key])
+            self.order_list.append(self.map[key])
+~~~

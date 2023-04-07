@@ -58,26 +58,26 @@ class LRUCache:
     def __init__(self, capacity):
         self.capacity=capacity
         self.map={}
-        self.order_list=Linked_list()
+        self.order=Linked_list()
 
     def get(self, key):
         if key not in self.map:
             return -1
-        self.order_list.remove(self.map[key])
-        self.order_list.append(self.map[key])
+        self.order.remove(self.map[key])
+        self.order.append(self.map[key])
         return self.map[key].value
 
     def put(self, key, value):
         if key not in self.map:
             if len(self.map)==self.capacity:
-                head=self.order_list.head
+                head=self.order.head
                 del self.map[head.key]
-                self.order_list.remove(head)
+                self.order.remove(head)
             node=Node(key, value)
-            self.order_list.append(node)
+            self.order.append(node)
             self.map[key]=node
         else:
             self.map[key].value=value
-            self.order_list.remove(self.map[key])
-            self.order_list.append(self.map[key])
+            self.order.remove(self.map[key])
+            self.order.append(self.map[key])
 ~~~

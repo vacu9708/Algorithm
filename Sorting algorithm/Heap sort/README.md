@@ -14,7 +14,7 @@
 * Let the number of elements be N
 * Heapifying : log(N)<br>
 >N times of heapifying are needed in each swap<br>
->log(N) + log(N-1) + log(N-2) + ... + log2 = **O(NlogN)**
+>log(N) + log(N-1) + log(N-2) + ... = **O(NlogN)**
 
 ~~~c++
 #include <iostream>

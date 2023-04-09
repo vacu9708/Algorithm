@@ -3,11 +3,10 @@
 
 ## Process (ascending order)
 > 1. Max heapify
-> 2. Move the root which is the biggest value to the far right except sorted elements in ascending order
-> 3. Repeat this process
+> 2. Move the 1st element which is the biggest value to the far right except already-done elements
 
 ## Features
-- Unstable like selection sort
+- **Unstable** like selection sort
 - Theoretically the best but in reality not that good because it is not cache-friendly
 
 ## Time complexity
@@ -43,21 +42,21 @@ void heapify(vector<int>& heap_tree, int parent_index, int heapify_upto) {
 }
 
 void heap_sort(vector<int>& heap_tree) {
+	// Heapify from the last parent ( (child+1) / 2 - 1 is its parent)
 	int tree_size = heap_tree.size();
 	printf("---Heapify\n");
-	// Heapify from the last parent ( (child+1) / 2 - 1 is its parent)
 	for (int i = 0; i <= tree_size / 2 - 1; i++) {
 		heapify(heap_tree, i, tree_size - 1);
 		print_elements(heap_tree); // Show the process
 	}
 	cout << "-----\n\n";
-	//-----
+	# S
 	for (int i = tree_size - 1; i > 0; i--) {
-		cout << "---Swap the root with index (" << i << ")\n"; // Show the process
+		cout << "---Swap the root with index (" << i << ")\n";
 		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements to the right in ascending order
 		print_elements(heap_tree);
 
-		printf("---Heapify up to index (%d)\n", i - 1); // Show the process
+		printf("---Heapify up to index (%d)\n", i - 1);
 		heapify(heap_tree, 0, i - 1);
 		print_elements(heap_tree);
 	}

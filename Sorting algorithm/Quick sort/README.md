@@ -26,15 +26,7 @@
 ~~~c++
 #include <iostream>
 #include <vector>
-#include <random>
 using namespace std;
-
-int random_integer(int min, int max) { // Selecting a middle element is faster than random pivot.
-    random_device seed; // Generate a random seed
-    mt19937_64 mersenne(seed());
-    uniform_int_distribution<> random(min, max);
-    return random(mersenne);
-}
 
 void print_elements(vector<int> elements) {
     int length = elements.size();

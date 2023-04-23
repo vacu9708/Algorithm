@@ -15,7 +15,7 @@
 ### Newton-Raphson method
 ![image](https://user-images.githubusercontent.com/67142421/149328643-8b2e5721-9b55-4bf0-819b-42f9ffc44f85.png)
 ### Babylonian method
-<img src="https://user-images.githubusercontent.com/67142421/149328802-7c02f898-dedb-4ec7-b5b8-77116c1fc2aa.png" width="550" height="300">
+![image](https://user-images.githubusercontent.com/67142421/233854145-87720e71-06ff-4ceb-bd4d-ee4940c879b1.png)
 
 ## How to derive the formulas
 ![KakaoTalk_20220113_204543213](https://user-images.githubusercontent.com/67142421/149327997-af3a7a06-b48f-4d71-836c-196090a42123.jpg)<br>

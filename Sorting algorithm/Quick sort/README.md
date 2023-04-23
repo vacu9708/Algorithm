@@ -54,7 +54,6 @@ void quick_sort(vector<int>& elements, int first, int last) { // Sorting in ascl
         // Once "i" is no longer on the left of "j", swap list[j] and the pivot so that list[j] and pivot are in ascending order.
         else {
             swap(elements[j], elements[first]);
-            // Show the process
             //printf("Dividing number : (%d) -> ", elements[j]);
             //print_elements(elements);
             break;

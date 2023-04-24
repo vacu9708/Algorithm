@@ -3,9 +3,8 @@
 >It is one of the *Divide and conquer* algorithms.
 
 ## Features
-* It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
-* A list is divided into 2 sublists. This process is repeated.
-* The "pivot" is used to partition the array into two sub-arrays, based on its value.
+* It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed. (unstable)
+* "Pivot" is used to partition the array into two sub-arrays, based on its value.
 
 ## Process
 1. Choose a pivot element.
@@ -18,7 +17,7 @@
 >Also, this problem can be solved by using a middle pivot.
 ### Example
 >There are sorted elements {1,2,3,4,5}(n = 5). What will happen if only the minimum is selected as a pivot?<br>
->Let's pick the minimum 1 as a pivot. "i" can leave only elements smaller than or equal to 1 and "j" can leeve only elements bigger than or equal to 1.<br>
+>Let's pick the minimum 1 as a pivot. "i" can leave only elements smaller than or equal to 1 and "j" can leave only elements bigger than or equal to 1.<br>
 >In the end, "j" will get to the pivot where 2n iterations were performed. And then the minimum in the next sublist, 2 is selected as a pivot and the same process is performed. n-1 times of iteration is performed.<br>
 >(n-1) + (n-2) + (n-3) + ... + 1 = **O(n^2)**
 
@@ -30,7 +29,7 @@ def quick_sort(arr, left, right):
     i,j = left, right
     while 1:
         # Find an element greater than or equal to pivot
-        while i < right and arr[i] < pivot: i+=1
+        while i < right and arr[i] < pivot: i+=1 # Value same as the pivot cannot be passed
         # Find an element less than or equal to pivot
         while j > left and arr[j] > pivot: j-=1
         if i < j: arr[i], arr[j] = arr[j], arr[i]

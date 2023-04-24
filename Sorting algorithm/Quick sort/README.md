@@ -4,14 +4,13 @@
 
 ## Features
 * It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed.
-* A list is divided into 2 sublists. This process is repeated. (Divde and conquer algorithm)
+* A list is divided into 2 sublists. This process is repeated.
+* The "pivot" is used to partition the array into two sub-arrays, based on its value.
 
-## Repeated process (ascending order)
-1. A pivot is selected and swapped with the first element.
-2. "i" searches for an element bigger than the pivot from the 2nd index and "j" searches for an element smaller than the pivot from the last index.
-3. Swap found 2 elements. This process leaves elements smaller than pivot on the left of i and elements bigger than pivot on the right of j.
-4. Once "i" is no longer on the left of "j", swap list[j] and the pivot so that elements on the left of j are in ascending order.
-5. Split the list into 2 sublists with j that is the center.
+## Process
+1. Choose a pivot element.
+2. Partition the array into two sub-arrays, one with elements less than or equal to the pivot, and the other with elements greater than or equal to the pivot.
+3. Recursively apply steps 1 and 2 to the two sub-arrays.
 
 ## The worst case where O(n^2) is taken
 >If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** is taken.<br>
@@ -35,40 +34,31 @@ void print_elements(vector<int> elements) {
     cout << "\n";
 }
 
-void quick_sort(vector<int>& elements, int first, int last) { // Sorting in asclasting order
-    if (first >= last)
+void quick_sort(vector<int>& elements, int left, int right) {
+    if (left >= right)
         return;
 
-    int pivot_index = (first + last) / 2; // Any element can be pivot. But a middle element is stable in time complexity.
-    swap(elements[pivot_index], elements[first]); // The pivot has to be at the beginning of the elements.
-
-    int i = first + 1, j = last;
-
+    int pivot = elements[(left + right) / 2]; // Any element can be pivot. But a middle element is stable in terms of time complexity.
+    int i = left, j = right;
     while (1) {
-        // Find an element bigger than pivot to make asecending order
-        while (i < last && elements[i] <= elements[first]) i++;
-        // Find an element smaller than pivot to make asecending order
-        while (j > first && elements[j] >= elements[first]) j--;
-        // Make ascending order
+        // Find an element greater than or equal to pivot
+        while (i < right && elements[i] < pivot) i++;
+        // Find an element less than or equal to pivot
+        while (j > left && elements[j] > pivot) j--;
         if (i < j) swap(elements[i], elements[j]);
-        // Once "i" is no longer on the left of "j", swap list[j] and the pivot so that list[j] and pivot are in ascending order.
-        else {
-            swap(elements[j], elements[first]);
-            //printf("Dividing number : (%d) -> ", elements[j]);
-            //print_elements(elements);
-            break;
-        }
+        else break;
     }
 
-    //Divide the list into 2 sublists.
-    quick_sort(elements, first, j - 1);
-    quick_sort(elements, j + 1, last);
+    // All the elements before j are less than those after j
+    quick_sort(elements, left, j - 1);
+    quick_sort(elements, j + 1, right);
 }
 
 void main() {
     vector<int> elements = { 5,1,7,6,2,3,8,9,4 };
-    printf("Elements to sort : "); print_elements(elements);
+    printf("Before sort : "); print_elements(elements);
     quick_sort(elements, 0, elements.size() - 1);
+    printf("After sort : "); print_elements(elements);
 }
 ~~~
 

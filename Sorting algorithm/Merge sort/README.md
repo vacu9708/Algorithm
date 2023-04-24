@@ -9,12 +9,10 @@
 >Due to these strengths, merge sort runs stably in any situation.
 
 ## Time complexity
-![image](https://user-images.githubusercontent.com/67142421/158380312-a1b7a32a-5230-4ae7-b50b-f9d47e2dbdb8.png)
+![image](https://user-images.githubusercontent.com/67142421/234135296-56675120-907a-431b-93ae-b7dfc1cc95f2.png)
 
->The way of calculating the time complexity of Merge sort derives from the principle of calculating that of Binary search.<br>
->In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is L, the total number of trials in a series of branches is cn * L<br>
->As written in [Binary search](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search), L is log(N). 
->Therefore, the time complexity of merge sort is **O(nlogn)**
+>In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is is log(N) as written in [Binary search](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search).<br>
+>The last level of the tree is reached N times. Therefore, the time complexity of merge sort is **O(NlogN)**
 
 ~~~c++
 #include <iostream>

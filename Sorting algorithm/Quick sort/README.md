@@ -29,11 +29,13 @@ def quick_sort(arr, left, right):
     pivot=arr[(left + right) // 2]
     i,j = left, right
     while 1:
+        # Find an element greater than or equal to pivot
         while i < right and arr[i] < pivot: i+=1
+        # Find an element less than or equal to pivot
         while j > left and arr[j] > pivot: j-=1
         if i < j: arr[i], arr[j] = arr[j], arr[i]
         else: break
-
+    # All the elements before j are less than those after j
     quick_sort(arr, left, j - 1)
     quick_sort(arr, j + 1, right)
 

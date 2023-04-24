@@ -15,55 +15,41 @@
 >The last level of the tree is reached N times. Therefore, the time complexity of merge sort is **O(NlogN)**
 
 ~~~c++
-#include <iostream>
-#include <vector>
-using namespace std;
+def merge_sort(lst, temp, left, right):
+    if left == right:
+        return
 
-void print_elements(vector<int>& list) {
-	int list_size = list.size();
-	for (int i = 0; i < list_size; i++)
-		cout << list[i] << " ";
-	printf("\n");
-}
+    mid = (left + right) // 2
+    merge_sort(lst, temp, left, mid)
+    merge_sort(lst, temp, mid + 1, right)
 
-void merge_sort(vector<int>& list, vector<int>& temp, int left, int right) {
-	if (left == right)
-		return;
+    i, j, temp_i = left, mid + 1, left
+    while i <= mid and j <= right:
+        if lst[i] < lst[j]:
+            temp[temp_i] = lst[i]
+            i += 1
+        else:
+            temp[temp_i] = lst[j]
+            j += 1
+        temp_i += 1
 
-	int mid = (left + right) / 2;
-	merge_sort(list, temp, left, mid);
-	merge_sort(list, temp, mid + 1, right);
+    while i <= mid:
+        temp[temp_i] = lst[i]
+        i += 1
+        temp_i += 1
+    while j <= right:
+        temp[temp_i] = lst[j]
+        j += 1
+        temp_i += 1
 
-	int i = left, j = mid + 1, temp_i = left; // i : pointer in 1st half / j : pointer in 2nd half
-	// While i is within 1st half and j within 2nd half
-	while (i <= mid && j <= right) {
-		if (list[i] < list[j])
-			temp[temp_i++] = list[i++];
-		else
-			temp[temp_i++] = list[j++];
-	}
-	// Copy the remaining elements into temp
-	while (i <= mid) 
-		temp[temp_i++] = list[i++];
-	while (j <= right)
-		temp[temp_i++] = list[j++];
-	// Copy temp list to original list(Merge)
-	for (int i = left; i <= right; i++)
-		list[i] = temp[i];
+    for i in range(left, right + 1):
+        lst[i] = temp[i]
 
-	// Show the process
-	//if (right - left == list.size() - 1) // The last procedure
-		//printf("-----Merge!\n");
-}
+# Usage example
+lst = [8,7,6,5,4,3,2,1]
+print(f'Before sort: {lst}')
+temp = [0] * len(lst)
+merge_sort(lst, temp, 0, len(lst) - 1)
+print(f'After sort: {lst}')
 
-int main(void) {
-	vector<int> list = { 8,7,6,5,4,3,2,1 };
-	vector<int> temp(list.size()); // Essential for merge sort
-	printf("Elements to sort : "); print_elements(list);
-	merge_sort(list, temp, 0, list.size() - 1);
-	print_elements(list);
-}
 ~~~
-
-## Output
-![Untitled](https://user-images.githubusercontent.com/67142421/149567500-2f875e4e-c74e-4f25-b498-3ec84f0937b2.png)

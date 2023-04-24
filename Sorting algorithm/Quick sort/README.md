@@ -11,6 +11,9 @@
 2. Partition the array into two sub-arrays, one with elements less than or equal to the pivot, and the other with elements greater than or equal to the pivot.
 3. Recursively apply steps 1 and 2 to the two sub-arrays.
 
+## Time complexity
+Same as [Merge sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Merge%20sort)
+
 ## The worst case where O(n^2) is taken
 >If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** is taken.<br>
 >But this situation occurs only when elements are already sorted in either ascending or descending order, which rarely happens.<br>

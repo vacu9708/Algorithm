@@ -22,7 +22,7 @@
 >In the end, "j" will get to the pivot where 2n iterations were performed. And then the minimum in the next sublist, 2 is selected as a pivot and the same process is performed. n-1 times of iteration is performed.<br>
 >(n-1) + (n-2) + (n-3) + ... + 1 = **O(n^2)**
 
-~~~c++
+~~~python
 def quick_sort(arr, left, right):
     if left>=right:
         return

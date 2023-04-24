@@ -28,8 +28,7 @@
 using namespace std;
 
 void print_elements(vector<int> elements) {
-    int length = elements.size();
-    for (int i = 0; i < length; i++)
+    for (int i = 0; i < elements.size(); i++)
         cout << elements[i] << " ";
     cout << "\n";
 }

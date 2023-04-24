@@ -23,43 +23,22 @@
 >(n-1) + (n-2) + (n-3) + ... + 1 = **O(n^2)**
 
 ~~~c++
-#include <iostream>
-#include <vector>
-using namespace std;
+def quick_sort(arr, left, right):
+    if left>=right:
+        return
+    pivot=arr[(left + right) // 2]
+    i,j = left, right
+    while 1:
+        while i < right and arr[i] < pivot: i+=1
+        while j > left and arr[j] > pivot: j-=1
+        if i < j: arr[i], arr[j] = arr[j], arr[i]
+        else: break
 
-void print_elements(vector<int> elements) {
-    for (int i = 0; i < elements.size(); i++)
-        cout << elements[i] << " ";
-    cout << "\n";
-}
+    quick_sort(arr, left, j - 1)
+    quick_sort(arr, j + 1, right)
 
-void quick_sort(vector<int>& elements, int left, int right) {
-    if (left >= right)
-        return;
-
-    int pivot = elements[(left + right) / 2]; // Any element can be pivot. But a middle element is stable in terms of time complexity.
-    int i = left, j = right;
-    while (1) {
-        // Find an element greater than or equal to pivot
-        while (i < right && elements[i] < pivot) i++;
-        // Find an element less than or equal to pivot
-        while (j > left && elements[j] > pivot) j--;
-        if (i < j) swap(elements[i], elements[j]);
-        else break;
-    }
-
-    // All the elements before j are less than those after j
-    quick_sort(elements, left, j - 1);
-    quick_sort(elements, j + 1, right);
-}
-
-void main() {
-    vector<int> elements = { 5,1,7,6,2,3,8,9,4 };
-    printf("Before sort : "); print_elements(elements);
-    quick_sort(elements, 0, elements.size() - 1);
-    printf("After sort : "); print_elements(elements);
-}
+arr=[5,1,7,6,2,3,8,9,4]
+print(f'Before sort: {arr}')
+quick_sort(arr,0,len(arr)-1)
+print(f'After sort: {arr}')
 ~~~
-
-## Output
-![image](https://user-images.githubusercontent.com/67142421/155838057-809dc268-f50f-46ed-8cab-1a5271015962.png)

@@ -14,7 +14,7 @@
 >In each recursive iteration, the number of elements decreases to half. If the last level of the recursion tree is is log(N) as written in [Binary search](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm/Binary%20search).<br>
 >The last level of the tree is reached N times. Therefore, the time complexity of merge sort is **O(NlogN)**
 
-~~~c++
+~~~python
 def merge_sort(lst, temp, left, right):
     if left == right:
         return

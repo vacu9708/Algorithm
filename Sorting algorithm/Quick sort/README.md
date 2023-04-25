@@ -1,10 +1,11 @@
 # Quick sort
->Quick sort is the most effective sorting algorithm that takes **nlog(n) time** on average.<br>
->It is one of the *Divide and conquer* algorithms.
+>Quick sort is one of the most efficient sorting algorithm that takes **Nlog(N)** on average.<br>
+>It uses a *Divide and conquer* approach.
 
 ## Features
-* It can't preserve the elements with the same value. In other words, the order of elements with the same value can be changed. (unstable)
-* "Pivot" is used to partition the array into two sub-arrays, based on its value.
+- It can't preserve the elements with the same value. In other words, the order of equal elements may be changed. (unstable)
+- "Pivot" is used to partition the array into two sub-arrays, based on its value.
+- Top-down sorting (Merge sort is bottom-up)
 
 ## Process
 1. Choose a pivot element.

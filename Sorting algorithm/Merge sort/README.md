@@ -1,12 +1,12 @@
 # Merge sort
->Merge sort is a comparison-based sorting algorithm that takes **O(nlogn)** time which is one of the most efficient sorting algorithms. It is one of *Divide and conquer algorithms*.<br>
+>Merge sort is one of the most efficient sorting algorithm that takes **Nlog(N)** on average.<br>
+>It uses a *Divide and conquer* approach.
 
 ![image](https://user-images.githubusercontent.com/67142421/149567895-7ef189fb-abcd-4430-bf6a-5cef1dd9ea8f.png)
 
 ## Characteristics
-* Merge sort is a stable sort, which means that the order of equal elements is maintained
-* Its speed is not influenced by how elements are arranged before sorting, in other words, in all cases the time complexity is **O(nlogn)**
->Due to these strengths, merge sort runs stably in any situation.
+- A stable sort, which means that the order of equal elements is maintained.
+- Bottom-up sorting (Quick sort is top-down)
 
 ## Time complexity
 ![image](https://user-images.githubusercontent.com/67142421/234135296-56675120-907a-431b-93ae-b7dfc1cc95f2.png)

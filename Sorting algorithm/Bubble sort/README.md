@@ -1,10 +1,11 @@
 # Bubble sort
->Bubble sort is a sorting algorithm simple to implement but is the slowest of sorting algorithms
+>Bubble sort is a sorting algorithm simple to implement but is one of the slowest sorting algorithms that takes O(n^2).
+
 
 ## Working process
->Numbers are stacked from the far right in ascending order
-
 ![image](https://user-images.githubusercontent.com/67142421/149490296-a057ecca-c8ec-44c6-b3fc-603a0dcd7031.png)
+
+Elements in the wrong order are swapped.
 
 ## Time complexity
 > N = the number of elements to sort.
@@ -13,40 +14,16 @@
 > By the sum of arithmetical series : **Time complexity : O(n^2)**
 ![image](https://user-images.githubusercontent.com/67142421/149508649-d1d4efed-9e65-4b85-bff7-7a851a2dadff.png)
 
-~~~c++
-#include <iostream>
-using namespace std;
-
-int arr[] = { 5,4,3,2,1 };
-int length = sizeof(arr) / sizeof(int);
-
-void print_array() {
-	for (int i = 0; i < length; i++)
-		cout << arr[i] << " ";
-	cout << "\n";
-}
-
-void swap(int* first, int* second) {
-	int temp = *first;
-	*first = *second;
-	*second = temp;
-}
-
-void bubble_sort() {
-	int tmp = 0;
-	for (int i = 1; i < length; i++) { // Stack numbers from the far right in ascending order
-		print_array(); // Show the process
-		for (int j = 0; j < length - i; j++) {
-			if (arr[j] > arr[j + 1])
-				swap(arr[j], arr[j + 1]);
-		}
-	}
-	printf("Sorted array : "); print_array(); // Show the result
-}
-
-void main() {
-	bubble_sort();
-}
+~~~python
+def bubble_sort(lst):
+    for i in range(len(lst)-1,0,-1):
+        for j in range(i):
+            if lst[j]>lst[j+1]:
+                lst[j], lst[j+1]=lst[j+1], lst[j]
+        print(lst)
+lst=[5,4,3,2,1]
+bubble_sort(lst)
+print(lst)
 ~~~
 
 ## Compile and run

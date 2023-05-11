@@ -2,29 +2,27 @@
 ![image](https://user-images.githubusercontent.com/67142421/150201715-d2add600-ac30-4f92-bf3c-007255ea6b3c.png)
 
 ## RK2 method(Improved Euler's method)
->Improved Euler's method : A numerical method to solve an ordinary differential equation where the error of dy is reduced by considering both the current slope and next slope.<br>
->### h means x step(dx)
-![image](https://user-images.githubusercontent.com/67142421/150201532-c7a4f44a-4cbc-4861-af31-9ecb29f13ca8.png)
+A numerical method to solve an ordinary differential equation where the error of dy is reduced by using the average of the current slope and the next slope.<br>
 
 ~~~c++
 #include <iostream>
 using namespace std;
 
-double dy_dx(double x, double y) { // y = e^x
+double get_dy_dx(double x, double y) { // differential equation dy/dx = y
     return y;
 }
 
 void RK2(double target_x) { // RK2
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1;
+    double x = 0, y = 1; // Initial state of y=e^x
     double k1, k2; // two slopes
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
-        k1 = dy_dx(x, y);
-        k2 = dy_dx(x + x_step, y + x_step * k1);
-        x += x_step; // new x
-        y += x_step * ((k1 + k2) / 2); // Reduce the error by using the average of the current slope and next slope.
+        x += x_step; // next x
+        k1 = get_dy_dx(x, y);
+        k2 = get_dy_dx(x + x_step, y + x_step * k1);
+        y += x_step * ((k1 + k2) / 2); // Reduce the error by using the average of the current slope and the next slope.
 
     }
 

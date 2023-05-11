@@ -2,10 +2,12 @@
 ![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
 
 ### Euler's method(RK1)
->Euler's method(RK1) : A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>
-![image](https://user-images.githubusercontent.com/67142421/150194690-5656e5cd-6411-4e41-97f2-f07142c0e727.png)
-* h = step size
-* f() = instantaneous rate of change
+A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>>
+Function ***y*** is made step by step.
+
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/471a42d9-c4df-45f5-9451-074ec6716e4d)
+* h = instantaneous rate of change at the current x
+* f(x, y) = y value at x 
 
 ~~~c++
 #include <iostream>
@@ -36,12 +38,12 @@ void RK1_with_arrays(double target_x) { // RK1
 void RK1(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1, dy_dx = get_dy_dx(x, y);
+    double x = 0, y = 1, dy_dx = get_dy_dx(x, y); // Initial state
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
-        x = x + x_step;
-        y = y + dy_dx * x_step;
-        dy_dx = get_dy_dx(x, y);
+        x = x + x_step; // Change of x
+        y = y + dy_dx * x_step; // Change of y
+        dy_dx = get_dy_dx(x, y); // For next step
     }
 
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, dy_dx);

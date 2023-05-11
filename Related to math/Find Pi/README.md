@@ -51,7 +51,8 @@ print(f"Elapsed time : {time.time() - start}"
 
 ---
 ## Using Monte-Carlo method
->Pi is found by making use of the ratio of points that got into a circle inscribed in a square.
+Pi is found by making use of the ratio of points that got into a circle inscribed in a square.<br>
+It can be found by counting how many random points are put into the circle.<br>
 
 ![image](https://github.com/vacu9708/Algorithm/assets/67142421/7e0c46fb-3dd6-4966-a557-44bd7fe99dea)
 

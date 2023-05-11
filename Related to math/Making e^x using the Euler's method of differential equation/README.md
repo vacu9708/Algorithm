@@ -2,7 +2,7 @@
 ![image](https://user-images.githubusercontent.com/67142421/149747518-9a60f957-4e0c-4538-bfa8-e99a5b91dbba.png)
 
 ### Euler's method(RK1)
-A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>>
+A numerical method to solve an ordinary differential equation. This method is the most inaccurate and slowest.<br>
 Function ***y*** is made step by step.
 
 ![image](https://github.com/vacu9708/Algorithm/assets/67142421/471a42d9-c4df-45f5-9451-074ec6716e4d)

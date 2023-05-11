@@ -53,7 +53,7 @@ print(f"Elapsed time : {time.time() - start}"
 ## Using Monte-Carlo method
 >Pi is found by making use of the ratio of points that got into a circle inscribed in a square.
 
-![image](https://user-images.githubusercontent.com/67142421/149093113-ddad47b1-4f85-460e-99d1-ad27870553c2.png)
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/7e0c46fb-3dd6-4966-a557-44bd7fe99dea)
 
 ~~~c++
 #include <iostream>

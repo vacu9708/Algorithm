@@ -41,8 +41,8 @@ void RK1(double target_x) { // RK1
     double x = 0, y = 1, dy_dx = get_dy_dx(x, y); // Initial state of y=e^x
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
-        x = x + x_step; // Change of x
-        y = y + dy_dx * x_step; // Change of y
+        x += x_step; // Change of x
+        y += dy_dx * x_step; // Change of y
         dy_dx = get_dy_dx(x, y); // For next step
     }
 

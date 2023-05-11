@@ -17,7 +17,7 @@ double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
 double dy_dxs[9876543]{ 1 };
 
-double get_dy_dx(double x, double y) { // differential equation dy/dx = y -> y = e^x
+double get_dy_dx(double x, double y) { // differential equation dy/dx = y
     return y;
 }
 
@@ -38,7 +38,7 @@ void RK1_with_arrays(double target_x) { // RK1
 void RK1(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1, dy_dx = get_dy_dx(x, y); // Initial state
+    double x = 0, y = 1, dy_dx = get_dy_dx(x, y); // Initial state of y=e^x
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x = x + x_step; // Change of x

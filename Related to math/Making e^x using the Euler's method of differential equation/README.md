@@ -15,7 +15,7 @@ double x_points[9876543]{ 0 };
 double y_points[9876543]{ 1 };
 double dy_dxs[9876543]{ 1 };
 
-double dy_dx_function(double x, double y) { // differential equation dy/dx = y -> y = e^x
+double get_dy_dx(double x, double y) { // differential equation dy/dx = y -> y = e^x
     return y;
 }
 
@@ -26,7 +26,7 @@ void RK1_with_arrays(double target_x) { // RK1
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x_points[i + 1] = x_points[i] + x_step;
         y_points[i + 1] = y_points[i] + dy_dxs[i] * x_step; // y_points[i+1] is equal to y_points[i] + change in y
-        dy_dxs[i + 1] = dy_dx_function(x_points[i + 1], y_points[i + 1]); // The solution of this differential equation(dy/dx = y) is y=e^x. (using separation of variables method)
+        dy_dxs[i + 1] = get_dy_dx(x_points[i + 1], y_points[i + 1]); // The solution of this differential equation(dy/dx = y) is y=e^x. (using separation of variables method)
     }
 
     int i = target_x * compensation_for_x_step;
@@ -36,12 +36,12 @@ void RK1_with_arrays(double target_x) { // RK1
 void RK1(double target_x) { // RK1
     double compensation_for_x_step = 98765;
     double x_step = 1 / compensation_for_x_step;
-    double x = 0, y = 1, dy_dx = dy_dx_function(x, y);
+    double x = 0, y = 1, dy_dx = get_dy_dx(x, y);
 
     for (int i = 0; i < target_x * compensation_for_x_step; i++) {
         x = x + x_step;
         y = y + dy_dx * x_step;
-        dy_dx = dy_dx_function(x, y);
+        dy_dx = get_dy_dx(x, y);
     }
 
     printf("x = %lf, y = %.10lf, dy/dx = %.10lf\n", x, y, dy_dx);

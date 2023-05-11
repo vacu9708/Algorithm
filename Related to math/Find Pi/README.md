@@ -1,7 +1,7 @@
 # How to find the value of Pi
+>Principle : The area of a circle whose radius is 1 is equal to Pi. (Area of a circle = r^2 * pi)
 
 ## Using integral
->Principle : The area of a circle whose radius is 1 is equal to Pi. (Area of a circle = r^2 * pi)
 
 ![image](https://user-images.githubusercontent.com/67142421/149086756-188a218e-90b2-4221-a46c-bdf6eceed801.png)
 
@@ -51,10 +51,9 @@ print(f"Elapsed time : {time.time() - start}"
 
 ---
 ## Using Monte-Carlo method
-Pi is found by making use of the ratio of points that got into a circle inscribed in a square.<br>
-It can be found by counting how many random points are put into the circle.<br>
+Pi can be found by calculating the ratio of the number of points that get into a circle inscribed in a square to the total number of points in the square.<br>
 
-![image](https://github.com/vacu9708/Algorithm/assets/67142421/7e0c46fb-3dd6-4966-a557-44bd7fe99dea)
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/381cf554-d665-4147-bc02-0a9bdac0ca8e)
 
 ~~~c++
 #include <iostream>
@@ -80,7 +79,7 @@ void pi_using_monte_carlo() {
 			n_of_points_in_circle++;
 	}
 
-	printf("%.20lf\n", (n_of_points_in_circle / n_of_points) * 4); // Because the area of the square the circle is inscribed in is 4
+	printf("%.20lf\n", (n_of_points_in_circle / n_of_points) * 4); // Multiply the ratio by the area of the circle(4)
 }
 
 int main() {

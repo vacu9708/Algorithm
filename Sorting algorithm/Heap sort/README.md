@@ -27,18 +27,18 @@ void print_elements(vector<int>& heap_tree) {
 	cout << "\n";
 }
 
-void heapify(vector<int>& heap_tree, int parent_index, int heapify_upto) {
+void heapify(vector<int>& heap_tree, int parent, int heapify_upto) {
 	int tree_size = heap_tree.size();
-	int left_child = 2 * parent_index + 1, right_child = 2 * parent_index + 2;
-
-	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[parent_index]) {
-		heapify(heap_tree, left_child, heapify_upto);
-		swap(heap_tree[parent_index], heap_tree[left_child]);
-	}
-	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[parent_index]) {
-		heapify(heap_tree, right_child, heapify_upto);
-		swap(heap_tree[parent_index], heap_tree[right_child]);
-	}
+	int left_child = 2 * parent + 1, right_child = 2 * parent + 2;
+	int least = parent;
+	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[parent])
+		least = left;
+	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[parent]) {
+		least = right
+	if (least != parent) {
+        	swap(heap_tree[least], heap_tree[parent]);
+        	heapify(heap_tree, least);
+    	}
 }
 
 void heap_sort(vector<int>& heap_tree) {

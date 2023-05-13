@@ -31,9 +31,9 @@ void heapify(vector<int>& heap_tree, int parent, int heapify_upto) {
 	int tree_size = heap_tree.size();
 	int left_child = 2 * parent + 1, right_child = 2 * parent + 2;
 	int least = parent;
-	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[parent])
+	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[least])
 		least = left;
-	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[parent]) {
+	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[least]) {
 		least = right
 	if (least != parent) {
         	swap(heap_tree[least], heap_tree[parent]);

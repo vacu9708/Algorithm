@@ -16,13 +16,14 @@
 Same as [Merge sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm/Merge%20sort)
 
 ## The worst case where O(n^2) is taken
->If the worst pivot, either the maximum or minimum of the elements, is selected, **O(n^2)** is taken.<br>
+>If the worst pivot, either the maximum or minimum, is selected in every step, **O(n^2)** is taken.<br>
 >But this situation occurs only when elements are already sorted in either ascending or descending order, which rarely happens.<br>
 >Also, this problem can be solved by using a middle pivot.
 ### Example
->There are sorted elements {1,2,3,4,5}(n = 5). What will happen if only the minimum is selected as a pivot?<br>
->Let's pick the minimum 1 as a pivot. "i" can leave only elements smaller than or equal to 1 and "j" can leave only elements bigger than or equal to 1.<br>
->In the end, "j" will get to the pivot where 2n iterations were performed. And then the minimum in the next sublist, 2 is selected as a pivot and the same process is performed. n-1 times of iteration is performed.<br>
+>There are sorted elements {1,2,3,4,5}(n = 5). What will happen if the minimum is selected as a pivot in every step?<br>
+>Let's pick the minimum 1 as a pivot. "i" can pass elements smaller than 1 and "j" can pass elements bigger than 1.<br>
+>In the end, "j" will get to the far left after n times of repetitions.<br>
+>In the next iteration, 2 is selected as a pivot and the same process is performed.<br>
 >(n-1) + (n-2) + (n-3) + ... + 1 = **O(n^2)**
 
 ~~~python

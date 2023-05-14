@@ -48,8 +48,7 @@ def merge_sort(lst, temp, left, right):
 # Usage example
 lst = [8,7,6,5,4,3,2,1]
 print(f'Before sort: {lst}')
-temp = [0] * len(lst)
-merge_sort(lst, temp, 0, len(lst) - 1)
+merge_sort(lst, [0] * len(lst), 0, len(lst) - 1)
 print(f'After sort: {lst}')
 
 ~~~

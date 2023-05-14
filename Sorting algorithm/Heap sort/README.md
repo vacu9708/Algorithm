@@ -27,37 +27,34 @@ void print_elements(vector<int>& heap_tree) {
 	cout << "\n";
 }
 
-void heapify(vector<int>& heap_tree, int parent, int heapify_upto) {
-	int tree_size = heap_tree.size();
-	int left_child = 2 * parent + 1, right_child = 2 * parent + 2;
-	int least = parent;
-	if (left_child <= heapify_upto && heap_tree[left_child] > heap_tree[least])
-		least = left;
-	if (right_child <= heapify_upto && heap_tree[right_child] > heap_tree[least]) {
-		least = right
-	if (least != parent) {
-        	swap(heap_tree[least], heap_tree[parent]);
-        	heapify(heap_tree, least);
-    	}
+void max_heapify(vector<int>& heap_tree, int curr, int upto) {
+    int left = curr*2+1, right = curr*2+2; // children
+    int biggest = curr;
+    // If child is larger than parent, swap parent and child
+    if (left <= upto && heap_tree[left] > heap_tree[biggest])
+        biggest=left;
+    if (right <= upto && heap_tree[right] > heap_tree[biggest])
+        biggest=right;
+    if (biggest != curr) {
+        swap(heap_tree[biggest], heap_tree[curr]);
+        max_heapify(heap_tree, biggest, upto);
+    }
 }
 
+void heapify_all(vector<int>& heap_tree){
+    for (int i = (heap_tree.size()-2)/2; i >= 0; i--) // from last child's parent
+        max_heapify(heap_tree, i, heap_tree.size()-1);
+}
+
+
 void heap_sort(vector<int>& heap_tree) {
-	// Heapify from the last parent ( (child+1) / 2 - 1 is its parent)
-	int tree_size = heap_tree.size();
-	printf("---Heapify\n");
-	for (int i = 0; i <= tree_size / 2 - 1; i++) {
-		heapify(heap_tree, i, tree_size - 1);
-		print_elements(heap_tree); // Show the process
-	}
-	cout << "-----\n\n";
-	# S
-	for (int i = tree_size - 1; i > 0; i--) {
+	// Heapify from the last parent
+	for (int i = heap_tree.size() - 1; i > 0; i--) {
 		cout << "---Swap the root with index (" << i << ")\n";
 		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements to the right in ascending order
 		print_elements(heap_tree);
-
 		printf("---Heapify up to index (%d)\n", i - 1);
-		heapify(heap_tree, 0, i - 1);
+		max_heapify(heap_tree, 0, i - 1);
 		print_elements(heap_tree);
 	}
 }
@@ -65,10 +62,11 @@ void heap_sort(vector<int>& heap_tree) {
 int main() {
 	vector<int> heap_tree = { 3,1,5,4,2 };
 	printf("Elements to sort: "); print_elements(heap_tree);
-
+	heapify_all(heap_tree);
+    printf("Heap tree: "); print_elements(heap_tree);
 	heap_sort(heap_tree);
 }
 ~~~
 
 ## Output
-![Untitled](https://user-images.githubusercontent.com/67142421/149524068-2f7a71f0-cdd4-49ff-8df2-255f4359818a.png)
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/1acb38bc-3ec3-4ba8-95b7-f5d5711c3e46)

@@ -51,7 +51,7 @@ void heap_sort(vector<int>& heap_tree) {
 	// Heapify from the last parent
 	for (int i = heap_tree.size() - 1; i > 0; i--) {
 		swap(heap_tree[0], heap_tree[i]); // Move the biggest to the right
-		printf("---Swap the root with index (%d)\n", i);print(heap_tree);
+		printf("---Swap the root with index (%d)\n", i); print(heap_tree);
 		max_heapify(heap_tree, 0, i - 1);
 		printf("---Heapify up to index (%d)\n", i - 1); print(heap_tree);
 	}

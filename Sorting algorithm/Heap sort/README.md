@@ -20,7 +20,7 @@
 #include <vector>
 using namespace std;
 
-void print_elements(vector<int>& heap_tree) {
+void print(vector<int>& heap_tree) {
 	int tree_size = heap_tree.size();
 	for (int i = 0; i < tree_size; i++)
 		cout << heap_tree[i] << " ";
@@ -52,18 +52,18 @@ void heap_sort(vector<int>& heap_tree) {
 	for (int i = heap_tree.size() - 1; i > 0; i--) {
 		cout << "---Swap the root with index (" << i << ")\n";
 		swap(heap_tree[0], heap_tree[i]); // Move the root which is the biggest value except sorted elements to the right in ascending order
-		print_elements(heap_tree);
+		print(heap_tree);
 		printf("---Heapify up to index (%d)\n", i - 1);
 		max_heapify(heap_tree, 0, i - 1);
-		print_elements(heap_tree);
+		print(heap_tree);
 	}
 }
 
 int main() {
 	vector<int> heap_tree = { 3,1,5,4,2 };
-	printf("Elements to sort: "); print_elements(heap_tree);
+	printf("Elements to sort: "); print(heap_tree);
 	heapify_all(heap_tree);
-    printf("Heap tree: "); print_elements(heap_tree);
+    	printf("Heap tree: "); print(heap_tree);
 	heap_sort(heap_tree);
 }
 ~~~

@@ -48,7 +48,7 @@ def quick_sort(arr, left, right):
             j-=1
             
     quick_sort(arr, left, j)
-    quick_sort(arr, i, right
+    quick_sort(arr, i, right)
 
 arr=[5,1,7,6,2,3,8,9,4]
 print(f'Before sort: {arr}')

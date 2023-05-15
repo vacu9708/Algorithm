@@ -28,23 +28,32 @@ Same as [Merge sort](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20a
 
 ~~~python
 def quick_sort(arr, left, right):
-    if left>=right:
+    if left >= right:
         return
-    pivot=arr[(left + right) // 2]
-    i,j = left, right
-    while 1:
-        # Find an element greater than or equal to pivot
-        while i < right and arr[i] < pivot: i+=1 # Value same as the pivot cannot be passed
-        # Find an element less than or equal to pivot
-        while j > left and arr[j] > pivot: j-=1
-        if i < j: arr[i], arr[j] = arr[j], arr[i]
-        else: break
-    # All the elements before j are less than those after j
-    quick_sort(arr, left, j - 1)
-    quick_sort(arr, j + 1, right)
+
+    pivot = arr[(left+right) // 2]
+    i, j = left, right
+
+    while i <= j: # Until i and j cross each other
+        # Values same as the pivot cannot be passed
+        # Pass elements smaller than pivot
+        while arr[i] < pivot:
+            i += 1
+        # Pass elements bigger than pivot
+        while arr[j] > pivot:
+            j -= 1
+        if i <= j:
+            arr[i], arr[j] = arr[j], arr[i]
+            i+=1
+            j-=1
+            
+    quick_sort(arr, left, j)
+    quick_sort(arr, i, right
 
 arr=[5,1,7,6,2,3,8,9,4]
 print(f'Before sort: {arr}')
 quick_sort(arr,0,len(arr)-1)
 print(f'After sort: {arr}')
 ~~~
+
+

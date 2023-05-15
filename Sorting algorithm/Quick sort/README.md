@@ -35,7 +35,6 @@ def quick_sort(arr, left, right):
     i, j = left, right
 
     while i <= j: # Until i and j cross each other
-        # Values same as the pivot cannot be passed
         # Pass elements smaller than pivot
         while arr[i] < pivot:
             i += 1

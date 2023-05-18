@@ -6,9 +6,11 @@ class Path:
         self.dest=dest
         self.weight=weight
 
-def dijikstra(N, adjacencies):
+N=10
+def dijikstra(adjacencies):
     INF=999999999
-    weights=[0]+[INF for i in range(1,N)] # Start location's weight = 0
+    weights=[INF for i in range(N)]
+    weights[0]=0 # Start location's weight = 0
     pq=[(0,0)] # (weight, destination)
     #visited=[False for i in range(N)]
     while pq:
@@ -30,7 +32,7 @@ adjacencies=[[] for i in range(N)] # <start, destination, weight>
 for path in paths:
     adjacencies[path[0]].append(Path(path[1], path[2]))
     adjacencies[path[1]].append(Path(path[0], path[2]))
-dijikstra(10, adjacencies)
+dijikstra(adjacencies)
 ~~~
 
 ## Printing paths with recursion
@@ -45,7 +47,8 @@ N=10
 def dijikstra(adjacencies):
     shortest_routes=[i for i in range(N)]
     INF=999999999
-    weights=[0]+[INF for i in range(1,N)]
+    weights=[INF for i in range(N)]
+    weights[0]=0 # Start location's weight = 0
     pq=[(0,0)] # (weight, destination)
     #visited=[False for i in range(N)]
     while pq:

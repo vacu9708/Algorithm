@@ -8,7 +8,7 @@ class Path:
 
 def dijikstra(N, adjacencies):
     INF=999999999
-    weights=[1]+[INF for i in range(1,N)]
+    weights=[0]+[INF for i in range(1,N)] # Start location's weight = 0
     pq=[(0,0)] # (weight, destination)
     #visited=[False for i in range(N)]
     while pq:

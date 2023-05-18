@@ -27,7 +27,8 @@ class LRUCache:
 ~~~
 
 ## hashmap + doubly linked list makes an ordered hashmap
-![image](https://user-images.githubusercontent.com/67142421/236628009-63126c8e-ff5f-4f88-86f5-74b57cc0cb2c.png)
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/d7e73cd3-0879-4179-a7ff-e1b7eaf4eae1)
+[LRU cache.pptx](https://github.com/vacu9708/Algorithm/files/11512271/LRU.cache.pptx)
 
 ~~~python
 class Node:
@@ -50,11 +51,12 @@ class Linked_list:
         self.tail=node
 
     def remove(self, node):
+        # Change the connection
         if node.left:
             node.left.right=node.right
         if node.right:
             node.right.left=node.left
-            
+        # Change head or tail
         if node==self.head:
             self.head=self.head.right
         if node==self.tail:

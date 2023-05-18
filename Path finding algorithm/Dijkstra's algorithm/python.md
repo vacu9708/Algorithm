@@ -43,7 +43,7 @@ class Path:
 
 N=10
 def dijikstra(adjacencies):
-    paths=[i for i in range(N)]
+    shortest_routes=[i for i in range(N)]
     INF=999999999
     weights=[0]+[INF for i in range(1,N)]
     pq=[(0,0)] # (weight, destination)
@@ -58,9 +58,9 @@ def dijikstra(adjacencies):
             if new_path_weight<weights[path.dest]:
                 weights[path.dest]=new_path_weight
                 heapq.heappush(pq,(new_path_weight,path.dest))
-                paths[path.dest]=curr[1]
+                shortest_routes[path.dest]=curr[1]
     # Print
-    print_result(weights, paths)
+    print_result(weights, shortest_routes)
 
 def find_path(paths, destination):
     if destination==paths[destination]:

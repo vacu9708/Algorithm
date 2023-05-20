@@ -80,7 +80,7 @@ int main() {
 
 using namespace std;
 
-//void knapsack_ineffective() { // Ineffective
+//void knapsack_inefficient() {
 //	int n_of_items = 5, max_weight = 15;
 //	int weights[] = { 0,12,1,4,1,2 }; // 무게
 //	int values[] = { 0,4,2,10,1,2 }; // 가치

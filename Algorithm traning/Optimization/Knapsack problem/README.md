@@ -42,7 +42,7 @@ int main() {
 ~~~
 
 ## Output
-![image](https://github.com/vacu9708/Algorithm/assets/67142421/2c87be14-2d6f-48e5-9ba6-016fa02b6509)
+15
 
 # Fractional knapsack problem (Greedy approach)
 >In Fractional Knapsack, we can open item boxes and divide them for maximizing the total value of knapsack.

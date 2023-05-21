@@ -30,7 +30,7 @@ void knapsack() {
             for (int i = 1; i <= max_weight; i++) printf("%d ",memo[i]);
             cout << "\n";
         }
-        cout << "-----\n";
+        printf("%d-----\n",i);
     }
         
 	printf("%d", memo[max_weight]);

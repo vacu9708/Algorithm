@@ -44,7 +44,7 @@ for i in range(0, infinity):
     sum += dx * y
 
 print(f"Pi = {sum * 4}")
-print(f"Elapsed time : {time.time() - start}"
+print(f"Elapsed time : {time.time() - start}")
 ~~~
 ## Output
 ![Untitled](https://user-images.githubusercontent.com/67142421/149087590-95170557-b07f-4e71-8c18-3549582e7030.png)

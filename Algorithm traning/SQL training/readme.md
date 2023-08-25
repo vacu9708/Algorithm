@@ -41,3 +41,12 @@ SELECT A.sID, A.sName, A.GPA, B.sID, B.sName, B.GPA
 from Student as A, Student as B
 where A.GPA=B.GPA and A.sName!=B.sName and A.sName<B.sName
 ~~~
+
+# DELETE + JOIN
+### Example
+Delete all duplicate rows except one based on orderId" Is this correct and natural english
+~~~
+DELETE o1 FROM orders o1 JOIN (
+SELECT MIN(id) as minId, orderId FROM orders GROUP BY orderId) o2 
+ON o1.id != o2.minId and o1.orderId = o2.orderId
+~~~

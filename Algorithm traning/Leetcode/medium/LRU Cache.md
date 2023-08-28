@@ -27,8 +27,8 @@ class LRUCache:
 ~~~
 
 ## hashmap + doubly linked list makes an ordered hashmap
-![image](https://github.com/vacu9708/Algorithm/assets/67142421/d7e73cd3-0879-4179-a7ff-e1b7eaf4eae1)
-[LRU cache.pptx](https://github.com/vacu9708/Algorithm/files/11512271/LRU.cache.pptx)
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/cb8be100-206b-4121-a9bf-8a60fff9cd45)
+[LRU.cache.pptx](https://github.com/vacu9708/Algorithm/files/12456576/LRU.cache.pptx)
 
 ~~~python
 class Node:

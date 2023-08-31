@@ -21,8 +21,8 @@ from collections import defaultdict
 def solution(clothes):
     # Put clothes into hashmap
     hashmap=defaultdict(list)
-    for piece in clothes:
-        hashmap[piece[1]].append(piece[0])
+    for clothing in clothes:
+        hashmap[clothing[1]].append(clothing[0])
     clothes=list(hashmap.values())
     # Calculate the number of cases
     def combination(max_depth, depth, start, n_of_cases, answer):

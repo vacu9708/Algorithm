@@ -9,6 +9,5 @@
   * [Sorting algorithm](https://github.com/vacu9708/Algorithm/tree/main/Sorting%20algorithm)
   * [Path finding algorithm](https://github.com/vacu9708/Algorithm/tree/main/Path%20finding%20algorithm)
   * [Searching algorithm](https://github.com/vacu9708/Algorithm/tree/main/Searching%20algorithm)
-  * [Signal processing](https://github.com/vacu9708/Signal-processing)
 
 [Making basic functions](https://github.com/vacu9708/Algorithm/tree/main/Making%20basic%20functions)

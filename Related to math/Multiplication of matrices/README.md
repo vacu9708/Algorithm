@@ -1,3 +1,14 @@
+# Dot product
+Consider the dot product of two matrices whose dimensions are (m X n) and (p X q) respectively.<br>
+
+## Rule
+The number of columns in the first matrix must equal the number of rows in the second matrix.<br>
+In terms of dimensions, n must be equal to p.
+
+## Resulting Matrix Dimension
+The resulting matrix will have a dimension of (m X q)
+
+## Code
 ~~~python
 matrix1 = [[1,2,3], [4,5,6]]
 matrix2 = [[1,2], [3,4], [5,6]]

@@ -1,3 +1,4 @@
+floor() and int() are different!!
 ~~~python
 class Solution:
     def evalRPN(self, tokens: List[str]) -> int:
@@ -7,7 +8,7 @@ class Solution:
                 '*': lambda num1, num2: num1*num2,
                 '/': lambda num1, num2: int(num1/num2),
         }
-        nums=[]
+        nums=[] # Mimics a stack
         for token in tokens:
             if token not in operator_map:
                 nums.append(int(token))

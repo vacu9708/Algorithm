@@ -29,7 +29,7 @@ def infix_to_postfix(expression):
     # Priority of operators
     priority = {'+': 1, '-': 1, '*': 2, '/': 2, '(': 0}
   
-    stack = [] # Stack for operators
+    stack = [] # Stack for operators (Operators that are calculated earlier are in a higher position of the stack)
     postfix = []
     number = ''
   

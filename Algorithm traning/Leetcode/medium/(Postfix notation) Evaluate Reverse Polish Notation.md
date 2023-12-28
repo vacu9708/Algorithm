@@ -22,7 +22,7 @@ class Solution:
         return nums[0]
 ~~~
 
-### Algorithm to covert infix to postfix
+### Algorithm to convert infix to postfix
 ~~~python
 def infix_to_postfix(expression):
     print('\n'+expression)

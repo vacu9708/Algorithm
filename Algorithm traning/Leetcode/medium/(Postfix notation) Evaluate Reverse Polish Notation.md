@@ -1,6 +1,6 @@
 # [Evaluate Reverse Polish Notation](https://leetcode.com/problems/evaluate-reverse-polish-notation/)
 
-[Recursive(inefficient)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Complex%20calculation%20in%20a%20recursive%20way)<br>
+[Infix notation](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Complex%20calculation%20in%20a%20recursive%20way)<br>
 
 floor() and int() are different in python!<br>
 ~~~python

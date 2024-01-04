@@ -1,5 +1,7 @@
+# Postfix notation
 [Postfix notation](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/Leetcode/medium/(Postfix%20notation)%20Evaluate%20Reverse%20Polish%20Notation.md)
 
+# Infix notation recursively
 ~~~python
 def recursion(expression: str):    
     start=0 # Start index of the parentheses

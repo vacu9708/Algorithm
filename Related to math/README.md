@@ -8,6 +8,7 @@
 * [Permutation and combination](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Permutation%20and%20combination)
 * [Newton-raphson method (plus babylonian method)](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Newton-raphson%20method)
 * [Euclidean Great Common Divisor](https://github.com/vacu9708/Algorithm/blob/main/Algorithm%20traning/Programmers/level2/%EB%A9%80%EC%A9%A1%ED%95%9C%20%EC%82%AC%EA%B0%81%ED%98%95.md)
+* [Complex calculation](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Complex%20calculation)
 
 ## Linear algebra algorithm
 * [Cross product of matrices](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Multiplication%20of%20matrices)

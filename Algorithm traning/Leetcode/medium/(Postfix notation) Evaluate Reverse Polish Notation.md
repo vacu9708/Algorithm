@@ -1,5 +1,3 @@
-[Infix notation](https://github.com/vacu9708/Algorithm/tree/main/Related%20to%20math/Complex%20calculation%20in%20a%20recursive%20way)<br>
-
 ### Algorithm to convert infix to postfix and calculate it
 ~~~python
 def infix_to_postfix(expression):

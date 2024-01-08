@@ -35,7 +35,7 @@ for path in paths:
 dijikstra(adjacencies)
 ~~~
 
-## Printing paths with recursion
+## Printing paths recursively(union-find)
 ~~~python
 import heapq
 class Path:

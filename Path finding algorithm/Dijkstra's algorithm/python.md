@@ -45,7 +45,7 @@ class Path:
 
 N=10
 def dijikstra(adjacencies):
-    shortest_routes=[i for i in range(N)]
+    shortest_routes=[i for i in range(N)] # index: destination, value: the node right before it
     INF=999999999
     weights=[INF for i in range(N)]
     weights[0]=0 # Start location's weight = 0
@@ -61,6 +61,7 @@ def dijikstra(adjacencies):
 
     print_result(weights, shortest_routes)
 
+# Rewind path to the destination to find the path
 def find_path(paths, destination):
     if destination==paths[destination]:
         print(destination, end='->')

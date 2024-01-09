@@ -3,12 +3,11 @@
 
 ## Time complexity
 - **Best case**
-  >Elements that are already sorted (1 2 3 4 5)
-  >Only the outer loop is carried out (n-1) times.
+  >Elements that are already sorted (1 2 3 4 5)<br>
+  >Only the outer loop is carried out (n-1) times.<br>
   > ### -> O(n)
 - **Worst case**
-  >Elements that are not sorted at all : (5 4 3 2 1)
-  >
+  >Elements that are not sorted at all : (5 4 3 2 1)<br>
   >2 + 3 + 4 + ... + N-1 + N = ![image](https://user-images.githubusercontent.com/67142421/149545993-042d9d32-351e-4220-99a2-2ea2d31a8d04.png) 
   >### -> O(n^2)
 

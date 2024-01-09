@@ -1,4 +1,6 @@
 # Insertion sort
+![image](https://github.com/vacu9708/Algorithm/assets/67142421/c8505341-4292-4dab-bcc3-96d3d23af9b0)
+
 A **stable** sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.<br>
 It is repeated to sort sublists, and sorted sublists are skipped.<br>
 

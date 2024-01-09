@@ -1,5 +1,6 @@
 # Insertion sort
->A **stable** sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.
+A **stable** sorting algorithm to the extent of being used as part of other sorting algorithms because in the best case, it is very fast with the time complexity **O(n)**.<br>
+It is repeated to sort sublists, and sorted sublists are skipped.<br>
 
 ## Time complexity
 - **Best case**

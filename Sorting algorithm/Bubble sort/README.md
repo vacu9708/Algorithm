@@ -15,18 +15,22 @@ Elements in the wrong order are swapped.
 ![image](https://user-images.githubusercontent.com/67142421/149508649-d1d4efed-9e65-4b85-bff7-7a851a2dadff.png)
 
 ~~~python
-def bubble_sort(lst):
-    for i in range(len(lst)-1,0,-1):
-        for j in range(i):
-            if lst[j]>lst[j+1]:
-                lst[j], lst[j+1]=lst[j+1], lst[j]
-        print(lst)
-lst=[5,4,3,2,1]
-bubble_sort(lst)
-print(lst)
+def bubble_sort(arr):
+    n = len(arr)
+    for i in range(n - 1):
+        # Flag to check if any swaps were made in the pass
+        swapped = False
+        for j in range(n - 1 - i):
+            if arr[j] > arr[j + 1]:
+                # Swap two elements
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                swapped = True
+        # If no swaps were made in the pass, the array is already sorted, so exit
+        if not swapped:
+            break
+
+# Example integer array
+arr = [64, 34, 25, 12, 22, 11, 90]
+bubble_sort(arr)
+print("Sorted array:", arr)
 ~~~
-
-## Compile and run
-Sort 5 4 3 2 1 in ascending order.
-
-![Untitled](https://user-images.githubusercontent.com/67142421/149509160-b5323404-3059-4bc6-8535-d1da481906ac.png)

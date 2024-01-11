@@ -13,7 +13,7 @@ It is repeated to sort sublists, and sorted sublists are skipped.<br>
   >Elements that are not sorted at all : (5 4 3 2 1)<br>
   >2 + 3 + 4 + ... + N-1 + N = ![image](https://user-images.githubusercontent.com/67142421/149545993-042d9d32-351e-4220-99a2-2ea2d31a8d04.png) 
   >### -> O(n^2)
-  
+- **Linked list**: is a data structure where insertion is fast, which means the insertion sort is good for linked lists.
 
 ~~~c++
 #include <stdio.h>

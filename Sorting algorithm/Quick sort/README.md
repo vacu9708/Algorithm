@@ -31,35 +31,6 @@ def quick_sort(arr, left, right):
     if left >= right:
         return
 
-    pivot = arr[(left+right) // 2]
-    i, j = left, right
-
-    while i <= j: # Until i and j cross each other
-        # Pass elements smaller than pivot
-        while arr[i] < pivot:
-            i += 1
-        # Pass elements bigger than pivot
-        while arr[j] > pivot:
-            j -= 1
-        if i <= j:
-            arr[i], arr[j] = arr[j], arr[i]
-            i+=1
-            j-=1
-            
-    quick_sort(arr, left, j)
-    quick_sort(arr, i, right)
-
-arr=[5,1,7,6,2,3,8,9,4]
-print(f'Before sort: {arr}')
-quick_sort(arr,0,len(arr)-1)
-print(f'After sort: {arr}')
-~~~
-
-~~~python
-def quick_sort(arr, left, right):
-    if left >= right:
-        return
-
     pivot = arr[left]
     i, j = left+1, right
 
@@ -84,4 +55,20 @@ quick_sort(arr,0,len(arr)-1)
 print(f'After sort: {arr}')
 ~~~
 
+~~~python
+def quick_sort(arr):
+    if len(arr) <= 1:
+        return arr
 
+    pivot = arr[len(arr) // 2]  # Choose the middle element as the pivot
+    left = [x for x in arr if x < pivot]
+    middle = [x for x in arr if x == pivot]
+    right = [x for x in arr if x > pivot]
+
+    return quick_sort(left) + middle + quick_sort(right)
+
+# Example usage:
+arr = [3, 6, 8, 10, 1, 2, 1]
+sorted_arr = quick_sort(arr)
+print(sorted_arr)
+~~~

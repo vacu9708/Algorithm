@@ -55,4 +55,33 @@ quick_sort(arr,0,len(arr)-1)
 print(f'After sort: {arr}')
 ~~~
 
+~~~python
+def quick_sort(arr, left, right):
+    if left >= right:
+        return
+
+    pivot = arr[left]
+    i, j = left+1, right
+
+    while i < j: # Until i and j cross each other
+        # Pass elements smaller than pivot
+        while i <= j and arr[i] < pivot:
+            i += 1
+        # Pass elements bigger than pivot
+        while j >= i and arr[j] > pivot:
+            j -= 1
+        if i < j:
+            arr[i], arr[j] = arr[j], arr[i]
+    
+    arr[j], arr[left] = arr[left], arr[j]
+            
+    quick_sort(arr, left, j-1)
+    quick_sort(arr, j+1, right)
+
+arr=[5,1,7,6,2,3,8,9,4]
+print(f'Before sort: {arr}')
+quick_sort(arr,0,len(arr)-1)
+print(f'After sort: {arr}')
+~~~
+
 

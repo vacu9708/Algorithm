@@ -36,10 +36,10 @@ def quick_sort(arr, left, right):
 
     while i < j: # Until i and j cross each other
         # Pass elements smaller than pivot
-        while arr[i] < pivot:
+        while i <= j and arr[i] < pivot:
             i += 1
         # Pass elements bigger than pivot
-        while arr[j] > pivot:
+        while i <= j and arr[j] > pivot:
             j -= 1
         if i < j:
             arr[i], arr[j] = arr[j], arr[i]

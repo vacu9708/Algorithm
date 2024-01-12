@@ -69,7 +69,6 @@ examples = [
 for example in examples:
     quick_sort(example, 0, len(example) - 1)
     print(f'After sort: {example}')
-
 ~~~
 
 ~~~python

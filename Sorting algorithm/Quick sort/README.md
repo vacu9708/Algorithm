@@ -44,7 +44,7 @@ def quick_sort(arr, left, right):
         if i < j:  # Swap elements if i and j have not crossed
             arr[i], arr[j] = arr[j], arr[i]
 
-    # Swap pivot into correct position
+    # Swap pivot into correct position. This doesn't work without the equal(i <= j) above.
     arr[j], arr[left] = arr[left], arr[j]
 
     # Recursively sort the partitions

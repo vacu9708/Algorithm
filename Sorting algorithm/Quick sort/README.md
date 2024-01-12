@@ -32,27 +32,44 @@ def quick_sort(arr, left, right):
         return
 
     pivot = arr[left]
-    i, j = left+1, right
+    i, j = left + 1, right
 
-    while i < j: # Until i and j cross each other
-        # Pass elements smaller than pivot
-        while i <= j and arr[i] < pivot:
+    while i <= j:  # Until i and j cross each other
+        # Find element on left that should be on right
+        while i <= j and arr[i] <= pivot:  # Include equal to pivot for stability
             i += 1
-        # Pass elements bigger than pivot
-        while i <= j and arr[j] > pivot:
+        # Find element on right that should be on left
+        while i <= j and arr[j] >= pivot:  # Include equal to pivot for stability
             j -= 1
-        if i < j:
+        if i < j:  # Swap elements if i and j have not crossed
             arr[i], arr[j] = arr[j], arr[i]
-    
-    arr[j], arr[left] = arr[left], arr[j]
-            
-    quick_sort(arr, left, j-1)
-    quick_sort(arr, j+1, right)
 
-arr=[5,1,7,6,2,3,8,9,4]
-print(f'Before sort: {arr}')
-quick_sort(arr,0,len(arr)-1)
+    # Swap pivot into correct position
+    arr[j], arr[left] = arr[left], arr[j]
+
+    # Recursively sort the partitions
+    quick_sort(arr, left, j - 1)
+    quick_sort(arr, j + 1, right)
+
+# Example
+arr = [5, 1, 7, 6, 2, 3, 8, 9, 4]
+quick_sort(arr, 0, len(arr) - 1)
 print(f'After sort: {arr}')
+
+# Additional example arrays
+examples = [
+    [10, 7, 8, 9, 1, 5],
+    [64, 34, 25, 12, 22, 11, 90],
+    [32, 45, 67, 2, 7],
+    [1, 4, 3, 2],
+    [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+]
+
+# Sort each example array
+for example in examples:
+    quick_sort(example, 0, len(example) - 1)
+    print(f'After sort: {example}')
+
 ~~~
 
 ~~~python

@@ -51,7 +51,7 @@ print(f"Elapsed time : {time.time() - start}")
 
 ---
 ## Using Monte-Carlo method
-Pi can be found by calculating the ratio of the number of points that get into a circle inscribed in a square to the total number of points in the square.<br>
+Pi can be estimated by calculating the ratio of the number of points that fall inside a circle inscribed in a square to the total number of points within the square.<br>
 
 ![image](https://github.com/vacu9708/Algorithm/assets/67142421/e1239f01-d334-4cea-8a07-75d27d90d993)
 

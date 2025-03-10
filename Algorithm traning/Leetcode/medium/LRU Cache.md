@@ -29,7 +29,7 @@ class LRUCache:
 ~~~
 
 ## hashmap + doubly linked list makes an ordered hashmap
-By mistake, the linked list has (key, value) pairs unlike the visualization above
+The linked list has (key, value) pairs unlike the visualization above by mistake
 ~~~python
 class Node:
     def __init__(self, key, value):

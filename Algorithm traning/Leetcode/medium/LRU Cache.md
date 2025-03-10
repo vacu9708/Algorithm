@@ -2,6 +2,8 @@
 An LRU (Least Recently Used) cache is a data structure that is used to store a limited number of items with a fast access time.<br>
 The cache is designed to evict the least recently used items when the cache reaches its capacity.
 
+![image](https://github.com/user-attachments/assets/ec8a5caa-1c60-4ee5-84b8-c1eb9683cd75)
+
 ## Taking advantage of python dict (which does use a doubly linked list to maintain the order of the hashmap)
 ~~~python
 class LRUCache:
@@ -27,9 +29,7 @@ class LRUCache:
 ~~~
 
 ## hashmap + doubly linked list makes an ordered hashmap
-![image](https://github.com/vacu9708/Algorithm/assets/67142421/cb8be100-206b-4121-a9bf-8a60fff9cd45)
-[LRU.cache.pptx](https://github.com/vacu9708/Algorithm/files/12456576/LRU.cache.pptx)
-
+The linked list has (key, value) pairs unlike the visualization above
 ~~~python
 class Node:
     def __init__(self, key, value):

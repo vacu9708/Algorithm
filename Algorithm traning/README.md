@@ -1,5 +1,5 @@
 # Algorithm traning
-- ### data structure(hashmap, deque, heapq, etc)
+- ### data structure(hashmap, heapq, etc)
 - ### greedy, sort(binary search), two pointers, recursion, memo
 - ### Imagine the process
 ## Algorithm problems

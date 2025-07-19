@@ -1,6 +1,6 @@
 # Algorithm traning
 - **Data structure** : memo(hashmap), deque, heapq
-- **Algorithm** : DFS, sliding window(two pointers), sort(binary search), greedy
+- **Algorithm** : DFS, sort(binary search), sliding window(two pointers), greedy
   - DP, dijkstra
 
 ## Algorithm problems

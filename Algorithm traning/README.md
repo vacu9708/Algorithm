@@ -1,6 +1,6 @@
 # Algorithm traning
-- ### data structure(hashmap(memo), deque, heapq)
-- ### greedy, sort(binary search), sliding window(two pointers), dfs
+- ### data structure(memo(hashmap), deque, heapq)
+- ### dfs, sliding window(two pointers), sort(binary search), greedy
 - ### Imagine the process
 ## Algorithm problems
 * [Leetcode](https://github.com/vacu9708/Algorithm/tree/main/Algorithm%20traning/Leetcode)
